@@ -51,7 +51,7 @@ The default values work out of the box for local development. Only change them i
 ### Step 3: Start the Development Environment
 
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 
 This starts three services:
