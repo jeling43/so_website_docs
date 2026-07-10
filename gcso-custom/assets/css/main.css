@@ -47,8 +47,9 @@
     --header-height: 80px;
 
     /* Typography */
-    --font-primary: 'Segoe UI', Arial, Helvetica, sans-serif;
-    --font-heading: 'Segoe UI', Arial, Helvetica, sans-serif;
+    --font-primary: 'Montserrat', 'Segoe UI', Arial, Helvetica, sans-serif;
+    --font-heading: 'Montserrat', 'Segoe UI', Arial, Helvetica, sans-serif;
+    --font-accent: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
     --fs-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.8125rem);
     --fs-sm: clamp(0.8125rem, 0.75rem + 0.3vw, 0.9375rem);
     --fs-base: clamp(0.9375rem, 0.875rem + 0.3vw, 1rem);
