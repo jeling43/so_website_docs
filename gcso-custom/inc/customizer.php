@@ -139,6 +139,118 @@ function gcso_customize_register($wp_customize) {
         'type'    => 'url',
     ]);
 
+    // --- Hero Slide 2 ---
+    $wp_customize->add_section('gcso_hero_slide2', [
+        'title'       => __('Hero Slide 2', 'gcso'),
+        'panel'       => 'gcso_general',
+        'description' => __('Leave heading blank to disable this slide.', 'gcso'),
+    ]);
+
+    $wp_customize->add_setting('gcso_hero_slide2_heading', [
+        'default'           => '',
+        'sanitize_callback' => 'sanitize_text_field',
+    ]);
+    $wp_customize->add_control('gcso_hero_slide2_heading', [
+        'label'   => __('Slide 2 Heading', 'gcso'),
+        'section' => 'gcso_hero_slide2',
+        'type'    => 'text',
+    ]);
+
+    $wp_customize->add_setting('gcso_hero_slide2_description', [
+        'default'           => '',
+        'sanitize_callback' => 'sanitize_text_field',
+    ]);
+    $wp_customize->add_control('gcso_hero_slide2_description', [
+        'label'   => __('Slide 2 Description', 'gcso'),
+        'section' => 'gcso_hero_slide2',
+        'type'    => 'textarea',
+    ]);
+
+    $wp_customize->add_setting('gcso_hero_slide2_image', [
+        'default'           => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ]);
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'gcso_hero_slide2_image', [
+        'label'   => __('Slide 2 Background Image', 'gcso'),
+        'section' => 'gcso_hero_slide2',
+    ]));
+
+    $wp_customize->add_setting('gcso_hero_slide2_btn_text', [
+        'default'           => '',
+        'sanitize_callback' => 'sanitize_text_field',
+    ]);
+    $wp_customize->add_control('gcso_hero_slide2_btn_text', [
+        'label'   => __('Slide 2 Button Text', 'gcso'),
+        'section' => 'gcso_hero_slide2',
+        'type'    => 'text',
+    ]);
+
+    $wp_customize->add_setting('gcso_hero_slide2_btn_url', [
+        'default'           => '#',
+        'sanitize_callback' => 'esc_url_raw',
+    ]);
+    $wp_customize->add_control('gcso_hero_slide2_btn_url', [
+        'label'   => __('Slide 2 Button URL', 'gcso'),
+        'section' => 'gcso_hero_slide2',
+        'type'    => 'url',
+    ]);
+
+    // --- Hero Slide 3 ---
+    $wp_customize->add_section('gcso_hero_slide3', [
+        'title'       => __('Hero Slide 3', 'gcso'),
+        'panel'       => 'gcso_general',
+        'description' => __('Leave heading blank to disable this slide.', 'gcso'),
+    ]);
+
+    $wp_customize->add_setting('gcso_hero_slide3_heading', [
+        'default'           => '',
+        'sanitize_callback' => 'sanitize_text_field',
+    ]);
+    $wp_customize->add_control('gcso_hero_slide3_heading', [
+        'label'   => __('Slide 3 Heading', 'gcso'),
+        'section' => 'gcso_hero_slide3',
+        'type'    => 'text',
+    ]);
+
+    $wp_customize->add_setting('gcso_hero_slide3_description', [
+        'default'           => '',
+        'sanitize_callback' => 'sanitize_text_field',
+    ]);
+    $wp_customize->add_control('gcso_hero_slide3_description', [
+        'label'   => __('Slide 3 Description', 'gcso'),
+        'section' => 'gcso_hero_slide3',
+        'type'    => 'textarea',
+    ]);
+
+    $wp_customize->add_setting('gcso_hero_slide3_image', [
+        'default'           => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ]);
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'gcso_hero_slide3_image', [
+        'label'   => __('Slide 3 Background Image', 'gcso'),
+        'section' => 'gcso_hero_slide3',
+    ]));
+
+    $wp_customize->add_setting('gcso_hero_slide3_btn_text', [
+        'default'           => '',
+        'sanitize_callback' => 'sanitize_text_field',
+    ]);
+    $wp_customize->add_control('gcso_hero_slide3_btn_text', [
+        'label'   => __('Slide 3 Button Text', 'gcso'),
+        'section' => 'gcso_hero_slide3',
+        'type'    => 'text',
+    ]);
+
+    $wp_customize->add_setting('gcso_hero_slide3_btn_url', [
+        'default'           => '#',
+        'sanitize_callback' => 'esc_url_raw',
+    ]);
+    $wp_customize->add_control('gcso_hero_slide3_btn_url', [
+        'label'   => __('Slide 3 Button URL', 'gcso'),
+        'section' => 'gcso_hero_slide3',
+        'type'    => 'url',
+    ]);
+
     // --- Sheriff Message Section ---
     $wp_customize->add_section('gcso_sheriff', [
         'title' => __('Sheriff Message', 'gcso'),

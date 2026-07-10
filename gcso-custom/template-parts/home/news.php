@@ -9,7 +9,7 @@ defined('ABSPATH') || exit;
 
 $news_query = new WP_Query([
     'post_type'      => 'post',
-    'posts_per_page' => 3,
+    'posts_per_page' => 4,
     'post_status'    => 'publish',
     'orderby'        => 'date',
     'order'          => 'DESC',
@@ -30,32 +30,65 @@ $news_query = new WP_Query([
         </div>
 
         <?php if ($news_query->have_posts()) : ?>
-            <div class="gcso-news__grid">
-                <?php while ($news_query->have_posts()) : $news_query->the_post(); ?>
-                    <article class="gcso-news__card">
-                        <?php if (has_post_thumbnail()) : ?>
-                            <a href="<?php the_permalink(); ?>" class="gcso-news__image">
-                                <?php the_post_thumbnail('gcso-news-thumb', ['loading' => 'lazy']); ?>
-                            </a>
-                        <?php endif; ?>
-                        <div class="gcso-news__content">
-                            <h3 class="gcso-news__title">
-                                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                            </h3>
-                            <p class="gcso-news__excerpt"><?php echo esc_html(wp_trim_words(get_the_excerpt(), 18)); ?></p>
-                            <div class="gcso-news__meta">
-                                <time class="gcso-news__date" datetime="<?php echo esc_attr(get_the_date('c')); ?>">
-                                    <svg class="gcso-icon" aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/></svg>
-                                    <?php echo esc_html(get_the_date('M j, Y')); ?>
-                                </time>
-                                <a href="<?php the_permalink(); ?>" class="gcso-news__read-more">
-                                    <?php esc_html_e('Read More', 'gcso'); ?>
-                                    <span aria-hidden="true">&rarr;</span>
+            <div class="gcso-news__layout">
+                <?php
+                $post_index = 0;
+                while ($news_query->have_posts()) : $news_query->the_post();
+                    if ($post_index === 0) : ?>
+                        <!-- Featured / highlight post -->
+                        <article class="gcso-news__featured">
+                            <?php if (has_post_thumbnail()) : ?>
+                                <a href="<?php the_permalink(); ?>" class="gcso-news__featured-image">
+                                    <?php the_post_thumbnail('gcso-hero', ['loading' => 'lazy']); ?>
                                 </a>
+                            <?php endif; ?>
+                            <div class="gcso-news__featured-content">
+                                <span class="gcso-news__badge"><?php esc_html_e('Latest', 'gcso'); ?></span>
+                                <h3 class="gcso-news__featured-title">
+                                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                </h3>
+                                <p class="gcso-news__featured-excerpt"><?php echo esc_html(wp_trim_words(get_the_excerpt(), 30)); ?></p>
+                                <div class="gcso-news__meta">
+                                    <time class="gcso-news__date" datetime="<?php echo esc_attr(get_the_date('c')); ?>">
+                                        <svg class="gcso-icon" aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/></svg>
+                                        <?php echo esc_html(get_the_date('M j, Y')); ?>
+                                    </time>
+                                    <a href="<?php the_permalink(); ?>" class="gcso-news__read-more">
+                                        <?php esc_html_e('Read More', 'gcso'); ?>
+                                        <span aria-hidden="true">&rarr;</span>
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                    </article>
-                <?php endwhile; ?>
+                        </article>
+                        <div class="gcso-news__sidebar">
+                    <?php else : ?>
+                        <article class="gcso-news__card">
+                            <?php if (has_post_thumbnail()) : ?>
+                                <a href="<?php the_permalink(); ?>" class="gcso-news__image">
+                                    <?php the_post_thumbnail('gcso-news-thumb', ['loading' => 'lazy']); ?>
+                                </a>
+                            <?php endif; ?>
+                            <div class="gcso-news__content">
+                                <h3 class="gcso-news__title">
+                                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                </h3>
+                                <p class="gcso-news__excerpt"><?php echo esc_html(wp_trim_words(get_the_excerpt(), 14)); ?></p>
+                                <div class="gcso-news__meta">
+                                    <time class="gcso-news__date" datetime="<?php echo esc_attr(get_the_date('c')); ?>">
+                                        <svg class="gcso-icon" aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/></svg>
+                                        <?php echo esc_html(get_the_date('M j, Y')); ?>
+                                    </time>
+                                    <a href="<?php the_permalink(); ?>" class="gcso-news__read-more">
+                                        <?php esc_html_e('Read More', 'gcso'); ?>
+                                        <span aria-hidden="true">&rarr;</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    <?php endif;
+                    $post_index++;
+                endwhile; ?>
+                </div><!-- .gcso-news__sidebar -->
             </div>
         <?php else : ?>
             <p><?php esc_html_e('No news articles found.', 'gcso'); ?></p>

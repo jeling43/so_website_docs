@@ -6,6 +6,8 @@
  */
 
 defined('ABSPATH') || exit;
+
+$sheriff_name = gcso_get_option('gcso_sheriff_name', 'Sheriff');
 ?>
 <div class="gcso-header__branding">
     <?php if (has_custom_logo()) : ?>
@@ -24,5 +26,8 @@ defined('ABSPATH') || exit;
             <span class="gcso-header__site-name"><?php echo esc_html(get_bloginfo('name', 'display')); ?></span>
             <span class="gcso-header__tagline"><?php echo esc_html(get_bloginfo('description')); ?></span>
         </a>
+        <?php if ($sheriff_name) : ?>
+            <span class="gcso-header__sheriff-name"><?php echo esc_html($sheriff_name); ?></span>
+        <?php endif; ?>
     </div>
 </div>

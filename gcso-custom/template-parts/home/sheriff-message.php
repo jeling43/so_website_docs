@@ -13,11 +13,15 @@ $sheriff_message = gcso_get_option('gcso_sheriff_message', 'At the Gordon County
 ?>
 
 <section class="gcso-sheriff-message" aria-labelledby="sheriff-heading">
+    <div class="gcso-sheriff-message__bg-accent"></div>
     <div class="gcso-container gcso-sheriff-message__inner">
         <div class="gcso-sheriff-message__image">
             <?php if ($sheriff_photo) : ?>
-                <img src="<?php echo esc_url($sheriff_photo); ?>" alt="<?php echo esc_attr($sheriff_name); ?>" loading="lazy" width="500" height="400">
+                <img src="<?php echo esc_url($sheriff_photo); ?>" alt="<?php echo esc_attr($sheriff_name); ?>" loading="lazy" width="500" height="500">
             <?php endif; ?>
+            <div class="gcso-sheriff-message__image-badge">
+                <img src="<?php echo esc_url(GCSO_URI . '/assets/images/gcso-badge.png'); ?>" alt="" width="60" height="60" aria-hidden="true">
+            </div>
         </div>
         <div class="gcso-sheriff-message__content">
             <span class="gcso-sheriff-message__label">
@@ -25,6 +29,9 @@ $sheriff_message = gcso_get_option('gcso_sheriff_message', 'At the Gordon County
                 <?php esc_html_e('Message from the Sheriff', 'gcso'); ?>
             </span>
             <h2 id="sheriff-heading" class="gcso-sheriff-message__heading"><?php esc_html_e('Welcome to the Gordon County Sheriff\'s Office', 'gcso'); ?></h2>
+            <?php if ($sheriff_name) : ?>
+                <p class="gcso-sheriff-message__name"><?php echo esc_html($sheriff_name); ?></p>
+            <?php endif; ?>
             <div class="gcso-sheriff-message__text">
                 <?php echo wp_kses_post($sheriff_message); ?>
             </div>

@@ -43,6 +43,11 @@ $quick_links = [
 
 <section class="gcso-quick-links" aria-label="<?php esc_attr_e('Quick Access Links', 'gcso'); ?>">
     <div class="gcso-container">
+        <h2 class="gcso-section-heading">
+            <span class="gcso-section-heading__line"></span>
+            <?php esc_html_e('Quick Access', 'gcso'); ?>
+            <span class="gcso-section-heading__line"></span>
+        </h2>
         <div class="gcso-quick-links__grid">
             <?php foreach ($quick_links as $link) : ?>
                 <a href="<?php echo esc_url($link['url']); ?>" class="gcso-quick-links__card">
@@ -50,7 +55,7 @@ $quick_links = [
                         <?php echo $link['icon']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
                     </div>
                     <span class="gcso-quick-links__title"><?php echo esc_html($link['title']); ?></span>
-                    <span class="gcso-quick-links__underline"></span>
+                    <span class="gcso-quick-links__arrow" aria-hidden="true">&rarr;</span>
                 </a>
             <?php endforeach; ?>
         </div>

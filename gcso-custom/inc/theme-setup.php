@@ -96,5 +96,15 @@ function gcso_widgets_init() {
         'before_title'  => '<h4 class="gcso-footer-widget__title">',
         'after_title'   => '</h4>',
     ]);
+
+    register_sidebar([
+        'name'          => __('Social Media Feed', 'gcso'),
+        'id'            => 'social-feed-1',
+        'description'   => __('Add social media embed widgets here (e.g. Facebook Page plugin, Twitter timeline).', 'gcso'),
+        'before_widget' => '<div id="%1$s" class="gcso-social-feed-widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h4 class="gcso-social-feed-widget__title">',
+        'after_title'   => '</h4>',
+    ]);
 }
 add_action('widgets_init', 'gcso_widgets_init');
