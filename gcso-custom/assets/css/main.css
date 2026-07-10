@@ -718,6 +718,12 @@ p:last-child {
     position: relative;
     overflow: hidden;
     background: var(--gcso-navy);
+    outline: none;
+}
+
+.gcso-hero-carousel:focus-visible {
+    outline: 3px solid var(--gcso-gold);
+    outline-offset: -3px;
 }
 
 .gcso-hero-carousel__track {

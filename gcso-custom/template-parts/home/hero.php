@@ -52,7 +52,7 @@ if ($s3_heading) {
 $slide_count = count($slides);
 ?>
 
-<section class="gcso-hero-carousel" aria-label="<?php esc_attr_e('Hero', 'gcso'); ?>" aria-roledescription="carousel">
+<section class="gcso-hero-carousel" aria-label="<?php esc_attr_e('Hero', 'gcso'); ?>" aria-roledescription="carousel" tabindex="0">
     <div class="gcso-hero-carousel__track">
         <?php foreach ($slides as $index => $slide) : ?>
             <div class="gcso-hero-carousel__slide<?php echo $index === 0 ? ' is-active' : ''; ?>"
