@@ -24,7 +24,7 @@ This document covers how to test the GCSO Custom WordPress theme for functionali
 Use the Docker setup (see [LOCAL-DEVELOPMENT.md](./LOCAL-DEVELOPMENT.md)):
 
 ```bash
-docker-compose up -d
+docker compose up -d
 # Access at http://localhost:8080
 ```
 
