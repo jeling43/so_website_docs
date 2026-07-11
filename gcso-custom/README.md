@@ -40,7 +40,7 @@ cd so_website_docs
 cp .env.example .env
 
 # 3. Start Docker containers
-docker-compose up -d
+docker compose up -d
 
 # 4. Wait ~30 seconds for WordPress to initialize, then visit:
 #    WordPress: http://localhost:8080
@@ -66,22 +66,22 @@ docker-compose up -d
 
 ```bash
 # Start containers
-docker-compose up -d
+docker compose up -d
 
 # Stop containers
-docker-compose down
+docker compose down
 
 # View logs
-docker-compose logs -f wordpress
+docker compose logs -f wordpress
 
 # Restart WordPress container
-docker-compose restart wordpress
+docker compose restart wordpress
 
 # Destroy everything (including database)
-docker-compose down -v
+docker compose down -v
 
 # Rebuild containers
-docker-compose up -d --build
+docker compose up -d --build
 ```
 
 ### Working on Theme Files
@@ -99,8 +99,8 @@ The `gcso-custom/` directory is mounted directly into the WordPress container. A
 
 ```bash
 # Run WP-CLI commands inside the container
-docker-compose exec wordpress wp --allow-root theme list
-docker-compose exec wordpress wp --allow-root plugin install wordpress-importer --activate
+docker compose exec wordpress wp --allow-root theme list
+docker compose exec wordpress wp --allow-root plugin install wordpress-importer --activate
 ```
 
 ---

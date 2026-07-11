@@ -22,7 +22,7 @@ Open a terminal and confirm these commands work:
 docker --version
 # Docker version 24.x or higher
 
-docker-compose --version
+docker compose --version
 # Docker Compose version v2.x or higher
 
 git --version
@@ -145,49 +145,49 @@ so_website_docs/
 
 ```bash
 # Start all containers (runs in background)
-docker-compose up -d
+docker compose up -d
 
 # Stop all containers (preserves data)
-docker-compose down
+docker compose down
 
 # Restart everything
-docker-compose restart
+docker compose restart
 
 # View running containers
-docker-compose ps
+docker compose ps
 ```
 
 ### Viewing Logs
 
 ```bash
 # All logs
-docker-compose logs
+docker compose logs
 
 # WordPress logs only
-docker-compose logs wordpress
+docker compose logs wordpress
 
 # Follow logs in real time
-docker-compose logs -f wordpress
+docker compose logs -f wordpress
 
 # Last 50 lines
-docker-compose logs --tail=50 wordpress
+docker compose logs --tail=50 wordpress
 ```
 
 ### Resetting the Environment
 
 ```bash
 # Stop and remove containers + volumes (DELETES DATABASE)
-docker-compose down -v
+docker compose down -v
 
 # Start fresh
-docker-compose up -d
+docker compose up -d
 ```
 
 ### Accessing the Container Shell
 
 ```bash
 # WordPress container
-docker-compose exec wordpress bash
+docker compose exec wordpress bash
 
 # Inside the container, WordPress files are at:
 # /var/www/html/
@@ -199,22 +199,22 @@ docker-compose exec wordpress bash
 
 ```bash
 # List themes
-docker-compose exec wordpress wp --allow-root theme list
+docker compose exec wordpress wp --allow-root theme list
 
 # Activate the theme
-docker-compose exec wordpress wp --allow-root theme activate gcso-custom
+docker compose exec wordpress wp --allow-root theme activate gcso-custom
 
 # Create test posts
-docker-compose exec wordpress wp --allow-root post generate --count=5
+docker compose exec wordpress wp --allow-root post generate --count=5
 
 # Import test content
-docker-compose exec wordpress wp --allow-root plugin install wordpress-importer --activate
+docker compose exec wordpress wp --allow-root plugin install wordpress-importer --activate
 
 # Flush permalinks
-docker-compose exec wordpress wp --allow-root rewrite flush
+docker compose exec wordpress wp --allow-root rewrite flush
 
 # Enable debug mode
-docker-compose exec wordpress wp --allow-root config set WP_DEBUG true --raw
+docker compose exec wordpress wp --allow-root config set WP_DEBUG true --raw
 ```
 
 ---
@@ -224,12 +224,12 @@ docker-compose exec wordpress wp --allow-root config set WP_DEBUG true --raw
 ### Create the Homepage
 
 ```bash
-docker-compose exec wordpress wp --allow-root post create \
+docker compose exec wordpress wp --allow-root post create \
   --post_type=page \
   --post_title="Home" \
   --post_status=publish
 
-docker-compose exec wordpress wp --allow-root post create \
+docker compose exec wordpress wp --allow-root post create \
   --post_type=page \
   --post_title="News" \
   --post_status=publish
@@ -243,17 +243,17 @@ Then in **Settings > Reading**:
 ### Create Sample News Posts
 
 ```bash
-docker-compose exec wordpress wp --allow-root post create \
+docker compose exec wordpress wp --allow-root post create \
   --post_title="GCSO Honors Fallen Heroes on Memorial Day" \
   --post_content="We remember and honor the brave men and women who made the ultimate sacrifice." \
   --post_status=publish
 
-docker-compose exec wordpress wp --allow-root post create \
+docker compose exec wordpress wp --allow-root post create \
   --post_title="Community Safety Event a Success" \
   --post_content="Thank you to everyone who joined us for our Community Safety Event this past weekend." \
   --post_status=publish
 
-docker-compose exec wordpress wp --allow-root post create \
+docker compose exec wordpress wp --allow-root post create \
   --post_title="Deputies Complete Advanced Training" \
   --post_content="GCSO deputies successfully completed advanced training in defensive tactics." \
   --post_status=publish
@@ -283,15 +283,15 @@ WORDPRESS_DEBUG: 1
 Or run:
 
 ```bash
-docker-compose exec wordpress wp --allow-root config set WP_DEBUG true --raw
-docker-compose exec wordpress wp --allow-root config set WP_DEBUG_LOG true --raw
-docker-compose exec wordpress wp --allow-root config set WP_DEBUG_DISPLAY true --raw
+docker compose exec wordpress wp --allow-root config set WP_DEBUG true --raw
+docker compose exec wordpress wp --allow-root config set WP_DEBUG_LOG true --raw
+docker compose exec wordpress wp --allow-root config set WP_DEBUG_DISPLAY true --raw
 ```
 
 View debug logs:
 
 ```bash
-docker-compose exec wordpress cat /var/www/html/wp-content/debug.log
+docker compose exec wordpress cat /var/www/html/wp-content/debug.log
 ```
 
 ---
@@ -306,7 +306,7 @@ If port 8080 or 3306 is already in use:
    ports:
      - "8888:80"   # Change 8080 to 8888
    ```
-3. Restart: `docker-compose down && docker-compose up -d`
+3. Restart: `docker compose down && docker compose up -d`
 4. Access at http://localhost:8888
 
 ---
@@ -345,14 +345,14 @@ Create `.vscode/settings.json`:
 - Restart Docker Desktop
 
 ### WordPress shows a blank page
-- Check logs: `docker-compose logs wordpress`
+- Check logs: `docker compose logs wordpress`
 - Enable WP_DEBUG (see above)
 - Ensure all PHP files have proper `<?php` opening tags
 
 ### Theme not appearing in Themes list
 - Verify `style.css` exists in `gcso-custom/` with proper header
 - Check the volume mount in `docker-compose.yml`
-- Run: `docker-compose exec wordpress ls /var/www/html/wp-content/themes/gcso-custom/`
+- Run: `docker compose exec wordpress ls /var/www/html/wp-content/themes/gcso-custom/`
 
 ### CSS changes not showing
 - Hard refresh: Ctrl+Shift+R (Windows) / Cmd+Shift+R (Mac)
@@ -361,8 +361,8 @@ Create `.vscode/settings.json`:
 
 ### Database connection error
 - Wait 30 seconds and retry (MySQL may still be starting)
-- Check if MySQL container is running: `docker-compose ps`
-- Try: `docker-compose restart db`
+- Check if MySQL container is running: `docker compose ps`
+- Try: `docker compose restart db`
 
 ---
 
