@@ -1937,6 +1937,248 @@ textarea:focus-visible {
 }
 
 /* ==========================================================================
+   9b. SERVICE & CONTACT PAGE TEMPLATES
+   ========================================================================== */
+
+/* Service page layout */
+.gcso-service-page {
+    padding: var(--space-lg) 0;
+}
+
+.gcso-service-page__intro {
+    max-width: var(--content-width);
+    margin-bottom: var(--space-lg);
+    font-size: var(--fs-md);
+    line-height: 1.7;
+    color: #444;
+}
+
+/* Info cards grid */
+.gcso-info-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+}
+
+.gcso-info-card {
+    background: var(--gcso-white);
+    border: 1px solid var(--gcso-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    box-shadow: var(--shadow-card);
+}
+
+.gcso-info-card--full {
+    grid-column: 1 / -1;
+}
+
+.gcso-info-card--highlight {
+    border-left: 4px solid var(--gcso-gold);
+}
+
+.gcso-info-card__title {
+    font-size: var(--fs-lg);
+    color: var(--gcso-navy);
+    margin-bottom: var(--space-sm);
+    padding-bottom: var(--space-xs);
+    border-bottom: 2px solid var(--gcso-gold);
+}
+
+.gcso-info-card__body {
+    line-height: 1.7;
+}
+
+.gcso-info-card__body p {
+    margin-bottom: var(--space-sm);
+}
+
+.gcso-info-card__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.gcso-info-card__list li {
+    padding: var(--space-xs) 0;
+    border-bottom: 1px solid var(--gcso-light-gray);
+    padding-left: 1.25rem;
+    position: relative;
+}
+
+.gcso-info-card__list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.85rem;
+    width: 6px;
+    height: 6px;
+    background: var(--gcso-gold);
+    border-radius: 50%;
+}
+
+.gcso-info-card__list li:last-child {
+    border-bottom: none;
+}
+
+.gcso-info-card__list--columns {
+    columns: 2;
+    column-gap: var(--space-lg);
+}
+
+/* Contact page */
+.gcso-contact-page {
+    padding: var(--space-lg) 0;
+}
+
+.gcso-contact-cards__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+}
+
+.gcso-contact-card {
+    background: var(--gcso-white);
+    border: 1px solid var(--gcso-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    text-align: center;
+    box-shadow: var(--shadow-card);
+    transition: box-shadow var(--transition-base);
+}
+
+.gcso-contact-card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.gcso-contact-card__icon {
+    color: var(--gcso-gold);
+    margin-bottom: var(--space-sm);
+}
+
+.gcso-contact-card__title {
+    font-size: var(--fs-md);
+    color: var(--gcso-navy);
+    margin-bottom: var(--space-xs);
+}
+
+.gcso-contact-card__sub {
+    font-size: var(--fs-sm);
+    font-weight: 700;
+    color: #c0392b;
+    margin-top: var(--space-xs);
+}
+
+.gcso-contact-card a {
+    color: var(--gcso-gold);
+    font-weight: 600;
+}
+
+.gcso-contact-card a:hover {
+    color: var(--gcso-gold-dark);
+}
+
+/* Staff directory */
+.gcso-staff-directory__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: var(--space-md);
+}
+
+.gcso-staff-card {
+    background: var(--gcso-white);
+    border: 1px solid var(--gcso-border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    transition: box-shadow var(--transition-base);
+}
+
+.gcso-staff-card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.gcso-staff-card__photo img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.gcso-staff-card__info {
+    padding: var(--space-md);
+    text-align: center;
+}
+
+.gcso-staff-card__name {
+    font-size: var(--fs-md);
+    color: var(--gcso-navy);
+    margin-bottom: var(--space-xs);
+}
+
+.gcso-staff-card__rank {
+    font-size: var(--fs-sm);
+    color: var(--gcso-gold);
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.gcso-staff-card__position {
+    font-size: var(--fs-sm);
+    color: #666;
+}
+
+/* Alert box (Most Wanted, etc.) */
+.gcso-alert-box {
+    background: #fff3cd;
+    border: 1px solid #ffc107;
+    border-left: 4px solid #ffc107;
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    margin-bottom: var(--space-lg);
+    font-size: var(--fs-md);
+}
+
+.gcso-alert-box a {
+    color: var(--gcso-navy);
+    font-weight: 700;
+}
+
+/* Tip line phone */
+.gcso-tip-phone {
+    font-size: var(--fs-xl);
+    font-weight: 700;
+}
+
+.gcso-tip-phone a {
+    color: var(--gcso-navy);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.gcso-tip-phone a:hover {
+    color: var(--gcso-gold);
+}
+
+.gcso-info-card__body--center {
+    text-align: center;
+}
+
+/* Legal pages */
+.gcso-legal-page {
+    max-width: var(--content-width);
+    padding: var(--space-lg) 0;
+}
+
+.gcso-legal-page__updated {
+    font-size: var(--fs-sm);
+    color: #666;
+    font-style: italic;
+    margin-bottom: var(--space-lg);
+}
+
+/* ==========================================================================
    10. FOOTER
    ========================================================================== */
 
@@ -2229,6 +2471,21 @@ textarea:focus-visible {
 
     .gcso-hero-carousel__track {
         min-height: 700px;
+    }
+}
+
+/* Service & contact page responsive */
+@media (max-width: 768px) {
+    .gcso-info-card__list--columns {
+        columns: 1;
+    }
+
+    .gcso-contact-cards__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gcso-staff-directory__grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
 }
 
