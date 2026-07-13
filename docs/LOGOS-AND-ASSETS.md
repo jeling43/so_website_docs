@@ -125,6 +125,47 @@ The hero carousel supports up to **3 slides**, configured via **Appearance → C
 
 ---
 
+## Department Page Image Specs (Jail, Enforcement, Records, etc.)
+
+Use consistent image dimensions across division pages to improve usability, visual consistency, and easier content maintenance.
+
+### Recommended Department Assets
+
+| Asset Type | Recommended Size (px) | Format | Suggested Filename Pattern | Used In |
+|------------|------------------------|--------|----------------------------|---------|
+| Department Hero Banner | **1600 × 600** | WebP (preferred) or JPG | `dept-{name}-hero.webp` | Top of each department page (Jail, Patrol/Enforcement, CID, Records, etc.) |
+| Department Feature Card Image | **800 × 500** | WebP or JPG | `dept-{name}-card.webp` | Service cards/grids on department landing pages |
+| Staff/Unit Photo | **600 × 750** | WebP or JPG | `dept-{name}-staff-{person}.webp` | Leadership/contact sections |
+| Icon/Badge for Service Blocks | **128 × 128** | Transparent PNG or SVG | `icon-{service}.png` / `icon-{service}.svg` | Quick links and “Most Requested Tasks” buttons |
+| Downloadable Form Preview Thumbnail | **1200 × 1550** | JPG or WebP | `form-{topic}-preview.jpg` | Records/forms listing pages |
+
+### Department Hero Display Guidance
+
+- Use a **wide composition** that keeps key subjects centered.
+- Add a subtle dark overlay for readable text on top of photos.
+- Keep headline and CTA content inside the center-safe area (avoid outer 15% edges).
+- Target file size under **350 KB** per hero image where possible.
+
+### Suggested Department Hero Filenames
+
+```text
+dept-jail-hero.webp
+dept-enforcement-hero.webp
+dept-cid-hero.webp
+dept-records-hero.webp
+dept-court-services-hero.webp
+dept-community-programs-hero.webp
+```
+
+### HCI Notes for Department Images
+
+- Prefer **recognizable local context** images to strengthen information scent.
+- Avoid text baked into images (improves accessibility and responsiveness).
+- Keep visual style consistent so users can quickly recognize page structure.
+- Ensure all informative images include meaningful alt text.
+
+---
+
 ## Status
 
 - [ ] `gcso-custom/assets/images/` directory created
@@ -132,4 +173,7 @@ The hero carousel supports up to **3 slides**, configured via **Appearance → C
 - [ ] `gcso-badge-large.png` (900 × 900) — generated/obtained
 - [ ] `gcso-badge.png` (200 × 200) — scaled from large badge
 - [ ] `gcso-footer-logo.png` (500 × 200) — generated/obtained
+- [ ] Department hero images prepared (1600 × 600)
+- [ ] Department card images prepared (800 × 500)
+- [ ] Service icons prepared (128 × 128)
 - [ ] Custom logo uploaded via WordPress Customizer
