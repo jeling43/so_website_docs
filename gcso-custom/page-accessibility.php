@@ -21,7 +21,7 @@ get_header();
                 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                     <?php the_content(); ?>
                 <?php endwhile; else : ?>
-                    <p class="gcso-legal-page__updated"><?php esc_html_e('Last updated:', 'gcso'); ?> <?php echo esc_html(date('F j, Y')); ?></p>
+                    <p class="gcso-legal-page__updated"><?php esc_html_e('Last updated:', 'gcso'); ?> <?php echo esc_html(wp_date('F j, Y')); ?></p>
 
                     <h2><?php esc_html_e('Our Commitment', 'gcso'); ?></h2>
                     <p><?php esc_html_e('The Gordon County Sheriff\'s Office is committed to ensuring that our website is accessible to all users, including those with disabilities. We strive to meet or exceed the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA standards.', 'gcso'); ?></p>

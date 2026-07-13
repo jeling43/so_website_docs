@@ -21,7 +21,7 @@ get_header();
                 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                     <?php the_content(); ?>
                 <?php endwhile; else : ?>
-                    <p class="gcso-legal-page__updated"><?php esc_html_e('Last updated:', 'gcso'); ?> <?php echo esc_html(date('F j, Y')); ?></p>
+                    <p class="gcso-legal-page__updated"><?php esc_html_e('Last updated:', 'gcso'); ?> <?php echo esc_html(wp_date('F j, Y')); ?></p>
 
                     <h2><?php esc_html_e('Information We Collect', 'gcso'); ?></h2>
                     <p><?php esc_html_e('The Gordon County Sheriff\'s Office website may collect information that you voluntarily provide, such as your name, email address, and phone number when you submit a form or request. We do not collect personal information unless you choose to provide it.', 'gcso'); ?></p>
