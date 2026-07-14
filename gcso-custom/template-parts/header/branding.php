@@ -7,7 +7,7 @@
 
 defined('ABSPATH') || exit;
 
-$sheriff_name = gcso_get_option('gcso_sheriff_name', 'Sheriff');
+$sheriff_name = gcso_get_option('gcso_sheriff_name', 'Sheriff Mitch Ralston');
 ?>
 <div class="gcso-header__branding">
     <?php if (has_custom_logo()) : ?>
