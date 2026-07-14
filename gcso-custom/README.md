@@ -1,6 +1,6 @@
 # GCSO Custom WordPress Theme
 
-Custom WordPress theme for the **Gordon County Sheriff's Office** website redesign. Built without page builders (no Divi, Elementor, or Gutenberg blocks for layout) using clean PHP, HTML5, CSS, and vanilla JavaScript.
+Custom WordPress theme for the **Gordon County Sheriff's Office** website. Built without page builders — using clean PHP, HTML5, CSS, and vanilla JavaScript.
 
 ---
 
@@ -14,11 +14,10 @@ Custom WordPress theme for the **Gordon County Sheriff's Office** website redesi
 6. [Logo Setup](#logo-setup)
 7. [Image Placement](#image-placement)
 8. [Customizer Settings](#customizer-settings)
-9. [Migration Notes (Divi)](#migration-notes-divi)
-10. [Testing Checklist](#testing-checklist)
-11. [Launch Checklist](#launch-checklist)
-12. [Rollback Instructions](#rollback-instructions)
-13. [Theme Structure](#theme-structure)
+9. [Testing Checklist](#testing-checklist)
+10. [Launch Checklist](#launch-checklist)
+11. [Rollback Instructions](#rollback-instructions)
+12. [Theme Structure](#theme-structure)
 
 ---
 
@@ -134,7 +133,6 @@ docker compose exec wordpress wp --allow-root plugin install wordpress-importer 
 1. Log in to the **WP STAGING** admin dashboard
 2. Go to **Appearance > Themes**
 3. Locate **GCSO Custom** and click **Activate**
-4. The previous theme (Divi) remains installed but inactive — it will **not** be deleted automatically
 
 ---
 
@@ -231,40 +229,6 @@ Go to **Appearance > Customize > GCSO Settings** to edit:
 
 ---
 
-## Migration Notes (Divi)
-
-### Important
-
-- **Do NOT deactivate Divi** until all pages have been rebuilt
-- The new theme works completely independently of Divi
-- Divi shortcodes (`[et_pb_*]`) will appear as raw text in pages that haven't been rebuilt
-
-### Migration Steps
-
-1. **Install & activate** GCSO Custom on staging
-2. **Rebuild key pages** using the WordPress block editor or plain HTML:
-   - Home (handled by `front-page.php`)
-   - About GCSO
-   - Contact
-   - Services
-   - Divisions
-   - Careers
-3. **Clean up** old Divi content from rebuilt pages
-4. **Test thoroughly** on staging
-5. **Push to production** when ready
-6. After confirming everything works, **deactivate Divi** (keep it installed as a safety net for 30 days)
-7. After 30 days with no issues, **delete Divi**
-
-### Dealing with Divi Shortcodes
-
-If pages show raw `[et_pb_*]` shortcodes:
-1. Edit the page
-2. Remove all Divi shortcode content
-3. Re-enter content using standard WordPress editor
-4. Update the page
-
----
-
 ## Testing Checklist
 
 ### Functionality
@@ -320,7 +284,7 @@ If pages show raw `[et_pb_*]` shortcodes:
 
 ## Launch Checklist
 
-1. [ ] All pages rebuilt from Divi content
+1. [ ] All pages created and content entered
 2. [ ] All menu locations assigned
 3. [ ] Homepage set as static front page
 4. [ ] Custom logo uploaded
@@ -336,10 +300,9 @@ If pages show raw `[et_pb_*]` shortcodes:
 14. [ ] Cache plugin installed and configured
 15. [ ] Backup created before switching
 16. [ ] DNS/hosting team notified
-17. [ ] Divi deactivated (after full verification)
-18. [ ] All 301 redirects in place (if URLs changed)
-19. [ ] Google Search Console updated
-20. [ ] Analytics tracking confirmed
+17. [ ] All 301 redirects in place (if URLs changed)
+18. [ ] Google Search Console updated
+19. [ ] Analytics tracking confirmed
 
 ---
 
@@ -350,8 +313,8 @@ If something goes wrong after activating the new theme:
 ### Quick Rollback (via Admin)
 
 1. Go to **Appearance > Themes**
-2. Activate the previous theme (Divi)
-3. The site immediately reverts to the old design
+2. Activate a different installed theme (e.g., Twenty Twenty-Four)
+3. The site immediately reverts to that theme's design
 
 ### Rollback via FTP (if Admin is inaccessible)
 
@@ -359,15 +322,14 @@ If something goes wrong after activating the new theme:
 2. Navigate to `/wp-content/themes/`
 3. Rename `gcso-custom` to `gcso-custom-disabled`
 4. WordPress will automatically fall back to a default theme
-5. Log into admin and reactivate Divi
 
 ### Rollback via Database
 
 1. Access phpMyAdmin or MySQL CLI
 2. Run:
    ```sql
-   UPDATE wp_options SET option_value = 'Divi' WHERE option_name = 'template';
-   UPDATE wp_options SET option_value = 'Divi' WHERE option_name = 'stylesheet';
+   UPDATE wp_options SET option_value = 'twentytwentyfour' WHERE option_name = 'template';
+   UPDATE wp_options SET option_value = 'twentytwentyfour' WHERE option_name = 'stylesheet';
    ```
 
 ### Restore from Backup
