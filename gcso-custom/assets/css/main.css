@@ -2554,3 +2554,219 @@ textarea:focus-visible {
         transition-duration: 0.01ms !important;
     }
 }
+
+/* ==========================================================================
+   NEW PAGE COMPONENTS
+   ========================================================================== */
+
+/* Organization Chart */
+.gcso-org-chart__tree {
+    max-width: 700px;
+    margin: 0 auto var(--spacing-lg);
+    text-align: center;
+}
+
+.gcso-org-chart__level {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.gcso-org-chart__level--branches {
+    align-items: flex-start;
+}
+
+.gcso-org-chart__node {
+    background: var(--color-navy);
+    color: var(--color-white);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-md);
+    font-weight: 700;
+    font-family: var(--font-heading);
+    font-size: var(--text-sm);
+}
+
+.gcso-org-chart__node--primary {
+    background: var(--color-gold);
+    color: var(--color-navy);
+    font-size: var(--text-base);
+    padding: var(--spacing-sm) var(--spacing-lg);
+}
+
+.gcso-org-chart__connector {
+    width: 2px;
+    height: 24px;
+    background: var(--color-navy);
+    margin: 0 auto;
+}
+
+.gcso-org-chart__connector--split {
+    position: relative;
+    width: 50%;
+    height: 24px;
+    background: transparent;
+    border-top: 2px solid var(--color-navy);
+    margin-top: 24px;
+}
+
+.gcso-org-chart__connector--split::before {
+    content: '';
+    position: absolute;
+    top: -24px;
+    left: 50%;
+    width: 2px;
+    height: 24px;
+    background: var(--color-navy);
+}
+
+.gcso-org-chart__branch {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+}
+
+.gcso-org-chart__units {
+    list-style: none;
+    padding: var(--spacing-sm) 0 0;
+    margin: 0;
+}
+
+.gcso-org-chart__units li {
+    padding: var(--spacing-xs) 0;
+}
+
+.gcso-org-chart__units a {
+    color: var(--color-gold);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.gcso-org-chart__units a:hover,
+.gcso-org-chart__units a:focus {
+    text-decoration: underline;
+    color: var(--color-gold-dark);
+}
+
+/* Division Grid */
+.gcso-division-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.gcso-division-grid__card {
+    display: block;
+    padding: var(--spacing-md);
+    background: var(--color-white);
+    border: 1px solid var(--color-light-gray);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+    text-decoration: none;
+    color: var(--color-dark-text);
+    transition: box-shadow var(--transition-base), transform var(--transition-base);
+}
+
+.gcso-division-grid__card:hover,
+.gcso-division-grid__card:focus {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.gcso-division-grid__title {
+    color: var(--color-navy);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: var(--text-lg);
+    margin: 0 0 var(--spacing-xs);
+}
+
+.gcso-division-grid__desc {
+    margin: 0 0 var(--spacing-sm);
+    font-size: var(--text-sm);
+    line-height: 1.5;
+}
+
+.gcso-division-grid__link {
+    color: var(--color-gold);
+    font-weight: 600;
+    font-size: var(--text-sm);
+}
+
+/* Linked Info Cards */
+a.gcso-info-card--link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow var(--transition-base), transform var(--transition-base);
+}
+
+a.gcso-info-card--link:hover,
+a.gcso-info-card--link:focus {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+a.gcso-info-card--link .gcso-info-card__title {
+    color: var(--color-navy);
+}
+
+a.gcso-info-card--link:hover .gcso-info-card__title,
+a.gcso-info-card--link:focus .gcso-info-card__title {
+    color: var(--color-gold);
+}
+
+/* External Link Icon */
+.gcso-icon--external {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 0.35em;
+}
+
+/* Quick Links External Indicator */
+.gcso-quick-links__external {
+    color: var(--color-gold);
+    margin-top: var(--spacing-xs);
+}
+
+/* Sheriff Bio Layout */
+.gcso-sheriff-bio__layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    align-items: start;
+}
+
+@media (min-width: 768px) {
+    .gcso-sheriff-bio__layout {
+        grid-template-columns: 250px 1fr;
+    }
+}
+
+.gcso-sheriff-bio__photo img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+}
+
+/* Alert Box */
+.gcso-alert-box {
+    background: #fdf2f2;
+    border: 1px solid var(--color-emergency-red);
+    border-left: 4px solid var(--color-emergency-red);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--spacing-lg);
+}
+
+.gcso-alert-box p {
+    margin: 0;
+    color: var(--color-dark-text);
+}
+
+/* Jail Actions Section */
+.gcso-jail-actions {
+    margin-bottom: var(--spacing-lg);
+}

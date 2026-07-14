@@ -22,7 +22,7 @@ $emergency = gcso_get_option('gcso_emergency_phone', '911');
                 <span><?php printf(esc_html__('Non-Emergency: %s', 'gcso'), esc_html($phone)); ?></span>
             </li>
             <li class="gcso-utility-bar__item">
-                <a href="#" class="gcso-utility-bar__link">
+                <a href="<?php echo esc_url(home_url('/services/submit-a-tip')); ?>" class="gcso-utility-bar__link">
                     <svg class="gcso-icon" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4a2 2 0 00-2 2v12a2 2 0 002 2h4l4 4 4-4h4a2 2 0 002-2V4a2 2 0 00-2-2z"/></svg>
                     <span><?php esc_html_e('Submit a Tip', 'gcso'); ?></span>
                 </a>
