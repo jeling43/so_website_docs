@@ -394,8 +394,7 @@ If using the **WP Staging** plugin for testing:
 - Monitor site for 24–48 hours
 - Check Google Search Console for crawl errors
 - Verify analytics is tracking
-- Keep old theme (Divi) installed but inactive for 30 days as safety net
-- After 30 days with no issues, delete old theme
+- Keep a backup of the site available for 30 days as a safety net
 
 ---
 

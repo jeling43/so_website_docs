@@ -155,7 +155,7 @@ Use this pack to generate **temporary but realistic website assets** while final
 1. Generate each image at the exact size listed.
 2. Keep filenames exactly as specified above.
 3. Upload all files to WordPress Media Library.
-4. Assign in Divi modules per your page plan.
+4. Place images in the appropriate theme template or assign via the Customizer.
 5. Later, replace temp images with final assets using the same filenames where possible.
 
 ## Optional Upscale / Export Settings
