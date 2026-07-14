@@ -28,7 +28,7 @@ get_header();
                     <span class="gcso-section-heading__line"></span>
                 </h2>
 
-                <div class="gcso-org-chart__tree" role="img" aria-label="<?php esc_attr_e('Gordon County Sheriff\'s Office organizational chart showing the Sheriff at top, followed by Chief Deputy, then Enforcement Bureau and Judicial Bureau', 'gcso'); ?>">
+                <div class="gcso-org-chart__tree" role="img" aria-label="<?php esc_attr_e('Gordon County Sheriff Office organizational chart showing the Sheriff at top, followed by Chief Deputy, then Enforcement Bureau and Judicial Bureau', 'gcso'); ?>">
                     <div class="gcso-org-chart__level gcso-org-chart__level--top">
                         <div class="gcso-org-chart__node gcso-org-chart__node--primary">
                             <?php esc_html_e('Sheriff', 'gcso'); ?>

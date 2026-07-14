@@ -57,10 +57,8 @@ $quick_links = [
         <div class="gcso-quick-links__grid">
             <?php foreach ($quick_links as $link) :
                 $is_external = !empty($link['external']);
-                $target_attrs = $is_external ? ' target="_blank" rel="noopener noreferrer"' : '';
-                $aria_label = $is_external ? ' aria-label="' . esc_attr($link['title']) . ' ' . esc_attr__('(opens external site)', 'gcso') . '"' : '';
             ?>
-                <a href="<?php echo esc_url($link['url']); ?>" class="gcso-quick-links__card"<?php echo $target_attrs . $aria_label; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+                <a href="<?php echo esc_url($link['url']); ?>" class="gcso-quick-links__card"<?php if ($is_external) { echo ' target="_blank" rel="noopener noreferrer" aria-label="' . esc_attr($link['title'] . ' ' . __('(opens external site)', 'gcso')) . '"'; } ?>>
                     <div class="gcso-quick-links__icon">
                         <?php echo $link['icon']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
                     </div>
