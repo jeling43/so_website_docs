@@ -27,8 +27,9 @@ get_header();
                     <div class="gcso-info-card__body">
                         <p><?php esc_html_e('Use the Georgia Bureau of Investigation\'s Sex Offender Registry to search for registered sex offenders in Gordon County or throughout Georgia.', 'gcso'); ?></p>
                         <p>
-                            <a href="https://gbi.georgia.gov/services/sex-offender-registry" class="gcso-btn gcso-btn--gold" target="_blank" rel="noopener noreferrer">
+                            <a href="https://gbi.georgia.gov/services/sex-offender-registry" class="gcso-btn gcso-btn--gold" target="_blank" rel="noopener noreferrer" aria-label="<?php esc_attr_e('Search GBI Sex Offender Registry (opens external site)', 'gcso'); ?>">
                                 <?php esc_html_e('Search GBI Sex Offender Registry', 'gcso'); ?>
+                                <svg class="gcso-icon gcso-icon--external" aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
                             </a>
                         </p>
                     </div>
