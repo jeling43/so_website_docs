@@ -25,8 +25,8 @@ defined('ABSPATH') || exit;
         ?>
     </nav>
     <div class="gcso-mobile-menu__actions">
-        <a href="<?php echo esc_url(gcso_get_option('gcso_hero_btn1_url', '#')); ?>" class="gcso-btn gcso-btn--gold gcso-btn--block"><?php esc_html_e('Inmate Search', 'gcso'); ?></a>
-        <a href="#" class="gcso-btn gcso-btn--navy gcso-btn--block"><?php esc_html_e('Request a Report', 'gcso'); ?></a>
+        <a href="<?php echo esc_url(gcso_get_option('gcso_hero_btn1_url', '#')); ?>" class="gcso-btn gcso-btn--gold gcso-btn--block" target="_blank" rel="noopener noreferrer" aria-label="<?php esc_attr_e('Search Inmates (opens external site)', 'gcso'); ?>"><?php esc_html_e('Search Inmates', 'gcso'); ?></a>
+        <a href="<?php echo esc_url(home_url('/services/request-a-report')); ?>" class="gcso-btn gcso-btn--navy gcso-btn--block"><?php esc_html_e('Request a Report', 'gcso'); ?></a>
     </div>
     <div class="gcso-mobile-menu__contact">
         <p><strong><?php esc_html_e('Emergency:', 'gcso'); ?></strong> <?php echo esc_html(gcso_get_option('gcso_emergency_phone', '911')); ?></p>
