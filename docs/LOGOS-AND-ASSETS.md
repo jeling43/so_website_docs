@@ -6,7 +6,7 @@ Reference for all logo and badge assets needed by the GCSO WordPress theme.
 
 | Color | Hex | Usage |
 |-------|-----|-------|
-| Navy | `#071B3A` | Primary background, enamel on badge |
+| Green olive | `#344D2A` | Primary background, enamel on badge |
 | Gold | `#C69B43` | Accents, metallic badge finish |
 
 ---

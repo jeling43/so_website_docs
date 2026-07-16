@@ -19,9 +19,6 @@ $sheriff_message = gcso_get_option('gcso_sheriff_message', 'At the Gordon County
             <?php if ($sheriff_photo) : ?>
                 <img src="<?php echo esc_url($sheriff_photo); ?>" alt="<?php echo esc_attr($sheriff_name); ?>" loading="lazy" width="500" height="500">
             <?php endif; ?>
-            <div class="gcso-sheriff-message__image-badge">
-                <img src="<?php echo esc_url(GCSO_URI . '/assets/images/gcso-badge.png'); ?>" alt="" width="60" height="60" aria-hidden="true">
-            </div>
         </div>
         <div class="gcso-sheriff-message__content">
             <span class="gcso-sheriff-message__label">

@@ -16,8 +16,8 @@ $cta_btn_url     = gcso_get_option('gcso_cta_btn_url', '#');
 
 <section class="gcso-cta" aria-label="<?php esc_attr_e('Career Opportunities', 'gcso'); ?>">
     <div class="gcso-container gcso-cta__inner">
-        <div class="gcso-cta__badge">
-            <img src="<?php echo esc_url(GCSO_URI . '/assets/images/gcso-badge.png'); ?>" alt="" width="60" height="60" aria-hidden="true">
+        <div class="gcso-cta__badge" aria-hidden="true">
+            <img src="<?php echo esc_url(GCSO_URI . '/assets/images/gold-badge.png'); ?>" alt="" width="60" height="60">
         </div>
         <div class="gcso-cta__text">
             <h2 class="gcso-cta__heading">

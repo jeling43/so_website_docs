@@ -14,11 +14,7 @@ defined('ABSPATH') || exit;
             <!-- Column 1: Branding & Contact -->
             <div class="gcso-footer__col gcso-footer__col--brand">
                 <div class="gcso-footer__logo">
-                    <?php if (has_custom_logo()) : ?>
-                        <?php the_custom_logo(); ?>
-                    <?php else : ?>
-                        <img src="<?php echo esc_url(GCSO_URI . '/assets/images/gcso-badge.png'); ?>" alt="<?php echo esc_attr(get_bloginfo('name')); ?>" width="60" height="60">
-                    <?php endif; ?>
+                    <img src="<?php echo esc_url(GCSO_URI . '/assets/images/gold-badge.png'); ?>" alt="<?php echo esc_attr(get_bloginfo('name')); ?>" width="60" height="60">
                     <div class="gcso-footer__brand-text">
                         <strong>Gordon County</strong><br>Sheriff's Office
                     </div>

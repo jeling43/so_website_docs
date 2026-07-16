@@ -71,7 +71,7 @@ function gcso_customize_register($wp_customize) {
     ]);
 
     $wp_customize->add_setting('gcso_hero_heading', [
-        'default'           => 'Serving and Protecting Gordon County',
+        'default'           => 'Dedicated and Sworn to Serve Gordon County',
         'sanitize_callback' => 'sanitize_text_field',
     ]);
     $wp_customize->add_control('gcso_hero_heading', [
@@ -81,7 +81,7 @@ function gcso_customize_register($wp_customize) {
     ]);
 
     $wp_customize->add_setting('gcso_hero_description', [
-        'default'           => 'Dedicated professionals committed to safety, integrity, and community.',
+        'default'           => 'Dedicated and Sworn to Serve',
         'sanitize_callback' => 'sanitize_text_field',
     ]);
     $wp_customize->add_control('gcso_hero_description', [
@@ -91,7 +91,7 @@ function gcso_customize_register($wp_customize) {
     ]);
 
     $wp_customize->add_setting('gcso_hero_image', [
-        'default'           => '',
+        'default'           => GCSO_URI . '/assets/images/badge-hero.png',
         'sanitize_callback' => 'esc_url_raw',
     ]);
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'gcso_hero_image', [
@@ -147,7 +147,7 @@ function gcso_customize_register($wp_customize) {
     ]);
 
     $wp_customize->add_setting('gcso_hero_slide2_heading', [
-        'default'           => '',
+        'default'           => 'On Patrol for Gordon County',
         'sanitize_callback' => 'sanitize_text_field',
     ]);
     $wp_customize->add_control('gcso_hero_slide2_heading', [
@@ -157,7 +157,7 @@ function gcso_customize_register($wp_customize) {
     ]);
 
     $wp_customize->add_setting('gcso_hero_slide2_description', [
-        'default'           => '',
+        'default'           => 'Professional service, visible presence, and dedicated protection across our community.',
         'sanitize_callback' => 'sanitize_text_field',
     ]);
     $wp_customize->add_control('gcso_hero_slide2_description', [
@@ -167,7 +167,7 @@ function gcso_customize_register($wp_customize) {
     ]);
 
     $wp_customize->add_setting('gcso_hero_slide2_image', [
-        'default'           => '',
+        'default'           => GCSO_URI . '/assets/images/hero-car-1.png',
         'sanitize_callback' => 'esc_url_raw',
     ]);
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'gcso_hero_slide2_image', [
@@ -176,7 +176,7 @@ function gcso_customize_register($wp_customize) {
     ]));
 
     $wp_customize->add_setting('gcso_hero_slide2_btn_text', [
-        'default'           => '',
+        'default'           => 'Explore Patrol Services',
         'sanitize_callback' => 'sanitize_text_field',
     ]);
     $wp_customize->add_control('gcso_hero_slide2_btn_text', [
@@ -186,7 +186,7 @@ function gcso_customize_register($wp_customize) {
     ]);
 
     $wp_customize->add_setting('gcso_hero_slide2_btn_url', [
-        'default'           => '#',
+        'default'           => home_url('/patrol/'),
         'sanitize_callback' => 'esc_url_raw',
     ]);
     $wp_customize->add_control('gcso_hero_slide2_btn_url', [

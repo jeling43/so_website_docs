@@ -9,12 +9,17 @@ defined('ABSPATH') || exit;
 
 // Build slides array — Slide 1 comes from existing customizer fields; slides 2 & 3 use their own settings.
 $slides = [];
+$primary_hero_image = gcso_get_option('gcso_hero_image', '');
+
+if (empty($primary_hero_image)) {
+    $primary_hero_image = GCSO_URI . '/assets/images/badge-hero.png';
+}
 
 // Slide 1 (primary – existing settings)
 $slides[] = [
-    'heading'     => gcso_get_option('gcso_hero_heading', 'Serving and Protecting Gordon County'),
-    'description' => gcso_get_option('gcso_hero_description', 'Dedicated professionals committed to safety, integrity, and community.'),
-    'image'       => gcso_get_option('gcso_hero_image', GCSO_URI . '/assets/images/hero-default.jpg'),
+    'heading'     => gcso_get_option('gcso_hero_heading', 'Dedicated and Sworn to Serve Gordon County'),
+    'description' => gcso_get_option('gcso_hero_description', 'Dedicated and Sworn to Serve'),
+    'image'       => $primary_hero_image,
     'btn_text'    => gcso_get_option('gcso_hero_btn1_text', 'Inmate Search'),
     'btn_url'     => gcso_get_option('gcso_hero_btn1_url', '#'),
     'btn2_text'   => gcso_get_option('gcso_hero_btn2_text', 'Contact Us'),
@@ -22,14 +27,14 @@ $slides[] = [
 ];
 
 // Slide 2
-$s2_heading = gcso_get_option('gcso_hero_slide2_heading', '');
+$s2_heading = gcso_get_option('gcso_hero_slide2_heading', 'On Patrol for Gordon County');
 if ($s2_heading) {
     $slides[] = [
         'heading'     => $s2_heading,
-        'description' => gcso_get_option('gcso_hero_slide2_description', ''),
-        'image'       => gcso_get_option('gcso_hero_slide2_image', ''),
-        'btn_text'    => gcso_get_option('gcso_hero_slide2_btn_text', ''),
-        'btn_url'     => gcso_get_option('gcso_hero_slide2_btn_url', '#'),
+        'description' => gcso_get_option('gcso_hero_slide2_description', 'Professional service, visible presence, and dedicated protection across our community.'),
+        'image'       => gcso_get_option('gcso_hero_slide2_image', GCSO_URI . '/assets/images/hero-car-1.png'),
+        'btn_text'    => gcso_get_option('gcso_hero_slide2_btn_text', 'Explore Patrol Services'),
+        'btn_url'     => gcso_get_option('gcso_hero_slide2_btn_url', home_url('/patrol/')),
         'btn2_text'   => '',
         'btn2_url'    => '',
     ];

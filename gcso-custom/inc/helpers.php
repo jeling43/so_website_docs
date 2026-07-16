@@ -98,10 +98,13 @@ function gcso_breadcrumbs() {
  */
 function gcso_get_social_links() {
     $platforms = ['facebook', 'twitter', 'youtube', 'instagram'];
+    $defaults = [
+        'facebook' => 'https://www.facebook.com/p/Gordon-County-Sheriffs-Office-61557663234207/',
+    ];
     $links = [];
 
     foreach ($platforms as $platform) {
-        $url = get_theme_mod("gcso_social_{$platform}", '');
+        $url = get_theme_mod("gcso_social_{$platform}", $defaults[$platform] ?? '');
         if ($url) {
             $links[$platform] = $url;
         }
