@@ -11,22 +11,22 @@ $divisions = [
     [
         'title' => __('Administration', 'gcso'),
         'url'   => home_url('/divisions/administration'),
-        'image' => GCSO_URI . '/assets/images/division-admin.jpg',
+        'image' => GCSO_URI . '/assets/images/admin.png',
     ],
     [
         'title' => __('Enforcement', 'gcso'),
         'url'   => home_url('/divisions/enforcement'),
-        'image' => GCSO_URI . '/assets/images/division-enforcement.jpg',
+        'image' => GCSO_URI . '/assets/images/enforcement.png',
     ],
     [
         'title' => __('Judicial Services', 'gcso'),
         'url'   => home_url('/divisions/judicial-services'),
-        'image' => GCSO_URI . '/assets/images/division-judicial.jpg',
+        'image' => GCSO_URI . '/assets/images/judicial.png',
     ],
     [
         'title' => __('Jail Division', 'gcso'),
         'url'   => home_url('/divisions/jail'),
-        'image' => GCSO_URI . '/assets/images/division-jail.jpg',
+        'image' => GCSO_URI . '/assets/images/jail.png',
     ],
 ];
 ?>

@@ -4,7 +4,7 @@ Use this pack to generate **temporary but realistic website assets** while final
 
 ## Global Style Rules (apply to every prompt)
 - Visual style: professional county sheriff website, clean civic branding.
-- Palette influence: dark green `#1F4D3A` and gold `#C69B43`.
+- Palette influence: green olive `#344D2A` and gold `#C69B43`.
 - Quality: realistic, polished, editorial/commercial grade.
 - Composition: website-friendly, uncluttered, clear focal point.
 - Output: no watermark, no signatures, no gibberish text.

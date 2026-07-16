@@ -184,7 +184,7 @@ For items like "Services" or "Divisions" with sub-items:
 3. Upload the GCSO badge/logo (recommended: 200×200px PNG with transparent background)
 4. The logo appears in the header and footer automatically
 5. Set **Site Title** to: `Gordon County Sheriff's Office`
-6. Set **Tagline** to: `Serving & Protecting Our Community`
+6. Set **Tagline** to: `Dedicated and Sworn to Serve`
 
 ---
 
