@@ -22,7 +22,7 @@ defined('ABSPATH') || exit;
     </nav>
 
     <div class="gcso-header__actions">
-        <a href="<?php echo esc_url(gcso_get_option('gcso_hero_btn1_url', '#')); ?>" class="gcso-btn gcso-btn--gold gcso-btn--sm" target="_blank" rel="noopener noreferrer" aria-label="<?php esc_attr_e('Search Inmates (opens external site)', 'gcso'); ?>">
+        <a href="<?php echo esc_url(gcso_get_inmate_search_url()); ?>" class="gcso-btn gcso-btn--gold gcso-btn--sm" target="_blank" rel="noopener noreferrer" aria-label="<?php esc_attr_e('Search Inmates (opens external site)', 'gcso'); ?>">
             <svg class="gcso-icon" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
             <?php esc_html_e('Inmate Search', 'gcso'); ?>
         </a>

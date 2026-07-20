@@ -12,7 +12,7 @@ $sheriff_name = gcso_get_option('gcso_sheriff_name', 'Sheriff Mitch Ralston');
 <div class="gcso-header__branding">
     <div class="gcso-header__logo">
         <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-            <img src="<?php echo esc_url(GCSO_URI . '/assets/images/gold-badge.png'); ?>" alt="<?php echo esc_attr(get_bloginfo('name')); ?>" width="80" height="80">
+            <img src="<?php echo esc_url(GCSO_URI . '/assets/images/badge-Photoroom.png'); ?>" alt="<?php echo esc_attr(get_bloginfo('name')); ?>" width="80" height="80">
         </a>
     </div>
     <div class="gcso-header__text">
