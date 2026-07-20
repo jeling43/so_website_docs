@@ -2,14 +2,14 @@
 /**
  * Template Name: Inmate Information
  *
- * This page redirects to the main Jail page where all inmate services
- * are consolidated. Keeping as a redirect for legacy URL support.
+ * This page redirects to the Gordon County inmate information and lookup
+ * service. Keeping this template preserves legacy URL support.
  *
  * @package GCSO_Custom
  */
 
 defined('ABSPATH') || exit;
 
-// Redirect to the consolidated Jail page
-wp_safe_redirect(home_url('/jail'), 301);
+// Redirect legacy inmate-information requests to the official lookup service.
+wp_redirect(esc_url_raw(gcso_get_inmate_search_url()), 301); // phpcs:ignore WordPress.Security.SafeRedirect.wp_redirect_wp_redirect
 exit;

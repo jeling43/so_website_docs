@@ -100,8 +100,7 @@ get_header();
                         <div class="gcso-info-card__body">
                             <p><?php esc_html_e('Search for inmates currently held at the Gordon County Jail.', 'gcso'); ?></p>
                             <p>
-                                <!-- TODO: VERIFY BEFORE PRODUCTION - Confirm inmate search URL -->
-                                <a href="<?php echo esc_url(gcso_get_option('gcso_hero_btn1_url', '#')); ?>" class="gcso-btn gcso-btn--outline-navy" target="_blank" rel="noopener noreferrer" aria-label="<?php esc_attr_e('Search Current Inmates (opens external site)', 'gcso'); ?>">
+                                <a href="<?php echo esc_url(gcso_get_inmate_search_url()); ?>" class="gcso-btn gcso-btn--outline-navy" target="_blank" rel="noopener noreferrer" aria-label="<?php esc_attr_e('Search Current Inmates (opens external site)', 'gcso'); ?>">
                                     <?php esc_html_e('Search Inmates', 'gcso'); ?>
                                     <svg class="gcso-icon gcso-icon--external" aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
                                 </a>

@@ -8,6 +8,15 @@
 defined('ABSPATH') || exit;
 
 /**
+ * Return the official Gordon County inmate information and lookup URL.
+ *
+ * @return string
+ */
+function gcso_get_inmate_search_url() {
+    return 'https://offenderindex.com/gordoncoga';
+}
+
+/**
  * Get SVG icon markup.
  *
  * @param string $name Icon name (filename without extension).
@@ -151,7 +160,7 @@ function gcso_reading_time($post_id = null) {
  */
 function gcso_footer_fallback_menu() {
     echo '<ul class="gcso-footer__links">';
-    echo '<li><a href="' . esc_url(home_url('/inmate-information')) . '">' . esc_html__('Inmate Information', 'gcso') . '</a></li>';
+    echo '<li><a href="' . esc_url(gcso_get_inmate_search_url()) . '" target="_blank" rel="noopener noreferrer">' . esc_html__('Inmate Information', 'gcso') . '</a></li>';
     echo '<li><a href="' . esc_url(home_url('/sex-offender-registry')) . '">' . esc_html__('Sex Offender Registry', 'gcso') . '</a></li>';
     echo '<li><a href="' . esc_url(home_url('/most-wanted')) . '">' . esc_html__('Most Wanted', 'gcso') . '</a></li>';
     echo '<li><a href="' . esc_url(home_url('/tip-line')) . '">' . esc_html__('Tip Line', 'gcso') . '</a></li>';

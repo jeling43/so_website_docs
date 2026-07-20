@@ -110,7 +110,7 @@ function gcso_customize_register($wp_customize) {
     ]);
 
     $wp_customize->add_setting('gcso_hero_btn1_url', [
-        'default'           => '#',
+        'default'           => 'https://offenderindex.com/gordoncoga',
         'sanitize_callback' => 'esc_url_raw',
     ]);
     $wp_customize->add_control('gcso_hero_btn1_url', [

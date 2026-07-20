@@ -10,7 +10,7 @@ defined('ABSPATH') || exit;
 $quick_links = [
     [
         'title'    => __('Search Inmates', 'gcso'),
-        'url'      => gcso_get_option('gcso_hero_btn1_url', '#'),
+        'url'      => gcso_get_inmate_search_url(),
         'icon'     => '<svg viewBox="0 0 64 64" fill="currentColor" width="48" height="48"><rect x="18" y="8" width="28" height="40" rx="2" fill="none" stroke="currentColor" stroke-width="3"/><rect x="22" y="14" width="20" height="12" fill="none" stroke="currentColor" stroke-width="2"/><line x1="22" y1="32" x2="42" y2="32" stroke="currentColor" stroke-width="2"/><line x1="22" y1="38" x2="42" y2="38" stroke="currentColor" stroke-width="2"/><line x1="22" y1="44" x2="35" y2="44" stroke="currentColor" stroke-width="2"/><path d="M28 52h8v6h-8z" fill="currentColor"/></svg>',
         'external' => true,
     ],

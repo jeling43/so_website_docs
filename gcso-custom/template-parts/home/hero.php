@@ -21,7 +21,7 @@ $slides[] = [
     'description' => gcso_get_option('gcso_hero_description', 'Dedicated and Sworn to Serve'),
     'image'       => $primary_hero_image,
     'btn_text'    => gcso_get_option('gcso_hero_btn1_text', 'Inmate Search'),
-    'btn_url'     => gcso_get_option('gcso_hero_btn1_url', '#'),
+    'btn_url'     => gcso_get_inmate_search_url(),
     'btn2_text'   => gcso_get_option('gcso_hero_btn2_text', 'Contact Us'),
     'btn2_url'    => gcso_get_option('gcso_hero_btn2_url', '#'),
 ];
