@@ -21,12 +21,15 @@ get_header();
                 <p><?php esc_html_e('The Gordon County Sheriff\'s Office is guided by a commitment to serve with integrity, professionalism, and respect for all members of our community.', 'gcso'); ?></p>
             </div>
 
+            <div class="gcso-mission-badge">
+                <img src="<?php echo esc_url(GCSO_URI . '/assets/images/badge-Photoroom.png'); ?>" alt="<?php esc_attr_e('Gordon County Sheriff’s Office badge', 'gcso'); ?>" width="160" height="160" loading="lazy">
+            </div>
+
             <div class="gcso-info-cards">
                 <div class="gcso-info-card">
                     <h3 class="gcso-info-card__title"><?php esc_html_e('Our Mission', 'gcso'); ?></h3>
                     <div class="gcso-info-card__body">
-                        <!-- TODO: VERIFY BEFORE PRODUCTION - Confirm official mission statement -->
-                        <p><?php esc_html_e('To protect and serve the citizens of Gordon County through professional law enforcement, community partnership, and unwavering dedication to public safety.', 'gcso'); ?></p>
+                        <p><?php esc_html_e('The Mission of the Gordon County Sheriff’s Office is to enforce our laws without fear or favor, defending the rights of the innocent, thus creating a safer community in which to live, work, and raise our families.', 'gcso'); ?></p>
                     </div>
                 </div>
 

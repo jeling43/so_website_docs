@@ -22,11 +22,11 @@ defined('ABSPATH') || exit;
                 <address class="gcso-footer__address">
                     <p>
                         <svg class="gcso-icon" aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
-                        <?php echo esc_html(gcso_get_option('gcso_address', '100 Public Safety Way, Calhoun, GA 30701')); ?>
+                        <?php echo esc_html(gcso_get_option('gcso_address', '2700 Highway 41 North, Calhoun, Georgia 30701')); ?>
                     </p>
                     <p>
                         <svg class="gcso-icon" aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.24 1.01l-2.2 2.2z"/></svg>
-                        <?php echo esc_html(gcso_get_option('gcso_phone', '706-629-1244')); ?>
+                        <?php echo esc_html(gcso_get_option('gcso_phone', '706-629-1245')); ?>
                     </p>
                     <p>
                         <svg class="gcso-icon" aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
@@ -63,7 +63,6 @@ defined('ABSPATH') || exit;
                     <li><a href="https://www.georgiasheriffs.org/" target="_blank" rel="noopener noreferrer"><?php esc_html_e("Georgia Sheriffs' Association", 'gcso'); ?></a></li>
                     <li><a href="#" target="_blank" rel="noopener noreferrer"><?php esc_html_e('GACJ (Georgia Association of Criminal Investigators)', 'gcso'); ?></a></li>
                     <li><a href="#" target="_blank" rel="noopener noreferrer"><?php esc_html_e('Georgia Crime Information Center', 'gcso'); ?></a></li>
-                    <li><a href="https://www.gov.uk/overseas-passports" target="_blank" rel="noopener noreferrer"><?php esc_html_e('GOV.UK – ePassport', 'gcso'); ?></a></li>
                     <li><a href="https://georgia.gov/" target="_blank" rel="noopener noreferrer"><?php esc_html_e('Georgia.gov', 'gcso'); ?></a></li>
                 </ul>
             </div>

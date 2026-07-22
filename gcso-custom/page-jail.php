@@ -13,7 +13,7 @@ get_header();
 
 $jailatm_url = 'https://deposits.jailatm.com/webdeposits/';
 $paytel_url  = 'https://www.paytelconnect.com/';
-$maps_url    = 'https://www.google.com/maps/search/?api=1&query=2700+US+41+Highway+NW+Calhoun+GA+30701';
+$maps_url    = 'https://www.google.com/maps/search/?api=1&query=2700+Highway+41+North+Calhoun+Georgia+30701';
 ?>
 
 <main id="main-content" class="gcso-main" role="main">
@@ -23,6 +23,14 @@ $maps_url    = 'https://www.google.com/maps/search/?api=1&query=2700+US+41+Highw
         <?php gcso_breadcrumbs(); ?>
 
         <div class="gcso-service-page gcso-jail-page">
+            <section class="gcso-bureau-intro" aria-labelledby="jail-division-title">
+                <div class="gcso-bureau-intro__content">
+                    <p class="gcso-bureau-intro__eyebrow"><?php esc_html_e('Gordon County Sheriff’s Office', 'gcso'); ?></p>
+                    <h2 id="jail-division-title"><?php esc_html_e('Jail Division', 'gcso'); ?></h2>
+                    <p><?php esc_html_e('Safe, secure operations and professional care for the Gordon County Jail.', 'gcso'); ?></p>
+                </div>
+            </section>
+
             <div class="gcso-service-page__intro">
                 <p><?php esc_html_e('The Jail Division is responsible for the safe and secure operation of the county jail and its inmate occupants and for maintaining the required records of incarcerated persons.', 'gcso'); ?></p>
                 <p><?php esc_html_e('The current Gordon County Jail is a modern, 81,000-square-foot detention facility that opened in May 2009 and has capacity for 376 inmates. The Jail houses male and female pre-trial and convicted persons charged with criminal offenses occurring within Gordon County, including the cities of Calhoun, Fairmount, and Resaca.', 'gcso'); ?></p>
@@ -73,6 +81,21 @@ $maps_url    = 'https://www.google.com/maps/search/?api=1&query=2700+US+41+Highw
                 </div>
             </section>
 
+            <section aria-labelledby="jail-leadership-heading">
+                <h2 id="jail-leadership-heading" class="gcso-section-heading">
+                    <span class="gcso-section-heading__line"></span>
+                    <?php esc_html_e('Jail Division Leadership', 'gcso'); ?>
+                    <span class="gcso-section-heading__line"></span>
+                </h2>
+
+                <div class="gcso-info-cards gcso-jail-command">
+                    <div class="gcso-info-card gcso-info-card--full gcso-jail-command-card--primary"><h3 class="gcso-info-card__title"><?php esc_html_e('Major Pat Bedford', 'gcso'); ?></h3><div class="gcso-info-card__body"><p><?php esc_html_e('Judicial Bureau Commander / Jail Administrator', 'gcso'); ?></p></div></div>
+                    <div class="gcso-info-card"><h3 class="gcso-info-card__title"><?php esc_html_e('Captain Dylan Nicholas', 'gcso'); ?></h3><div class="gcso-info-card__body"><p><?php esc_html_e('Jail Division Commander', 'gcso'); ?></p></div></div>
+                    <div class="gcso-info-card"><h3 class="gcso-info-card__title"><?php esc_html_e('Lieutenant John Vick', 'gcso'); ?></h3><div class="gcso-info-card__body"><p><?php esc_html_e('Assistant Jail Division Commander, Jail Operations', 'gcso'); ?></p></div></div>
+                </div>
+
+            </section>
+
             <section aria-labelledby="jail-contact-heading">
                 <h2 id="jail-contact-heading" class="gcso-section-heading">
                     <span class="gcso-section-heading__line"></span>
@@ -80,53 +103,15 @@ $maps_url    = 'https://www.google.com/maps/search/?api=1&query=2700+US+41+Highw
                     <span class="gcso-section-heading__line"></span>
                 </h2>
 
-                <div class="gcso-info-cards gcso-jail-command">
-                    <div class="gcso-info-card gcso-jail-command-card">
-                        <h3 class="gcso-info-card__title"><?php esc_html_e('Major Pat Bedford', 'gcso'); ?></h3>
-                        <div class="gcso-info-card__body">
-                            <p class="gcso-jail-command-card__role"><?php esc_html_e('Judicial Bureau Commander / Jail Administrator', 'gcso'); ?></p>
-                            <p class="gcso-jail-command-card__description"><?php esc_html_e('For information regarding county jail operations and Sheriff’s Office Court Services Division operations.', 'gcso'); ?></p>
-                            <div class="gcso-jail-command-card__contact">
-                                <a href="tel:+17066291244">706-629-1244</a>
-                                <a href="mailto:pat.bedford@gordoncountyga.gov">pat.bedford@gordoncountyga.gov</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="gcso-info-card gcso-jail-command-card">
-                        <h3 class="gcso-info-card__title"><?php esc_html_e('Captain Dylan Nicholas', 'gcso'); ?></h3>
-                        <div class="gcso-info-card__body">
-                            <p class="gcso-jail-command-card__role"><?php esc_html_e('Jail Division Commander', 'gcso'); ?></p>
-                            <p class="gcso-jail-command-card__description"><?php esc_html_e('For information regarding jail operations, inmates, releases, bonds, and booking records.', 'gcso'); ?></p>
-                            <div class="gcso-jail-command-card__contact">
-                                <a href="tel:+17066291246">706-629-1246</a>
-                                <a href="mailto:dylan.nicholas@gordoncountyga.gov">dylan.nicholas@gordoncountyga.gov</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="gcso-info-card gcso-jail-command-card">
-                        <h3 class="gcso-info-card__title"><?php esc_html_e('Lieutenant John Vick', 'gcso'); ?></h3>
-                        <div class="gcso-info-card__body">
-                            <p class="gcso-jail-command-card__role"><?php esc_html_e('Assistant Jail Division Commander, Jail Operations', 'gcso'); ?></p>
-                            <p class="gcso-jail-command-card__description"><?php esc_html_e('For information regarding jail operations, inmates, releases, bonds, and booking records.', 'gcso'); ?></p>
-                            <div class="gcso-jail-command-card__contact">
-                                <a href="tel:+17066291246">706-629-1246</a>
-                                <a href="mailto:john.vick@gordoncountyga.gov">john.vick@gordoncountyga.gov</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="gcso-info-cards">
                     <div class="gcso-info-card">
                         <h3 class="gcso-info-card__title"><?php esc_html_e('Jail Address & Telephone', 'gcso'); ?></h3>
                         <div class="gcso-info-card__body">
                             <address>
-                                2700 U.S. 41 Highway, N.W.<br>
-                                Calhoun, GA 30701
+                                2700 Highway 41 North<br>
+                                Calhoun, Georgia 30701
                             </address>
-                            <p><a href="tel:+17066291246">706-629-1246</a></p>
+                            <p><a href="tel:+17066291245">706-629-1245</a></p>
                             <p><a href="<?php echo esc_url($maps_url); ?>" class="gcso-btn gcso-btn--outline-navy" target="_blank" rel="noopener noreferrer"><?php esc_html_e('Driving Directions', 'gcso'); ?></a></p>
                         </div>
                     </div>
@@ -239,7 +224,7 @@ $maps_url    = 'https://www.google.com/maps/search/?api=1&query=2700+US+41+Highw
                         <summary><?php esc_html_e('Inmate Mail', 'gcso'); ?></summary>
                         <div class="gcso-jail-accordion__content">
                             <p><?php esc_html_e('For current incoming-mail requirements and instructions, contact the Gordon County Jail before sending mail.', 'gcso'); ?></p>
-                            <p><a href="tel:+17066291246" class="gcso-btn gcso-btn--outline-navy"><?php esc_html_e('Call the Jail: 706-629-1246', 'gcso'); ?></a></p>
+                            <p><a href="tel:+17066291245" class="gcso-btn gcso-btn--outline-navy"><?php esc_html_e('Call the Jail: 706-629-1245', 'gcso'); ?></a></p>
                         </div>
                     </details>
 

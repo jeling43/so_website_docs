@@ -53,7 +53,7 @@ get_header();
                         <p>
                             <strong><?php esc_html_e('Non-Emergency:', 'gcso'); ?></strong>
                             <!-- TODO: VERIFY BEFORE PRODUCTION - Non-emergency phone number -->
-                            <a href="tel:<?php echo esc_attr(gcso_get_option('gcso_phone', '706-629-1244')); ?>"><?php echo esc_html(gcso_get_option('gcso_phone', '706-629-1244')); ?></a>
+                            <a href="tel:<?php echo esc_attr(gcso_get_option('gcso_phone', '706-629-1245')); ?>"><?php echo esc_html(gcso_get_option('gcso_phone', '706-629-1245')); ?></a>
                         </p>
                         <p>
                             <strong><?php esc_html_e('Emergency:', 'gcso'); ?></strong>

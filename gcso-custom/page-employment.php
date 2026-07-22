@@ -54,12 +54,12 @@ get_header();
                         <p><?php esc_html_e('Applications may be picked up at the Gordon County Justice Center or downloaded below. Completed applications can be returned in person or mailed to:', 'gcso'); ?></p>
                         <p>
                             <strong><?php esc_html_e('Gordon County Sheriff\'s Office', 'gcso'); ?></strong><br>
-                            <?php echo esc_html(gcso_get_option('gcso_address', '100 Public Safety Way, Calhoun, GA 30701')); ?>
+                            <?php echo esc_html(gcso_get_option('gcso_address', '2700 Highway 41 North, Calhoun, Georgia 30701')); ?>
                         </p>
                         <p>
                             <strong><?php esc_html_e('Questions?', 'gcso'); ?></strong>
                             <?php esc_html_e('Call', 'gcso'); ?>
-                            <a href="tel:<?php echo esc_attr(gcso_get_option('gcso_phone', '706-629-1244')); ?>"><?php echo esc_html(gcso_get_option('gcso_phone', '706-629-1244')); ?></a>
+                            <a href="tel:<?php echo esc_attr(gcso_get_option('gcso_phone', '706-629-1245')); ?>"><?php echo esc_html(gcso_get_option('gcso_phone', '706-629-1245')); ?></a>
                         </p>
                     </div>
                 </div>

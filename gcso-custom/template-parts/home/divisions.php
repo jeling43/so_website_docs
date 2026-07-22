@@ -10,22 +10,22 @@ defined('ABSPATH') || exit;
 $divisions = [
     [
         'title' => __('Administration', 'gcso'),
-        'url'   => home_url('/divisions/administration'),
+        'url'   => home_url('/divisions/administration/'),
         'image' => GCSO_URI . '/assets/images/admin.png',
     ],
     [
         'title' => __('Enforcement', 'gcso'),
-        'url'   => home_url('/divisions/enforcement'),
+        'url'   => home_url('/divisions/enforcement-bureau/'),
         'image' => GCSO_URI . '/assets/images/enforcement.png',
     ],
     [
         'title' => __('Judicial Services', 'gcso'),
-        'url'   => home_url('/divisions/judicial-services'),
+        'url'   => home_url('/divisions/judicial-bureau/'),
         'image' => GCSO_URI . '/assets/images/judicial.png',
     ],
     [
         'title' => __('Jail Division', 'gcso'),
-        'url'   => home_url('/divisions/jail'),
+        'url'   => home_url('/jail/'),
         'image' => GCSO_URI . '/assets/images/jail.png',
     ],
 ];

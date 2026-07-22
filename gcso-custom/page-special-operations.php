@@ -61,7 +61,7 @@ get_header();
                     <div class="gcso-info-card__body">
                         <p>
                             <strong><?php esc_html_e('Phone:', 'gcso'); ?></strong>
-                            <a href="tel:<?php echo esc_attr(gcso_get_option('gcso_phone', '706-629-1244')); ?>"><?php echo esc_html(gcso_get_option('gcso_phone', '706-629-1244')); ?></a>
+                            <a href="tel:<?php echo esc_attr(gcso_get_option('gcso_phone', '706-629-1245')); ?>"><?php echo esc_html(gcso_get_option('gcso_phone', '706-629-1245')); ?></a>
                         </p>
                     </div>
                 </div>

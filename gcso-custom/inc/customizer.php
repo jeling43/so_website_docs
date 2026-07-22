@@ -25,7 +25,7 @@ function gcso_customize_register($wp_customize) {
     ]);
 
     $wp_customize->add_setting('gcso_phone', [
-        'default'           => '706-629-1244',
+        'default'           => '706-629-1245',
         'sanitize_callback' => 'sanitize_text_field',
     ]);
     $wp_customize->add_control('gcso_phone', [
@@ -45,7 +45,7 @@ function gcso_customize_register($wp_customize) {
     ]);
 
     $wp_customize->add_setting('gcso_address', [
-        'default'           => '100 Public Safety Way, Calhoun, GA 30701',
+        'default'           => '2700 Highway 41 North, Calhoun, Georgia 30701',
         'sanitize_callback' => 'sanitize_text_field',
     ]);
     $wp_customize->add_control('gcso_address', [
@@ -277,7 +277,7 @@ function gcso_customize_register($wp_customize) {
     ]));
 
     $wp_customize->add_setting('gcso_sheriff_message', [
-        'default'           => 'At the Gordon County Sheriff\'s Office, our mission is simple: to serve and protect every citizen with honor, integrity, and professionalism. We are committed to building strong partnerships, promoting safety, and improving the quality of life in our community.',
+        'default'           => 'Sheriff Mitch Ralston and the men and women of the Gordon County Sheriff’s Office are committed to making Gordon County a safer place to live, work, and raise your family.\n\nOur justice system begins with a partnership between the people of Gordon County and their law enforcement officers. Together, we can build a safer, stronger community.\n\n“Dedicated and Sworn to Serve” reflects our core values of service, integrity, and professionalism. We are here for you and committed to protecting everyone equally, without fear or favor.',
         'sanitize_callback' => 'wp_kses_post',
     ]);
     $wp_customize->add_control('gcso_sheriff_message', [
