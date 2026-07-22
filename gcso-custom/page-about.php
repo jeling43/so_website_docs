@@ -16,10 +16,17 @@ get_header();
     <div class="gcso-container gcso-content-area">
         <?php gcso_breadcrumbs(); ?>
 
-        <div class="gcso-service-page">
-            <div class="gcso-service-page__intro">
-                <p><?php esc_html_e('The Gordon County Sheriff\'s Office is committed to protecting and serving the citizens of Gordon County. Learn about our leadership, mission, and organizational structure.', 'gcso'); ?></p>
-            </div>
+        <div class="gcso-service-page gcso-about-page">
+            <section class="gcso-about-hero" aria-labelledby="about-hero-heading">
+                <div class="gcso-about-hero__badge">
+                    <img src="<?php echo esc_url(GCSO_URI . '/assets/images/badge-Photoroom.png'); ?>" alt="<?php esc_attr_e('Gordon County Sheriff’s Office badge', 'gcso'); ?>" width="180" height="180" loading="lazy">
+                </div>
+                <div class="gcso-about-hero__content">
+                    <span class="gcso-about-hero__eyebrow"><span aria-hidden="true"></span><?php esc_html_e('About the Sheriff’s Office', 'gcso'); ?></span>
+                    <h2 id="about-hero-heading"><?php esc_html_e('Leadership, Mission, and Service', 'gcso'); ?></h2>
+                    <p><?php esc_html_e('Learn about the people, principles, and organizational structure behind the Gordon County Sheriff’s Office.', 'gcso'); ?></p>
+                </div>
+            </section>
 
             <div class="gcso-info-cards">
                 <a href="<?php echo esc_url(home_url('/about/meet-the-sheriff')); ?>" class="gcso-info-card gcso-info-card--link">
@@ -38,13 +45,6 @@ get_header();
             </div>
 
             <div class="gcso-info-cards">
-                <a href="<?php echo esc_url(home_url('/about/command-staff')); ?>" class="gcso-info-card gcso-info-card--link">
-                    <h3 class="gcso-info-card__title"><?php esc_html_e('Command Staff', 'gcso'); ?></h3>
-                    <div class="gcso-info-card__body">
-                        <p><?php esc_html_e('Meet the leadership team of the Gordon County Sheriff\'s Office.', 'gcso'); ?></p>
-                    </div>
-                </a>
-
                 <a href="<?php echo esc_url(home_url('/about/organization')); ?>" class="gcso-info-card gcso-info-card--link">
                     <h3 class="gcso-info-card__title"><?php esc_html_e('Organization', 'gcso'); ?></h3>
                     <div class="gcso-info-card__body">

@@ -53,7 +53,7 @@ get_header();
                             <?php esc_html_e('For questions about the SRO program, contact the Gordon County Sheriff\'s Office:', 'gcso'); ?>
                         </p>
                         <p>
-                            <a href="tel:<?php echo esc_attr(gcso_get_option('gcso_phone', '706-629-1244')); ?>"><?php echo esc_html(gcso_get_option('gcso_phone', '706-629-1244')); ?></a>
+                            <a href="tel:<?php echo esc_attr(gcso_get_option('gcso_phone', '706-629-1245')); ?>"><?php echo esc_html(gcso_get_option('gcso_phone', '706-629-1245')); ?></a>
                         </p>
                     </div>
                 </div>

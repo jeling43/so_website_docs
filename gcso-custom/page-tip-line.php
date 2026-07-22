@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Submit a Tip
+ * Template Name: Tip Line
  *
  * @package GCSO_Custom
  */
@@ -18,7 +18,7 @@ get_header();
 
         <div class="gcso-service-page">
             <div class="gcso-service-page__intro">
-                <p><?php esc_html_e('Help keep Gordon County safe. If you have information about a crime or suspicious activity, you can submit a tip to the Sheriff\'s Office. All tips are reviewed and may be submitted anonymously.', 'gcso'); ?></p>
+                <p><?php esc_html_e('Our Tip Line is completely confidential. Please use the Tip Line to provide information regarding Major Crimes.', 'gcso'); ?></p>
             </div>
 
             <div class="gcso-alert-box">
@@ -33,10 +33,9 @@ get_header();
                     <h3 class="gcso-info-card__title"><?php esc_html_e('Call the Tip Line', 'gcso'); ?></h3>
                     <div class="gcso-info-card__body gcso-info-card__body--center">
                         <p class="gcso-tip-phone">
-                            <!-- TODO: VERIFY BEFORE PRODUCTION - Confirm correct tip line number (706-879-5485 or 706-879-5515?) -->
-                            <a href="tel:<?php echo esc_attr(gcso_get_option('gcso_phone', '706-629-1244')); ?>">
+                            <a href="tel:+17068795515">
                                 <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.24 1.01l-2.2 2.2z"/></svg>
-                                <?php echo esc_html(gcso_get_option('gcso_phone', '706-629-1244')); ?>
+                                <?php esc_html_e('706-879-5515', 'gcso'); ?>
                             </a>
                         </p>
                         <p><?php esc_html_e('Available 24 hours a day, 7 days a week', 'gcso'); ?></p>
@@ -48,9 +47,9 @@ get_header();
                     <h3 class="gcso-info-card__title"><?php esc_html_e('Non-Emergency Line', 'gcso'); ?></h3>
                     <div class="gcso-info-card__body gcso-info-card__body--center">
                         <p class="gcso-tip-phone">
-                            <a href="tel:<?php echo esc_attr(gcso_get_option('gcso_phone', '706-629-1244')); ?>">
+                            <a href="tel:<?php echo esc_attr(gcso_get_option('gcso_phone', '706-629-1245')); ?>">
                                 <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.24 1.01l-2.2 2.2z"/></svg>
-                                <?php echo esc_html(gcso_get_option('gcso_phone', '706-629-1244')); ?>
+                                <?php echo esc_html(gcso_get_option('gcso_phone', '706-629-1245')); ?>
                             </a>
                         </p>
                         <p><?php esc_html_e('For non-emergency reports and questions', 'gcso'); ?></p>

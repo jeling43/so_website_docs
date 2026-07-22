@@ -55,7 +55,7 @@ get_header();
                         <p><?php esc_html_e('If you have questions about sex offenders in your area or would like to report a concern, please contact:', 'gcso'); ?></p>
                         <p>
                             <strong><?php esc_html_e('Gordon County Sheriff\'s Office', 'gcso'); ?></strong><br>
-                            <a href="tel:<?php echo esc_attr(gcso_get_option('gcso_phone', '706-629-1244')); ?>"><?php echo esc_html(gcso_get_option('gcso_phone', '706-629-1244')); ?></a>
+                            <a href="tel:<?php echo esc_attr(gcso_get_option('gcso_phone', '706-629-1245')); ?>"><?php echo esc_html(gcso_get_option('gcso_phone', '706-629-1245')); ?></a>
                         </p>
                     </div>
                 </div>

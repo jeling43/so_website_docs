@@ -41,11 +41,11 @@ get_header();
                         <p><?php esc_html_e('Civil papers may be submitted in person at the Gordon County Justice Center or by mail. Please include all required fees with your submission.', 'gcso'); ?></p>
                         <p>
                             <strong><?php esc_html_e('Mailing Address:', 'gcso'); ?></strong><br>
-                            <?php echo esc_html(gcso_get_option('gcso_address', '100 Public Safety Way, Calhoun, GA 30701')); ?>
+                            <?php echo esc_html(gcso_get_option('gcso_address', '2700 Highway 41 North, Calhoun, Georgia 30701')); ?>
                         </p>
                         <p>
                             <strong><?php esc_html_e('Phone:', 'gcso'); ?></strong><br>
-                            <a href="tel:<?php echo esc_attr(gcso_get_option('gcso_phone', '706-629-1244')); ?>"><?php echo esc_html(gcso_get_option('gcso_phone', '706-629-1244')); ?></a>
+                            <a href="tel:<?php echo esc_attr(gcso_get_option('gcso_phone', '706-629-1245')); ?>"><?php echo esc_html(gcso_get_option('gcso_phone', '706-629-1245')); ?></a>
                         </p>
                     </div>
                 </div>

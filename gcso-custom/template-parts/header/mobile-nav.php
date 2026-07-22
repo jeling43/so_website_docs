@@ -30,7 +30,7 @@ defined('ABSPATH') || exit;
     </div>
     <div class="gcso-mobile-menu__contact">
         <p><strong><?php esc_html_e('Emergency:', 'gcso'); ?></strong> <?php echo esc_html(gcso_get_option('gcso_emergency_phone', '911')); ?></p>
-        <p><strong><?php esc_html_e('Non-Emergency:', 'gcso'); ?></strong> <?php echo esc_html(gcso_get_option('gcso_phone', '706-629-1244')); ?></p>
+        <p><strong><?php esc_html_e('Non-Emergency:', 'gcso'); ?></strong> <?php echo esc_html(gcso_get_option('gcso_phone', '706-629-1245')); ?></p>
     </div>
 </div>
 <div class="gcso-mobile-menu__backdrop" aria-hidden="true"></div>

@@ -22,16 +22,17 @@
 
 :root {
     /* Colors */
-    --gcso-navy: #344d2a;
+    /* Olive sheriff green: deep enough for white text and gold accents. */
+    --gcso-navy: #3f4a2d;
     --gcso-gold: #c69b43;
     --gcso-white: #ffffff;
     --gcso-light-gray: #f4f6f8;
     --gcso-dark-text: #17212b;
-    --gcso-navy-light: #526b3a;
+    --gcso-navy-light: #66704a;
     --gcso-gold-dark: #a67f2e;
     --gcso-gold-light: #d4af61;
     --gcso-border: #dde2e8;
-    --gcso-overlay: rgba(52, 77, 42, 0.85);
+    --gcso-overlay: rgba(63, 74, 45, 0.85);
 
     /* Spacing */
     --space-xs: 0.5rem;
@@ -2063,18 +2064,40 @@ textarea:focus-visible {
     padding: var(--space-lg) 0;
 }
 
+.gcso-contact-page .gcso-alert-box {
+    margin-bottom: var(--space-md);
+    padding: 1rem 1.25rem;
+    background: #b42318;
+    border: 0;
+    border-left: 0.5rem solid #7f1d1d;
+    box-shadow: 0 0.35rem 0.9rem rgba(127, 29, 29, 0.2);
+    color: #fff;
+    font-size: clamp(1.25rem, 2.2vw, 1.8rem);
+    text-align: center;
+}
+
+.gcso-contact-page .gcso-alert-box p,
+.gcso-contact-page .gcso-alert-box strong {
+    color: inherit;
+}
+
 .gcso-contact-cards__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: var(--space-md);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
     margin-bottom: var(--space-xl);
 }
 
 .gcso-contact-card {
+    display: flex;
+    min-height: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background: var(--gcso-white);
     border: 1px solid var(--gcso-border);
     border-radius: var(--radius-md);
-    padding: var(--space-md);
+    padding: 1.25rem 1rem;
     text-align: center;
     box-shadow: var(--shadow-card);
     transition: box-shadow var(--transition-base);
@@ -2086,25 +2109,46 @@ textarea:focus-visible {
 
 .gcso-contact-card__icon {
     color: var(--gcso-gold);
-    margin-bottom: var(--space-sm);
+    margin-bottom: 0.65rem;
 }
 
 .gcso-contact-card__title {
-    font-size: var(--fs-md);
+    max-width: 100%;
+    font-size: clamp(1rem, 1.35vw, 1.3rem);
+    line-height: 1.2;
     color: var(--gcso-navy);
-    margin-bottom: var(--space-xs);
+    margin: 0 0 0.35rem;
+}
+
+.gcso-contact-card p {
+    max-width: 100%;
+    font-size: clamp(0.95rem, 1.1vw, 1.1rem);
+    line-height: 1.45;
+    margin: 0.2rem 0 0;
 }
 
 .gcso-contact-card__sub {
     font-size: var(--fs-sm);
     font-weight: 700;
     color: #c0392b;
-    margin-top: var(--space-xs);
+    margin-top: 0.65rem;
+}
+
+.gcso-contact-card__note {
+    color: var(--gcso-dark-text);
+    font-size: 0.9rem !important;
 }
 
 .gcso-contact-card a {
+    overflow-wrap: anywhere;
     color: var(--gcso-gold);
     font-weight: 600;
+}
+
+.gcso-contact-card a:focus-visible {
+    outline: 3px solid var(--gcso-gold);
+    outline-offset: 3px;
+    border-radius: 0.2rem;
 }
 
 .gcso-contact-card a:hover {
@@ -2473,7 +2517,7 @@ textarea:focus-visible {
     }
 
     .gcso-quick-links__grid {
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(7, minmax(0, 1fr));
     }
 
     .gcso-sheriff-message__image img {
@@ -2541,6 +2585,12 @@ textarea:focus-visible {
 
     .gcso-staff-directory__grid {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1100px) {
+    .gcso-contact-cards__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
@@ -2703,6 +2753,181 @@ textarea:focus-visible {
     color: var(--color-gold-dark);
 }
 
+/* Accessible organization structure */
+.gcso-org-structure__intro {
+    max-width: 760px;
+    margin: 0 auto var(--spacing-lg);
+    color: var(--color-dark-text);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.gcso-org-structure__hierarchy {
+    max-width: 1080px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.gcso-org-structure__role {
+    display: inline-flex;
+    min-width: 220px;
+    padding: 1rem 1.5rem;
+    flex-direction: column;
+    gap: 0.2rem;
+    color: var(--color-white);
+    background: var(--color-navy);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+}
+
+.gcso-org-structure__role span {
+    color: var(--color-gold-light);
+    font-size: var(--text-sm);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.gcso-org-structure__role strong {
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+}
+
+.gcso-org-structure__role--primary {
+    color: var(--color-navy);
+    background: var(--color-gold);
+}
+
+.gcso-org-structure__role--primary span {
+    color: var(--color-navy);
+}
+
+.gcso-org-structure__connector {
+    width: 2px;
+    height: 2rem;
+    margin: 0 auto;
+    background: var(--color-navy);
+}
+
+.gcso-org-structure__connector--split {
+    position: relative;
+    width: 50%;
+    height: 2rem;
+    background: transparent;
+    border-top: 2px solid var(--color-navy);
+}
+
+.gcso-org-structure__connector--split::before {
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    width: 2px;
+    height: 2rem;
+    background: var(--color-navy);
+    content: '';
+}
+
+.gcso-org-structure__bureaus {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--spacing-lg);
+    text-align: left;
+}
+
+.gcso-org-structure__bureau {
+    overflow: hidden;
+    background: var(--color-white);
+    border: 1px solid var(--color-light-gray);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+}
+
+.gcso-org-structure__bureau-header {
+    display: flex;
+    padding: 1.25rem 1.5rem;
+    align-items: baseline;
+    gap: 0.4rem;
+    color: var(--color-white);
+    background: var(--color-navy);
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+}
+
+.gcso-org-structure__bureau-header strong {
+    color: var(--color-gold-light);
+}
+
+.gcso-org-structure__bureau-body {
+    padding: 1.5rem;
+}
+
+.gcso-org-structure__bureau-link {
+    display: inline-flex;
+    margin-bottom: 1rem;
+    color: var(--color-gold-dark);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.gcso-org-structure__bureau-link:hover,
+.gcso-org-structure__bureau-link:focus-visible {
+    color: var(--color-navy);
+    text-decoration: underline;
+}
+
+.gcso-org-structure__bureau-body ul {
+    display: grid;
+    gap: 0.7rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.gcso-org-structure__bureau-body li {
+    padding-left: 1.25rem;
+    position: relative;
+}
+
+.gcso-org-structure__bureau-body li::before {
+    position: absolute;
+    top: 0.65em;
+    left: 0;
+    width: 0.45rem;
+    height: 0.45rem;
+    background: var(--color-gold);
+    border-radius: 50%;
+    content: '';
+}
+
+.gcso-org-structure__bureau-body li a {
+    color: var(--color-dark-text);
+    text-decoration: none;
+}
+
+.gcso-org-structure__bureau-body li a:hover,
+.gcso-org-structure__bureau-body li a:focus-visible {
+    color: var(--color-gold-dark);
+    text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+    .gcso-org-structure__connector--split {
+        width: 2px;
+        height: 2rem;
+        border-top: 0;
+        background: var(--color-navy);
+    }
+
+    .gcso-org-structure__connector--split::before {
+        display: none;
+    }
+
+    .gcso-org-structure__bureaus {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Division Grid */
 .gcso-division-grid {
     display: grid;
@@ -2806,6 +3031,199 @@ a.gcso-info-card--link:focus .gcso-info-card__title {
     box-shadow: var(--shadow-card);
 }
 
+/* Sheriff Profile Page */
+.gcso-about-hero {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    gap: clamp(1.5rem, 4vw, 3.5rem);
+    margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+    padding: clamp(1.25rem, 3vw, 2.25rem);
+    background: var(--color-white);
+    border-top: 4px solid var(--color-gold);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+}
+
+.gcso-about-hero__badge img {
+    display: block;
+    width: clamp(100px, 12vw, 145px);
+    height: auto;
+}
+
+.gcso-about-hero__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--color-gold-dark);
+    font-size: var(--text-sm);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.gcso-about-hero__eyebrow span {
+    display: inline-block;
+    width: 2.5rem;
+    height: 3px;
+    background: var(--color-gold);
+}
+
+.gcso-about-hero h2 {
+    margin: 0.75rem 0 0.5rem;
+    color: var(--color-navy);
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    line-height: 1.1;
+}
+
+.gcso-about-hero p {
+    max-width: 48rem;
+    margin: 0;
+    color: var(--color-dark-text);
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+    .gcso-about-hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .gcso-about-hero__badge img {
+        margin: 0 auto;
+    }
+
+    .gcso-about-hero__eyebrow {
+        justify-content: center;
+    }
+}
+
+.gcso-sheriff-profile {
+    max-width: 1120px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.gcso-sheriff-profile__hero {
+    display: grid;
+    overflow: hidden;
+    margin-bottom: var(--spacing-lg);
+    background: var(--color-white);
+    border: 1px solid var(--color-light-gray);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+}
+
+@media (min-width: 768px) {
+    .gcso-sheriff-profile__hero {
+        grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
+    }
+}
+
+.gcso-sheriff-profile__photo {
+    min-height: 360px;
+    background: var(--color-navy);
+}
+
+.gcso-sheriff-profile__photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 360px;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.gcso-sheriff-profile__intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(2rem, 5vw, 4.5rem);
+    background: #f5f7f8;
+}
+
+.gcso-sheriff-profile__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--color-gold-dark);
+    font-size: var(--text-sm);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.gcso-sheriff-profile__eyebrow > span {
+    display: inline-block;
+    width: 2.75rem;
+    height: 3px;
+    background: var(--color-gold);
+}
+
+.gcso-sheriff-profile__intro h2 {
+    margin: 1rem 0 0.35rem;
+    color: var(--color-navy);
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1.05;
+}
+
+.gcso-sheriff-profile__role {
+    margin: 0;
+    color: var(--color-gold-dark);
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    font-style: italic;
+}
+
+.gcso-sheriff-profile__summary {
+    max-width: 34rem;
+    margin: 1.75rem 0 0;
+    color: var(--color-dark-text);
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.gcso-sheriff-profile__biography {
+    display: grid;
+    grid-template-columns: minmax(190px, 0.35fr) minmax(0, 1fr);
+    gap: clamp(2rem, 6vw, 5rem);
+    padding: clamp(2rem, 5vw, 4rem);
+    background: var(--color-white);
+    border: 1px solid var(--color-light-gray);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+}
+
+.gcso-sheriff-profile__section-heading h2 {
+    margin: 0.75rem 0 0;
+    color: var(--color-navy);
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+}
+
+.gcso-sheriff-profile__text {
+    color: var(--color-dark-text);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.gcso-sheriff-profile__text p {
+    margin: 0 0 1.25rem;
+}
+
+.gcso-sheriff-profile__text p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+    .gcso-sheriff-profile__biography {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Alert Box */
 .gcso-alert-box {
     background: #fdf2f2;
@@ -2819,6 +3237,55 @@ a.gcso-info-card--link:focus .gcso-info-card__title {
 .gcso-alert-box p {
     margin: 0;
     color: var(--color-dark-text);
+}
+
+/* Mission and values badge */
+.gcso-mission-badge {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto var(--spacing-lg);
+}
+
+.gcso-mission-badge img {
+    width: clamp(280px, 36vw, 360px);
+    height: auto;
+    object-fit: contain;
+}
+
+/* Embedded report request form */
+.gcso-report-request-form {
+    margin-top: var(--spacing-lg);
+}
+
+.gcso-report-request-form__heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.gcso-report-request-form__heading h2 {
+    margin: 0;
+    color: var(--color-navy);
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    text-align: center;
+}
+
+.gcso-report-request-form__frame {
+    overflow: hidden;
+    background: var(--color-white);
+    border: 1px solid var(--color-light-gray);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+}
+
+.gcso-report-request-form__frame iframe {
+    display: block;
+    width: 100%;
+    min-height: 1500px;
+    border: 0;
 }
 
 /* Jail Actions Section */
@@ -2893,11 +3360,90 @@ a.gcso-info-card--link:focus .gcso-info-card__title {
     align-items: stretch;
 }
 
+.gcso-administration-page .gcso-administration-contacts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.gcso-enforcement-page .gcso-enforcement-contacts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.gcso-bureau-intro {
+    margin: 0 0 var(--space-lg);
+    padding: 1.25rem 1.5rem;
+    background: var(--gcso-white);
+    border: 1px solid var(--gcso-border);
+    border-left: 0.35rem solid var(--gcso-gold);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+    text-align: center;
+}
+
+.gcso-bureau-intro__eyebrow {
+    margin: 0 0 0.2rem;
+    color: var(--gcso-gold-dark);
+    font-size: var(--fs-xs);
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.gcso-bureau-intro h1,
+.gcso-bureau-intro h2 {
+    margin: 0;
+    color: var(--gcso-navy);
+    font-size: clamp(1.75rem, 3vw, 2.75rem);
+    line-height: 1.1;
+}
+
+.gcso-bureau-intro__content > p:last-child {
+    max-width: 48rem;
+    margin: 0.45rem 0 0;
+    color: var(--gcso-dark-text);
+    font-size: var(--fs-md);
+}
+
+.gcso-enforcement-page [aria-labelledby="enforcement-units-heading"] .gcso-info-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.gcso-leadership-card--primary {
+    text-align: center;
+}
+
+.gcso-leadership-card--primary .gcso-info-card__body p {
+    margin: 0;
+}
+
+.gcso-administration-card--primary {
+    text-align: center;
+}
+
+.gcso-administration-card--primary .gcso-info-card__body p {
+    margin: 0;
+}
+
+.gcso-jail-page .gcso-jail-command {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .gcso-jail-command-card {
     display: flex;
     min-width: 0;
     flex-direction: column;
     padding: 1.5rem;
+}
+
+.gcso-jail-command-card--primary {
+    text-align: center;
+}
+
+.gcso-jail-command-card--primary .gcso-info-card__title {
+    margin-bottom: 0.5rem;
+}
+
+.gcso-jail-command-card--primary .gcso-info-card__body p {
+    margin: 0;
 }
 
 .gcso-jail-command-card .gcso-info-card__title {
@@ -3067,9 +3613,31 @@ a.gcso-info-card--link:focus .gcso-info-card__title {
         grid-template-columns: 1fr;
     }
 
+    .gcso-jail-page .gcso-jail-command {
+        grid-template-columns: 1fr;
+    }
+
+    .gcso-administration-page .gcso-administration-contacts {
+        grid-template-columns: 1fr;
+    }
+
+    .gcso-enforcement-page .gcso-enforcement-contacts {
+        grid-template-columns: 1fr;
+    }
+
+    .gcso-enforcement-page [aria-labelledby="enforcement-units-heading"] .gcso-info-cards {
+        grid-template-columns: 1fr;
+    }
+
     .gcso-jail-command-card .gcso-info-card__title,
     .gcso-jail-command-card__role {
         min-height: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .gcso-bureau-intro {
+        padding: 1rem;
     }
 }
 
@@ -3222,6 +3790,8 @@ a.gcso-info-card--link:focus .gcso-info-card__title {
 }
 
 .gcso-bureau-card {
+    display: flex;
+    flex-direction: column;
     min-width: 0;
     overflow: hidden;
     background: var(--gcso-white);
@@ -3250,6 +3820,9 @@ a.gcso-info-card--link:focus .gcso-info-card__title {
 }
 
 .gcso-bureau-card__body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
     padding: 1.75rem;
     color: #4b5563;
     line-height: 1.7;
@@ -3272,7 +3845,9 @@ a.gcso-info-card--link:focus .gcso-info-card__title {
 }
 
 .gcso-bureau-card__action {
-    margin-top: 1.5rem !important;
+    margin-top: auto !important;
+    padding-top: 1.5rem;
+    text-align: center;
 }
 
 .gcso-divisions-page .gcso-division-grid__card {

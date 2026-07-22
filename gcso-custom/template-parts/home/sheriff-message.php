@@ -9,7 +9,7 @@ defined('ABSPATH') || exit;
 
 $sheriff_name    = gcso_get_option('gcso_sheriff_name', 'Sheriff');
 $sheriff_photo   = gcso_get_option('gcso_sheriff_photo', GCSO_URI . '/assets/images/sheriff-placeholder.jpg');
-$sheriff_message = gcso_get_option('gcso_sheriff_message', 'At the Gordon County Sheriff\'s Office, our mission is simple: to serve and protect every citizen with honor, integrity, and professionalism. We are committed to building strong partnerships, promoting safety, and improving the quality of life in our community.');
+$sheriff_message = gcso_get_option('gcso_sheriff_message', '<p>Sheriff Mitch Ralston and the men and women of the Gordon County Sheriff’s Office are committed to making Gordon County a safer place to live, work, and raise your family.</p><p>Our justice system begins with a partnership between the people of Gordon County and their law enforcement officers. Together, we can build a safer, stronger community.</p><p>“Dedicated and Sworn to Serve” reflects our core values of service, integrity, and professionalism. We are here for you and committed to protecting everyone equally, without fear or favor.</p>');
 ?>
 
 <section class="gcso-sheriff-message" aria-labelledby="sheriff-heading">
@@ -32,7 +32,7 @@ $sheriff_message = gcso_get_option('gcso_sheriff_message', 'At the Gordon County
             <div class="gcso-sheriff-message__text">
                 <?php echo wp_kses_post($sheriff_message); ?>
             </div>
-            <a href="<?php echo esc_url(home_url('/about-gcso')); ?>" class="gcso-btn gcso-btn--navy">
+            <a href="<?php echo esc_url(home_url('/about/meet-the-sheriff/')); ?>" class="gcso-btn gcso-btn--navy">
                 <?php esc_html_e('Meet the Sheriff', 'gcso'); ?>
                 <svg class="gcso-icon" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M10 6l6 6-6 6"/></svg>
             </a>

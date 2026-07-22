@@ -51,11 +51,11 @@ get_header();
                         <p><?php esc_html_e('Reports may be requested in person at the Gordon County Sheriff\'s Office or by mail. A fee may apply for copies.', 'gcso'); ?></p>
                         <p>
                             <strong><?php esc_html_e('In Person:', 'gcso'); ?></strong><br>
-                            <?php echo esc_html(gcso_get_option('gcso_address', '100 Public Safety Way, Calhoun, GA 30701')); ?>
+                            <?php echo esc_html(gcso_get_option('gcso_address', '2700 Highway 41 North, Calhoun, Georgia 30701')); ?>
                         </p>
                         <p>
                             <strong><?php esc_html_e('By Phone:', 'gcso'); ?></strong><br>
-                            <a href="tel:<?php echo esc_attr(gcso_get_option('gcso_phone', '706-629-1244')); ?>"><?php echo esc_html(gcso_get_option('gcso_phone', '706-629-1244')); ?></a>
+                            <a href="tel:<?php echo esc_attr(gcso_get_option('gcso_phone', '706-629-1245')); ?>"><?php echo esc_html(gcso_get_option('gcso_phone', '706-629-1245')); ?></a>
                         </p>
                         <p>
                             <strong><?php esc_html_e('What Happens Next:', 'gcso'); ?></strong><br>
@@ -64,6 +64,21 @@ get_header();
                     </div>
                 </div>
             </div>
+
+            <section class="gcso-report-request-form" aria-labelledby="report-request-form-heading">
+                <div class="gcso-report-request-form__heading">
+                    <span class="gcso-section-heading__line"></span>
+                    <h2 id="report-request-form-heading"><?php esc_html_e('Request a Report Online', 'gcso'); ?></h2>
+                    <span class="gcso-section-heading__line"></span>
+                </div>
+                <div class="gcso-report-request-form__frame">
+                    <iframe
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSdkIxR5IizfvJMf5SYosStWE6GGOkEdy6TzCcoCSAryrAce_A/viewform?embedded=true"
+                        title="Request a Report form"
+                        loading="lazy"
+                    ><?php esc_html_e('Loading the report request form…', 'gcso'); ?></iframe>
+                </div>
+            </section>
 
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                 <?php if (get_the_content()) : ?>

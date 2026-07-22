@@ -40,11 +40,11 @@ get_header();
                         <p><?php esc_html_e('To register your business, contact the Gordon County Sheriff\'s Office for the required forms and documentation.', 'gcso'); ?></p>
                         <p>
                             <strong><?php esc_html_e('Phone:', 'gcso'); ?></strong>
-                            <a href="tel:<?php echo esc_attr(gcso_get_option('gcso_phone', '706-629-1244')); ?>"><?php echo esc_html(gcso_get_option('gcso_phone', '706-629-1244')); ?></a>
+                            <a href="tel:<?php echo esc_attr(gcso_get_option('gcso_phone', '706-629-1245')); ?>"><?php echo esc_html(gcso_get_option('gcso_phone', '706-629-1245')); ?></a>
                         </p>
                         <p>
                             <strong><?php esc_html_e('Address:', 'gcso'); ?></strong><br>
-                            <?php echo esc_html(gcso_get_option('gcso_address', '100 Public Safety Way, Calhoun, GA 30701')); ?>
+                            <?php echo esc_html(gcso_get_option('gcso_address', '2700 Highway 41 North, Calhoun, Georgia 30701')); ?>
                         </p>
                     </div>
                 </div>

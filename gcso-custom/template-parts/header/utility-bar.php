@@ -7,7 +7,7 @@
 
 defined('ABSPATH') || exit;
 
-$phone     = gcso_get_option('gcso_phone', '706-629-1244');
+$phone     = gcso_get_option('gcso_phone', '706-629-1245');
 $emergency = gcso_get_option('gcso_emergency_phone', '911');
 ?>
 <div class="gcso-utility-bar">
