@@ -3239,6 +3239,255 @@ a.gcso-info-card--link:focus .gcso-info-card__title {
     color: var(--color-dark-text);
 }
 
+/* Sex offender registry page */
+.gcso-registry-page {
+    max-width: 72rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.gcso-registry-intro {
+    max-width: 56rem;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+.gcso-registry-intro p:first-child {
+    color: var(--gcso-navy);
+    font-size: clamp(1.15rem, 2vw, 1.45rem);
+    font-weight: 600;
+    line-height: 1.55;
+}
+
+.gcso-registry-section-heading {
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-md);
+}
+
+.gcso-registry-page .gcso-info-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.gcso-registry-page .gcso-info-card__body {
+    flex: 1;
+}
+
+.gcso-registry-primary-actions .gcso-info-card--highlight {
+    text-align: center;
+    border-top: 0.35rem solid var(--gcso-gold);
+    border-left-width: 1px;
+    background: linear-gradient(135deg, #fff 0%, #fbfcf9 100%);
+}
+
+.gcso-registry-primary-actions .gcso-info-card--highlight .gcso-info-card__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gcso-registry-primary-actions .gcso-info-card--highlight .gcso-info-card__title {
+    color: var(--gcso-navy);
+    font-size: clamp(1.35rem, 2vw, 1.75rem);
+}
+
+.gcso-registry-contact-card {
+    border-left: 0.35rem solid var(--gcso-navy);
+}
+
+.gcso-registry-contact-card .gcso-info-card__body {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem 1.5rem;
+}
+
+.gcso-registry-contact-card .gcso-info-card__body > p:first-child {
+    grid-column: 1 / -1;
+}
+
+.gcso-registry-contact-card .gcso-registry-contact {
+    margin: 0;
+    padding: 1rem;
+    background: #f8faf7;
+    border: 1px solid var(--gcso-border);
+    border-radius: var(--radius-sm);
+    text-align: center;
+}
+
+.gcso-registry-contact-card .gcso-registry-contact strong {
+    display: inline-block;
+    margin-bottom: 0.35rem;
+    color: var(--gcso-navy);
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+}
+
+.gcso-registry-contact-card .gcso-info-card__body > p:last-child {
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--gcso-border);
+}
+
+.gcso-registry-contact-card a,
+.gcso-registry-page .gcso-info-card a {
+    overflow-wrap: anywhere;
+}
+
+.gcso-registry-disclaimer {
+    margin-top: var(--space-lg);
+    background: #f5f7f2;
+    border: 1px solid #dce3d4;
+    border-left: 0.35rem solid var(--gcso-navy);
+    text-align: center;
+}
+
+.gcso-registry-disclaimer h2 {
+    max-width: 48rem;
+    margin: 0 auto 0.45rem;
+    color: var(--gcso-navy);
+    font-size: var(--fs-lg);
+}
+
+.gcso-registry-disclaimer p {
+    max-width: 60rem;
+    margin-right: auto;
+    margin-left: auto;
+    line-height: 1.65;
+}
+
+.gcso-registry-secondary-actions .gcso-info-card,
+.gcso-registry-requirements .gcso-info-card {
+    min-height: 100%;
+}
+
+.gcso-registry-secondary-actions .gcso-info-card__body {
+    display: flex;
+    flex-direction: column;
+}
+
+.gcso-registry-secondary-actions .gcso-info-card__body > p:last-child {
+    margin-top: auto;
+    padding-top: 1rem;
+}
+
+.gcso-registry-requirements .gcso-info-card:nth-child(2) .gcso-info-card__body {
+    display: flex;
+    flex-direction: column;
+}
+
+.gcso-registry-requirements .gcso-info-card:nth-child(2) .gcso-info-card__body > p:nth-last-child(2) {
+    margin-top: auto;
+}
+
+.gcso-registry-requirements .gcso-info-card:nth-child(2) .gcso-info-card__body > p:nth-last-child(-n + 2) {
+    margin-bottom: 0.5rem;
+}
+
+.gcso-registry-requirements .gcso-info-card:nth-child(2) .gcso-info-card__body > p:last-child {
+    margin-bottom: 0;
+}
+
+.gcso-registry-requirements .gcso-info-card:nth-child(2) .gcso-btn {
+    display: block;
+    text-align: center;
+}
+
+/* Tip line page */
+.gcso-tip-page {
+    max-width: 72rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.gcso-tip-intro {
+    max-width: 54rem;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+.gcso-tip-intro p {
+    color: var(--gcso-navy);
+    font-size: clamp(1.15rem, 2vw, 1.45rem);
+    font-weight: 600;
+    line-height: 1.55;
+}
+
+.gcso-tip-emergency-notice {
+    margin: 0 auto var(--space-lg);
+    max-width: 62rem;
+    padding: 1rem 1.5rem;
+    background: #fff4f4;
+    border: 1px solid #f2caca;
+    border-left: 0.45rem solid #c0392b;
+    text-align: center;
+}
+
+.gcso-tip-emergency-notice strong {
+    color: #a93226;
+}
+
+.gcso-tip-actions .gcso-info-card {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    border-top: 0.35rem solid var(--gcso-gold);
+    border-left-width: 1px;
+    text-align: center;
+}
+
+.gcso-tip-actions .gcso-info-card__title {
+    text-align: center;
+}
+
+.gcso-tip-actions .gcso-info-card__body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gcso-tip-actions .gcso-tip-phone {
+    margin: 0.75rem 0;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    white-space: nowrap;
+}
+
+.gcso-tip-actions .gcso-tip-phone a {
+    justify-content: center;
+    flex-wrap: nowrap;
+    color: var(--gcso-navy);
+    white-space: nowrap;
+}
+
+.gcso-tip-actions .gcso-info-card__body > p:last-child {
+    margin-top: auto;
+    margin-bottom: 0;
+}
+
+.gcso-tip-report-types .gcso-info-card {
+    border-left: 0.35rem solid var(--gcso-navy);
+}
+
+@media (max-width: 600px) {
+    .gcso-tip-emergency-notice {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .gcso-registry-contact-card .gcso-info-card__body {
+        grid-template-columns: 1fr;
+    }
+
+    .gcso-registry-contact-card .gcso-info-card__body > p:first-child,
+    .gcso-registry-contact-card .gcso-info-card__body > p:last-child {
+        grid-column: auto;
+    }
+}
+
 /* Mission and values badge */
 .gcso-mission-badge {
     display: flex;

@@ -258,7 +258,7 @@ function gcso_customize_register($wp_customize) {
     ]);
 
     $wp_customize->add_setting('gcso_sheriff_name', [
-        'default'           => 'Sheriff',
+        'default'           => 'Sheriff Mitch Ralston',
         'sanitize_callback' => 'sanitize_text_field',
     ]);
     $wp_customize->add_control('gcso_sheriff_name', [

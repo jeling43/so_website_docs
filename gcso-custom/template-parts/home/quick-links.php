@@ -33,9 +33,9 @@ $quick_links = [
         'external' => false,
     ],
     [
-        'title'    => __('View Most Wanted', 'gcso'),
-        'url'      => home_url('/services/most-wanted'),
-        'icon'     => '<svg viewBox="0 0 64 64" fill="currentColor" width="48" height="48"><circle cx="32" cy="32" r="24" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="32" cy="32" r="16" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="32" cy="32" r="8" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="32" cy="32" r="2" fill="currentColor"/><line x1="32" y1="4" x2="32" y2="12" stroke="currentColor" stroke-width="2"/><line x1="32" y1="52" x2="32" y2="60" stroke="currentColor" stroke-width="2"/><line x1="4" y1="32" x2="12" y2="32" stroke="currentColor" stroke-width="2"/><line x1="52" y1="32" x2="60" y2="32" stroke="currentColor" stroke-width="2"/></svg>',
+        'title'    => __('Sex Offender Registry', 'gcso'),
+        'url'      => home_url('/services/sex-offender-registry/'),
+        'icon'     => '<svg viewBox="0 0 64 64" fill="currentColor" width="48" height="48"><circle cx="32" cy="32" r="24" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="32" cy="24" r="7" fill="none" stroke="currentColor" stroke-width="3"/><path d="M18 48c1-8 6-12 14-12s13 4 14 12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>',
         'external' => false,
     ],
     [
