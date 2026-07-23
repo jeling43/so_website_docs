@@ -16,19 +16,19 @@ get_header();
     <div class="gcso-container gcso-content-area">
         <?php gcso_breadcrumbs(); ?>
 
-        <div class="gcso-service-page">
-            <div class="gcso-service-page__intro">
+        <div class="gcso-service-page gcso-tip-page">
+            <div class="gcso-service-page__intro gcso-tip-intro">
                 <p><?php esc_html_e('Our Tip Line is completely confidential. Please use the Tip Line to provide information regarding Major Crimes.', 'gcso'); ?></p>
             </div>
 
-            <div class="gcso-alert-box">
+            <aside class="gcso-alert-box gcso-tip-emergency-notice">
                 <p>
                     <strong><?php esc_html_e('For emergencies, always call 911.', 'gcso'); ?></strong>
                     <?php esc_html_e('The tip line is not for reporting emergencies or crimes in progress.', 'gcso'); ?>
                 </p>
-            </div>
+            </aside>
 
-            <div class="gcso-info-cards">
+            <div class="gcso-info-cards gcso-tip-actions">
                 <div class="gcso-info-card gcso-info-card--highlight">
                     <h3 class="gcso-info-card__title"><?php esc_html_e('Call the Tip Line', 'gcso'); ?></h3>
                     <div class="gcso-info-card__body gcso-info-card__body--center">
@@ -57,7 +57,7 @@ get_header();
                 </div>
             </div>
 
-            <div class="gcso-info-cards">
+            <div class="gcso-info-cards gcso-tip-report-types">
                 <div class="gcso-info-card gcso-info-card--full">
                     <h3 class="gcso-info-card__title"><?php esc_html_e('Types of Information You Can Report', 'gcso'); ?></h3>
                     <ul class="gcso-info-card__list gcso-info-card__list--columns">

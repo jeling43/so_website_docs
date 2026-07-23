@@ -7,7 +7,8 @@
 
 defined('ABSPATH') || exit;
 
-$sheriff_name    = gcso_get_option('gcso_sheriff_name', 'Sheriff');
+$sheriff_name    = gcso_get_option('gcso_sheriff_name', 'Sheriff Mitch Ralston');
+$sheriff_name    = trim((string) $sheriff_name) === 'Sheriff' ? 'Sheriff Mitch Ralston' : $sheriff_name;
 $sheriff_photo   = gcso_get_option('gcso_sheriff_photo', GCSO_URI . '/assets/images/sheriff-placeholder.jpg');
 $sheriff_message = gcso_get_option('gcso_sheriff_message', '<p>Sheriff Mitch Ralston and the men and women of the Gordon County Sheriff’s Office are committed to making Gordon County a safer place to live, work, and raise your family.</p><p>Our justice system begins with a partnership between the people of Gordon County and their law enforcement officers. Together, we can build a safer, stronger community.</p><p>“Dedicated and Sworn to Serve” reflects our core values of service, integrity, and professionalism. We are here for you and committed to protecting everyone equally, without fear or favor.</p>');
 ?>
