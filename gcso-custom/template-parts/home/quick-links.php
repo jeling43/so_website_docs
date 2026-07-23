@@ -34,7 +34,7 @@ $quick_links = [
     ],
     [
         'title'    => __('Sex Offender Registry', 'gcso'),
-        'url'      => home_url('/services/sex-offender-registry/'),
+        'url'      => home_url('/sex-offender-registry/'),
         'icon'     => '<svg viewBox="0 0 64 64" fill="currentColor" width="48" height="48"><circle cx="32" cy="32" r="24" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="32" cy="24" r="7" fill="none" stroke="currentColor" stroke-width="3"/><path d="M18 48c1-8 6-12 14-12s13 4 14 12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>',
         'external' => false,
     ],

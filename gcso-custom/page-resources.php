@@ -60,7 +60,7 @@ get_header();
                         <h3 class="gcso-info-card__title"><?php esc_html_e('Most Wanted', 'gcso'); ?></h3>
                         <div class="gcso-info-card__body"><p><?php esc_html_e('View individuals currently wanted by the Sheriff’s Office.', 'gcso'); ?></p></div>
                     </a>
-                    <a href="<?php echo esc_url(home_url('/services/sex-offender-registry/')); ?>" class="gcso-info-card gcso-info-card--link">
+                    <a href="<?php echo esc_url(home_url('/sex-offender-registry/')); ?>" class="gcso-info-card gcso-info-card--link">
                         <h3 class="gcso-info-card__title"><?php esc_html_e('Sex Offender Registry', 'gcso'); ?></h3>
                         <div class="gcso-info-card__body"><p><?php esc_html_e('Access registration and community-safety information.', 'gcso'); ?></p></div>
                     </a>
