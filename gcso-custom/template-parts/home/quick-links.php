@@ -21,7 +21,7 @@ $quick_links = [
         'external' => false,
     ],
     [
-        'title'    => __('Resources', 'gcso'),
+        'title'    => __('Services', 'gcso'),
         'url'      => home_url('/resources/'),
         'icon'     => '<svg viewBox="0 0 64 64" fill="currentColor" width="48" height="48"><path d="M10 16a4 4 0 014-4h14l5 6h17a4 4 0 014 4v26a4 4 0 01-4 4H14a4 4 0 01-4-4V16z" fill="none" stroke="currentColor" stroke-width="3"/><path d="M10 22h44" fill="none" stroke="currentColor" stroke-width="3"/></svg>',
         'external' => false,
