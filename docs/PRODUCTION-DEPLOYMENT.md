@@ -12,6 +12,45 @@ This runbook describes how to deploy the GCSO Custom theme to the production Wor
 
 Target downtime: less than one minute when the hosting platform supports a quick theme-directory switch.
 
+## Existing posts and content
+
+### Posts already in the production WordPress site
+
+If the new theme is being installed on the existing production WordPress installation, posts do not need to be migrated. WordPress stores posts in the database, separately from the theme.
+
+Before deployment:
+
+1. Back up the production database.
+2. Confirm that existing posts are published and have the correct categories.
+3. Confirm that featured images and authors are present.
+4. Identify the page that should display the news archive.
+
+After activating the theme:
+
+1. Go to **Settings → Reading**.
+2. Set the correct page as the **Posts page**, such as `News & Alerts`.
+3. Test the news archive and at least one individual post.
+4. Verify dates, authors, categories, featured images, excerpts, search results, and pagination.
+5. Confirm that existing post URLs have not changed.
+
+Do not copy the local Docker database into production. This could overwrite production posts, pages, users, settings, and form data.
+
+### Posts from a separate WordPress site
+
+If posts are coming from a different WordPress installation, use the built-in WordPress export and import tools:
+
+1. On the old site, go to **Tools → Export**.
+2. Export posts, or select the required date range, author, category, and status.
+3. On the new site, go to **Tools → Import → WordPress**.
+4. Upload the exported WordPress XML file.
+5. Map the old authors to the correct production users.
+6. Enable the option to download and import file attachments when available.
+7. Review imported posts, media, categories, authors, dates, and links.
+8. Confirm that featured images display correctly.
+9. Add redirects if imported post URLs differ from the old URLs.
+
+Complete imports on staging first. Never run an untested import directly against production.
+
 ## 1. Inventory production
 
 Record the current production configuration before testing or deployment:
