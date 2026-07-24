@@ -12,7 +12,7 @@ defined('ABSPATH') || exit;
 get_header();
 ?>
 
-<main id="main-content" class="gcso-main" role="main">
+<main id="main-content" class="gcso-main gcso-services-main" role="main">
     <?php get_template_part('template-parts/content/page-banner'); ?>
 
     <div class="gcso-container gcso-content-area">

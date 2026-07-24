@@ -1986,6 +1986,33 @@ textarea:focus-visible {
     color: #444;
 }
 
+/* Services landing page */
+.gcso-services-main .gcso-content-area {
+    padding-top: var(--space-md);
+}
+
+.gcso-resources-page .gcso-service-page__intro {
+    max-width: 820px;
+    margin-inline: auto;
+    margin-bottom: var(--space-xl);
+    text-align: center;
+    font-size: clamp(1.15rem, 1.8vw, 1.45rem);
+    line-height: 1.6;
+    color: var(--gcso-navy);
+}
+
+.gcso-resources-page .gcso-service-page__intro p {
+    margin-bottom: 0;
+}
+
+.gcso-resources-page > section {
+    margin-bottom: var(--space-2xl);
+}
+
+.gcso-resources-page > section:last-of-type {
+    margin-bottom: 0;
+}
+
 /* Info cards grid */
 .gcso-info-cards {
     display: grid;
