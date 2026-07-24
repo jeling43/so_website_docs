@@ -23,7 +23,7 @@
 :root {
     /* Colors */
     /* Olive sheriff green: deep enough for white text and gold accents. */
-    --gcso-navy: #3f4a2d;
+    --gcso-navy: #364126;
     --gcso-gold: #c69b43;
     --gcso-white: #ffffff;
     --gcso-light-gray: #f4f6f8;
@@ -32,7 +32,7 @@
     --gcso-gold-dark: #a67f2e;
     --gcso-gold-light: #d4af61;
     --gcso-border: #dde2e8;
-    --gcso-overlay: rgba(63, 74, 45, 0.85);
+    --gcso-overlay: rgba(54, 65, 38, 0.85);
 
     /* Spacing */
     --space-xs: 0.5rem;
