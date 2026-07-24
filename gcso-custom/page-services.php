@@ -119,10 +119,10 @@ get_header();
                 </h2>
 
                 <div class="gcso-info-cards">
-                    <a href="<?php echo esc_url(home_url('/services/raffle-licenses')); ?>" class="gcso-info-card gcso-info-card--link">
+                    <a href="<?php echo esc_url(home_url('/raffle-licenses/')); ?>" class="gcso-info-card gcso-info-card--link">
                         <h3 class="gcso-info-card__title"><?php esc_html_e('Raffle Licenses', 'gcso'); ?></h3>
                         <div class="gcso-info-card__body">
-                            <p><?php esc_html_e('Apply for a raffle license for your nonprofit organization.', 'gcso'); ?></p>
+                            <p><?php esc_html_e('Review raffle-license requirements and request information.', 'gcso'); ?></p>
                         </div>
                     </a>
 

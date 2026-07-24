@@ -12,7 +12,7 @@ defined('ABSPATH') || exit;
 get_header();
 ?>
 
-<main id="main-content" class="gcso-main" role="main">
+<main id="main-content" class="gcso-main gcso-services-main" role="main">
     <?php get_template_part('template-parts/content/page-banner'); ?>
 
     <div class="gcso-container gcso-content-area">
@@ -23,10 +23,10 @@ get_header();
                 <p><?php esc_html_e('Find commonly requested services, public-safety information, forms, and community resources from the Gordon County Sheriff’s Office.', 'gcso'); ?></p>
             </div>
 
-            <section aria-labelledby="resources-records-heading">
-                <h2 id="resources-records-heading" class="gcso-section-heading">
+            <section aria-labelledby="resources-popular-heading">
+                <h2 id="resources-popular-heading" class="gcso-section-heading">
                     <span class="gcso-section-heading__line"></span>
-                    <?php esc_html_e('Reports and Records', 'gcso'); ?>
+                    <?php esc_html_e('Most Requested', 'gcso'); ?>
                     <span class="gcso-section-heading__line"></span>
                 </h2>
                 <div class="gcso-info-cards">
@@ -34,6 +34,20 @@ get_header();
                         <h3 class="gcso-info-card__title"><?php esc_html_e('Request a Report', 'gcso'); ?></h3>
                         <div class="gcso-info-card__body"><p><?php esc_html_e('Request an incident or accident report online.', 'gcso'); ?></p></div>
                     </a>
+                    <a href="<?php echo esc_url(home_url('/jail/')); ?>" class="gcso-info-card gcso-info-card--link">
+                        <h3 class="gcso-info-card__title"><?php esc_html_e('Jail Information', 'gcso'); ?></h3>
+                        <div class="gcso-info-card__body"><p><?php esc_html_e('Find inmate, visitation, bonds, and jail-contact information.', 'gcso'); ?></p></div>
+                    </a>
+                </div>
+            </section>
+
+            <section aria-labelledby="resources-records-heading">
+                <h2 id="resources-records-heading" class="gcso-section-heading">
+                    <span class="gcso-section-heading__line"></span>
+                    <?php esc_html_e('Reports and Records', 'gcso'); ?>
+                    <span class="gcso-section-heading__line"></span>
+                </h2>
+                <div class="gcso-info-cards">
                     <a href="<?php echo esc_url(home_url('/services/open-records/')); ?>" class="gcso-info-card gcso-info-card--link">
                         <h3 class="gcso-info-card__title"><?php esc_html_e('Open Records Request', 'gcso'); ?></h3>
                         <div class="gcso-info-card__body"><p><?php esc_html_e('Submit a formal request for public records.', 'gcso'); ?></p></div>
@@ -56,35 +70,31 @@ get_header();
                         <h3 class="gcso-info-card__title"><?php esc_html_e('Tip Line', 'gcso'); ?></h3>
                         <div class="gcso-info-card__body"><p><?php esc_html_e('Submit confidential information regarding major crimes.', 'gcso'); ?></p></div>
                     </a>
+                    <a href="<?php echo esc_url(home_url('/sex-offender-registry/')); ?>" class="gcso-info-card gcso-info-card--link">
+                        <h3 class="gcso-info-card__title"><?php esc_html_e('Sex Offender Registry', 'gcso'); ?></h3>
+                        <div class="gcso-info-card__body"><p><?php esc_html_e('Access registration and community-safety information.', 'gcso'); ?></p></div>
+                    </a>
                     <a href="<?php echo esc_url(home_url('/services/most-wanted/')); ?>" class="gcso-info-card gcso-info-card--link">
                         <h3 class="gcso-info-card__title"><?php esc_html_e('Most Wanted', 'gcso'); ?></h3>
                         <div class="gcso-info-card__body"><p><?php esc_html_e('View individuals currently wanted by the Sheriff’s Office.', 'gcso'); ?></p></div>
                     </a>
-                    <a href="<?php echo esc_url(home_url('/services/sex-offender-registry/')); ?>" class="gcso-info-card gcso-info-card--link">
-                        <h3 class="gcso-info-card__title"><?php esc_html_e('Sex Offender Registry', 'gcso'); ?></h3>
-                        <div class="gcso-info-card__body"><p><?php esc_html_e('Access registration and community-safety information.', 'gcso'); ?></p></div>
-                    </a>
                 </div>
             </section>
 
-            <section aria-labelledby="resources-community-heading">
-                <h2 id="resources-community-heading" class="gcso-section-heading">
+            <section aria-labelledby="resources-permits-heading">
+                <h2 id="resources-permits-heading" class="gcso-section-heading">
                     <span class="gcso-section-heading__line"></span>
-                    <?php esc_html_e('Jail, Permits, and Employment', 'gcso'); ?>
+                    <?php esc_html_e('Permits and Employment', 'gcso'); ?>
                     <span class="gcso-section-heading__line"></span>
                 </h2>
                 <div class="gcso-info-cards">
-                    <a href="<?php echo esc_url(home_url('/jail/')); ?>" class="gcso-info-card gcso-info-card--link">
-                        <h3 class="gcso-info-card__title"><?php esc_html_e('Jail Information', 'gcso'); ?></h3>
-                        <div class="gcso-info-card__body"><p><?php esc_html_e('Find inmate, visitation, bonds, and jail-contact information.', 'gcso'); ?></p></div>
-                    </a>
                     <a href="<?php echo esc_url(home_url('/contact/employment/')); ?>" class="gcso-info-card gcso-info-card--link">
                         <h3 class="gcso-info-card__title"><?php esc_html_e('Employment', 'gcso'); ?></h3>
                         <div class="gcso-info-card__body"><p><?php esc_html_e('Learn about careers and employment applications.', 'gcso'); ?></p></div>
                     </a>
-                    <a href="<?php echo esc_url(home_url('/services/raffle-licenses/')); ?>" class="gcso-info-card gcso-info-card--link">
+                    <a href="<?php echo esc_url(home_url('/raffle-licenses/')); ?>" class="gcso-info-card gcso-info-card--link">
                         <h3 class="gcso-info-card__title"><?php esc_html_e('Raffle Licenses', 'gcso'); ?></h3>
-                        <div class="gcso-info-card__body"><p><?php esc_html_e('Review nonprofit raffle-license requirements.', 'gcso'); ?></p></div>
+                        <div class="gcso-info-card__body"><p><?php esc_html_e('Review raffle-license requirements and request information.', 'gcso'); ?></p></div>
                     </a>
                     <a href="<?php echo esc_url(home_url('/services/secondary-metals-recycling/')); ?>" class="gcso-info-card gcso-info-card--link">
                         <h3 class="gcso-info-card__title"><?php esc_html_e('Secondary Metals Recycling', 'gcso'); ?></h3>
