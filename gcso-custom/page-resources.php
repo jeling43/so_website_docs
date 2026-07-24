@@ -84,7 +84,7 @@ get_header();
                     </a>
                     <a href="<?php echo esc_url(home_url('/services/raffle-licenses/')); ?>" class="gcso-info-card gcso-info-card--link">
                         <h3 class="gcso-info-card__title"><?php esc_html_e('Raffle Licenses', 'gcso'); ?></h3>
-                        <div class="gcso-info-card__body"><p><?php esc_html_e('Review nonprofit raffle-license requirements.', 'gcso'); ?></p></div>
+                        <div class="gcso-info-card__body"><p><?php esc_html_e('Review raffle-license requirements and request information.', 'gcso'); ?></p></div>
                     </a>
                     <a href="<?php echo esc_url(home_url('/services/secondary-metals-recycling/')); ?>" class="gcso-info-card gcso-info-card--link">
                         <h3 class="gcso-info-card__title"><?php esc_html_e('Secondary Metals Recycling', 'gcso'); ?></h3>
