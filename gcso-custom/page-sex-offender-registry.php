@@ -7,6 +7,11 @@
 
 defined('ABSPATH') || exit;
 
+$employment_category = get_category_by_slug('sex-offenders-employed-in-gordon-county');
+$employment_registry_url = $employment_category
+    ? get_category_link($employment_category->term_id)
+    : home_url('/category/sex-offenders-employed-in-gordon-county/');
+
 get_header();
 ?>
 
@@ -77,7 +82,7 @@ get_header();
                     <h3 class="gcso-info-card__title"><?php esc_html_e('Out-of-County Employment', 'gcso'); ?></h3>
                     <div class="gcso-info-card__body">
                         <p><?php esc_html_e('View the list of out-of-county sex offenders employed in Gordon County.', 'gcso'); ?></p>
-                        <p><a href="https://www.gordonsheriff.org/resources/sex-offender-registry/xoffender-employed-in-county/" class="gcso-btn gcso-btn--outline-navy" target="_blank" rel="noopener noreferrer" aria-label="<?php esc_attr_e('View out-of-county sex offenders employed in Gordon County (opens external site)', 'gcso'); ?>"><?php esc_html_e('View Employment Registry', 'gcso'); ?></a></p>
+                        <p><a href="<?php echo esc_url($employment_registry_url); ?>" class="gcso-btn gcso-btn--outline-navy" aria-label="<?php esc_attr_e('View out-of-county sex offenders employed in Gordon County', 'gcso'); ?>"><?php esc_html_e('View Employment Registry', 'gcso'); ?></a></p>
                     </div>
                 </div>
 

@@ -1780,6 +1780,26 @@ textarea:focus-visible {
 }
 
 /* Archive grid */
+.gcso-archive__intro {
+    max-width: 58rem;
+    margin: 0 auto var(--space-xl);
+    padding: var(--space-md) var(--space-lg);
+    background: #f5f7f2;
+    border: 1px solid #dce3d4;
+    border-left: 0.35rem solid var(--gcso-navy);
+    border-radius: var(--radius-sm);
+    text-align: center;
+}
+
+.gcso-archive__intro p {
+    margin: 0;
+}
+
+.gcso-archive__intro p + p {
+    margin-top: var(--space-sm);
+    font-size: var(--fs-sm);
+}
+
 .gcso-archive__grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
