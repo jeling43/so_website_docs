@@ -34,6 +34,7 @@ function gcso_get_icon($name, $args = []) {
 
     $file = GCSO_DIR . '/assets/icons/' . sanitize_file_name($name) . '.svg';
     if (file_exists($file)) {
+        // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents -- Reads a sanitized local SVG asset from the theme directory.
         $svg = file_get_contents($file);
         // Add class and aria attributes
         $svg = str_replace('<svg', '<svg class="' . esc_attr($args['class']) . '" aria-hidden="' . esc_attr($args['aria-hidden']) . '"', $svg);

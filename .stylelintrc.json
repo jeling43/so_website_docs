@@ -1,0 +1,37 @@
+{
+    "extends": "stylelint-config-standard",
+    "ignoreFiles": [
+        "**/vendor/**",
+        "**/node_modules/**",
+        "**/dist/**",
+        "**/build/**",
+        "**/*.min.css"
+    ],
+    "rules": {
+        "no-descending-specificity": null,
+        "selector-class-pattern": null,
+        "selector-id-pattern": null,
+        "custom-property-pattern": null,
+        "declaration-block-no-redundant-longhand-properties": null,
+        "font-family-no-missing-generic-family-keyword": true,
+        "color-no-invalid-hex": true,
+        "property-no-unknown": [true, {
+            "ignoreProperties": ["text-size-adjust"]
+        }],
+        "at-rule-no-unknown": [true, {
+            "ignoreAtRules": ["apply", "layer", "tailwind", "screen"]
+        }],
+        "import-notation": null,
+        "alpha-value-notation": null,
+        "color-function-notation": null,
+        "media-feature-range-notation": null,
+        "shorthand-property-no-redundant-values": null,
+        "comment-empty-line-before": null,
+        "color-hex-length": null,
+        "value-keyword-case": ["lower", {
+            "ignoreFunctions": [],
+            "ignoreProperties": ["font-family", "/^--/"]
+        }],
+        "no-duplicate-selectors": null
+    }
+}

@@ -1,0 +1,17 @@
+includes:
+    - vendor/szepeviktor/phpstan-wordpress/extension.neon
+
+parameters:
+    level: 5
+    bootstrapFiles:
+        - phpstan-bootstrap.php
+    paths:
+        - gcso-custom
+    excludePaths:
+        - gcso-custom/vendor (?)
+        - gcso-custom/node_modules (?)
+    # Suppress wp_nav_menu array-shape mismatches caused by passing `false` for
+    # `container` and a string callable for `fallback_cb` — both are valid WP usage
+    # but the phpstan-wordpress stubs type them more narrowly.
+    ignoreErrors:
+        - '#Parameter \#1 \$args of function wp_nav_menu expects#'

@@ -81,7 +81,7 @@ defined('ABSPATH') || exit;
     <div class="gcso-footer__bottom">
         <div class="gcso-container gcso-footer__bottom-inner">
             <p class="gcso-footer__copyright">
-                &copy; <?php echo esc_html(date('Y')); ?> <?php echo esc_html(get_bloginfo('name')); ?>. <?php esc_html_e('All rights reserved.', 'gcso'); ?>
+                &copy; <?php echo esc_html(gmdate('Y')); ?> <?php echo esc_html(get_bloginfo('name')); ?>. <?php esc_html_e('All rights reserved.', 'gcso'); ?>
             </p>
             <nav class="gcso-footer__legal" aria-label="<?php esc_attr_e('Legal Navigation', 'gcso'); ?>">
                 <a href="<?php echo esc_url(home_url('/privacy-policy')); ?>"><?php esc_html_e('Privacy Policy', 'gcso'); ?></a>
