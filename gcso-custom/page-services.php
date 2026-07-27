@@ -18,8 +18,15 @@ get_header();
 
         <div class="gcso-service-page">
             <div class="gcso-service-page__intro">
-                <p><?php esc_html_e('Access commonly requested services from the Gordon County Sheriff\'s Office. Choose a service below to get started.', 'gcso'); ?></p>
+                <p><?php esc_html_e('Find a service quickly using the categories below. Select a service to view requirements, instructions, or the next step.', 'gcso'); ?></p>
             </div>
+
+            <nav class="gcso-services-page__nav" aria-label="Service categories">
+                <a href="#reports-heading"><?php esc_html_e('Reports and records', 'gcso'); ?></a>
+                <a href="#safety-heading"><?php esc_html_e('Public safety', 'gcso'); ?></a>
+                <a href="#permits-heading"><?php esc_html_e('Permits and licensing', 'gcso'); ?></a>
+                <a href="#court-services-heading"><?php esc_html_e('Court services', 'gcso'); ?></a>
+            </nav>
 
             <!-- Reports & Records -->
             <section aria-labelledby="reports-heading">
@@ -29,29 +36,29 @@ get_header();
                     <span class="gcso-section-heading__line"></span>
                 </h2>
 
-                <div class="gcso-info-cards">
+                <div class="gcso-info-cards gcso-info-cards--services">
                     <a href="<?php echo esc_url(home_url('/services/request-a-report')); ?>" class="gcso-info-card gcso-info-card--link">
                         <h3 class="gcso-info-card__title"><?php esc_html_e('Request a Report', 'gcso'); ?></h3>
                         <div class="gcso-info-card__body">
                             <p><?php esc_html_e('Request a copy of an incident or accident report.', 'gcso'); ?></p>
+                            <span class="gcso-card-action"><?php esc_html_e('View report request', 'gcso'); ?> <span aria-hidden="true">→</span></span>
                         </div>
                     </a>
 
                     <a href="<?php echo esc_url(home_url('/services/submit-additional-information')); ?>" class="gcso-info-card gcso-info-card--link">
-                        <h3 class="gcso-info-card__title"><?php esc_html_e('Submit Additional Information', 'gcso'); ?></h3>
+                        <h3 class="gcso-info-card__title"><?php esc_html_e('Add Case Information', 'gcso'); ?></h3>
                         <div class="gcso-info-card__body">
                             <p><?php esc_html_e('Provide additional information for an existing report or case.', 'gcso'); ?></p>
+                            <span class="gcso-card-action"><?php esc_html_e('Submit information', 'gcso'); ?> <span aria-hidden="true">→</span></span>
                         </div>
                     </a>
-                </div>
-
-                <div class="gcso-info-cards">
-                    <a href="<?php echo esc_url(home_url('/services/open-records')); ?>" class="gcso-info-card gcso-info-card--link gcso-info-card--full">
-                        <h3 class="gcso-info-card__title"><?php esc_html_e('Open Records Request', 'gcso'); ?></h3>
+                    <div class="gcso-info-card gcso-info-card--full gcso-info-card--notice">
+                        <h3 class="gcso-info-card__title"><?php esc_html_e('Public Records', 'gcso'); ?></h3>
                         <div class="gcso-info-card__body">
-                            <p><?php esc_html_e('Submit a formal Open Records Request under Georgia law.', 'gcso'); ?></p>
+                            <p><?php esc_html_e('Captain Chuck Kirby is the Gordon County Sheriff’s Office Custodian of Records. Public records requests should be addressed to the Custodian of Records.', 'gcso'); ?></p>
+                            <span class="gcso-card-note"><?php esc_html_e('Information only', 'gcso'); ?></span>
                         </div>
-                    </a>
+                    </div>
                 </div>
             </section>
 
@@ -63,11 +70,12 @@ get_header();
                     <span class="gcso-section-heading__line"></span>
                 </h2>
 
-                <div class="gcso-info-cards">
+                <div class="gcso-info-cards gcso-info-cards--services">
                     <a href="<?php echo esc_url(home_url('/services/most-wanted')); ?>" class="gcso-info-card gcso-info-card--link">
                         <h3 class="gcso-info-card__title"><?php esc_html_e('Most Wanted', 'gcso'); ?></h3>
                         <div class="gcso-info-card__body">
                             <p><?php esc_html_e('View individuals currently wanted by the Gordon County Sheriff\'s Office.', 'gcso'); ?></p>
+                            <span class="gcso-card-action"><?php esc_html_e('View most wanted', 'gcso'); ?> <span aria-hidden="true">→</span></span>
                         </div>
                     </a>
 
@@ -75,11 +83,12 @@ get_header();
                         <h3 class="gcso-info-card__title"><?php esc_html_e('Submit a Tip', 'gcso'); ?></h3>
                         <div class="gcso-info-card__body">
                             <p><?php esc_html_e('Report suspicious activity or provide anonymous crime information.', 'gcso'); ?></p>
+                            <span class="gcso-card-action"><?php esc_html_e('Submit a tip', 'gcso'); ?> <span aria-hidden="true">→</span></span>
                         </div>
                     </a>
                 </div>
 
-                <div class="gcso-info-cards">
+                <div class="gcso-info-cards gcso-info-cards--services">
                     <!-- Sex Offender Registry - Direct external link -->
                     <div class="gcso-info-card">
                         <h3 class="gcso-info-card__title"><?php esc_html_e('Sex Offender Search', 'gcso'); ?></h3>
@@ -118,11 +127,12 @@ get_header();
                     <span class="gcso-section-heading__line"></span>
                 </h2>
 
-                <div class="gcso-info-cards">
+                <div class="gcso-info-cards gcso-info-cards--services">
                     <a href="<?php echo esc_url(home_url('/raffle-licenses/')); ?>" class="gcso-info-card gcso-info-card--link">
                         <h3 class="gcso-info-card__title"><?php esc_html_e('Raffle Licenses', 'gcso'); ?></h3>
                         <div class="gcso-info-card__body">
                             <p><?php esc_html_e('Review raffle-license requirements and request information.', 'gcso'); ?></p>
+                            <span class="gcso-card-action"><?php esc_html_e('View raffle licenses', 'gcso'); ?> <span aria-hidden="true">→</span></span>
                         </div>
                     </a>
 
@@ -130,8 +140,43 @@ get_header();
                         <h3 class="gcso-info-card__title"><?php esc_html_e('Secondary Metals Recycling', 'gcso'); ?></h3>
                         <div class="gcso-info-card__body">
                             <p><?php esc_html_e('Registration and requirements for secondary metals recyclers.', 'gcso'); ?></p>
+                            <span class="gcso-card-action"><?php esc_html_e('View requirements', 'gcso'); ?> <span aria-hidden="true">→</span></span>
                         </div>
                     </a>
+                </div>
+            </section>
+
+            <!-- Court Services -->
+            <section aria-labelledby="court-services-heading">
+                <h2 id="court-services-heading" class="gcso-section-heading">
+                    <span class="gcso-section-heading__line"></span>
+                    <?php esc_html_e('Court Services', 'gcso'); ?>
+                    <span class="gcso-section-heading__line"></span>
+                </h2>
+
+                <div class="gcso-info-card gcso-info-card--full gcso-fees-card">
+                    <div class="gcso-info-card__body">
+                        <p class="gcso-service-page__section-intro"><?php esc_html_e('Common court-service fees are listed below for reference. Fees and payment requirements may change; confirm current details before submitting documents.', 'gcso'); ?></p>
+                        <dl class="gcso-fee-list">
+                            <?php
+                            $court_services_fees = array(
+                                'Service of Civil Process' => '$50.00',
+                                'Subpoena' => '$10.00',
+                                'Writ of Fieri Facias (Fi. Fa.)' => '$50.00',
+                                'Levy' => '$50.00',
+                                'Nulla Bona' => '$20.00',
+                                'Garnishments' => '$50.00',
+                                'Funeral Transports (Off Duty)' => '$65.00 per hour for each deputy (paid to deputy) and $0.67 per mile (paid to county)',
+                            );
+                            foreach ($court_services_fees as $service => $fee) :
+                            ?>
+                                <div class="gcso-fee-list__row">
+                                    <dt><?php echo esc_html($service); ?></dt>
+                                    <dd><?php echo esc_html($fee); ?></dd>
+                                </div>
+                            <?php endforeach; ?>
+                        </dl>
+                    </div>
                 </div>
             </section>
 

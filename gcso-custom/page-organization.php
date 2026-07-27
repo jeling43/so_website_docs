@@ -44,7 +44,6 @@ get_header();
                                 <strong><?php esc_html_e('Bureau', 'gcso'); ?></strong>
                             </div>
                             <div class="gcso-org-structure__bureau-body">
-                                <span class="gcso-org-structure__bureau-link"><?php esc_html_e('Enforcement Bureau', 'gcso'); ?></span>
                                 <ul>
                                     <li><?php esc_html_e('Patrol Division', 'gcso'); ?></li>
                                     <li><?php esc_html_e('Criminal Investigations', 'gcso'); ?></li>
@@ -59,7 +58,6 @@ get_header();
                                 <strong><?php esc_html_e('Bureau', 'gcso'); ?></strong>
                             </div>
                             <div class="gcso-org-structure__bureau-body">
-                                <span class="gcso-org-structure__bureau-link"><?php esc_html_e('Judicial Bureau', 'gcso'); ?></span>
                                 <ul>
                                     <li><?php esc_html_e('Court Services', 'gcso'); ?></li>
                                     <li><a href="<?php echo esc_url(home_url('/jail/')); ?>"><?php esc_html_e('Jail Division', 'gcso'); ?></a></li>
