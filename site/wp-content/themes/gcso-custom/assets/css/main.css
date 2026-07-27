@@ -1748,6 +1748,32 @@ textarea:focus-visible {
     margin: var(--space-md) 0;
 }
 
+/* Court services fee list */
+.gcso-fee-list {
+    max-width: 58rem;
+    margin: 0 auto;
+    border: 1px solid var(--gcso-border);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    background: var(--gcso-white);
+}
+
+.gcso-fee-list__row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(12rem, 0.8fr);
+    gap: var(--space-md);
+    padding: 0.9rem 1rem;
+    border-bottom: 1px solid var(--gcso-border);
+}
+
+.gcso-fee-list__row:last-child { border-bottom: 0; }
+.gcso-fee-list__row:nth-child(even) { background: var(--gcso-light-gray); }
+.gcso-fee-list__row dt, .gcso-fee-list__row dd { margin: 0; }
+.gcso-fee-list__row dd { font-weight: 700; color: var(--gcso-navy); }
+.gcso-fee-list__note { max-width: 58rem; margin: var(--space-md) auto 0; font-size: var(--fs-sm); color: var(--gcso-muted); }
+.gcso-fee-list__note a { color: var(--gcso-navy); font-weight: 600; }
+@media (max-width: 600px) { .gcso-fee-list__row { grid-template-columns: 1fr; gap: 0.25rem; } }
+
 .gcso-content table {
     width: 100%;
     border-collapse: collapse;
@@ -1986,6 +2012,46 @@ textarea:focus-visible {
     color: #444;
 }
 
+.gcso-services-page__nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin: 0 0 var(--space-xl);
+    padding: 0.85rem;
+    background: var(--gcso-light-gray);
+    border: 1px solid var(--gcso-border);
+    border-radius: var(--radius-md);
+}
+
+.gcso-services-page__nav a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+    padding: 0.55rem 0.9rem;
+    border: 1px solid var(--gcso-border);
+    border-radius: 999px;
+    background: var(--gcso-white);
+    color: var(--gcso-navy);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.gcso-services-page__nav a:hover,
+.gcso-services-page__nav a:focus-visible {
+    border-color: var(--gcso-navy);
+    background: var(--gcso-navy);
+    color: var(--gcso-white);
+}
+
+.gcso-service-page > section {
+    scroll-margin-top: 6rem;
+    margin-bottom: var(--space-2xl);
+}
+
+.gcso-service-page > section:last-of-type {
+    margin-bottom: 0;
+}
+
 /* Services landing page */
 .gcso-services-main .gcso-content-area {
     padding-top: var(--space-md);
@@ -2005,8 +2071,80 @@ textarea:focus-visible {
     margin-bottom: 0;
 }
 
+.gcso-resource-jump {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0 auto var(--space-xl);
+    padding: 0.75rem;
+    border: 1px solid var(--gcso-border);
+    border-radius: var(--radius-md);
+    background: var(--gcso-light-gray);
+}
+
+.gcso-resource-jump a {
+    min-height: 2.75rem;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 0.8rem;
+    border: 1px solid var(--gcso-border);
+    border-radius: 999px;
+    background: var(--gcso-white);
+    color: var(--gcso-navy);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.gcso-resource-jump a:hover,
+.gcso-resource-jump a:focus-visible {
+    border-color: var(--gcso-navy);
+    background: var(--gcso-navy);
+    color: var(--gcso-white);
+}
+
+.gcso-resources-page .gcso-info-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.gcso-resources-page .gcso-info-cards--two {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.gcso-resources-page .gcso-info-card--link {
+    min-height: 0;
+}
+
+.gcso-resources-page .gcso-info-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.gcso-resources-page .gcso-info-card--notice {
+    border-left: 4px solid var(--gcso-gold);
+    background: #fffaf0;
+}
+
+.gcso-resources-page .gcso-info-card__title {
+    min-height: 4.5rem;
+    font-size: clamp(1.1rem, 1.4vw, 1.5rem);
+    line-height: 1.15;
+    text-align: center;
+}
+
+.gcso-resources-page .gcso-info-card__body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.gcso-resources-page .gcso-card-action {
+    margin-top: var(--space-sm);
+    padding-top: var(--space-sm);
+}
+
 .gcso-resources-page > section {
-    margin-bottom: var(--space-2xl);
+    margin-bottom: var(--space-xl);
 }
 
 .gcso-resources-page > section:last-of-type {
@@ -2041,6 +2179,7 @@ textarea:focus-visible {
     font-size: var(--fs-lg);
     color: var(--gcso-navy);
     margin-bottom: var(--space-sm);
+    min-height: 4.25rem;
     padding-bottom: var(--space-xs);
     border-bottom: 2px solid var(--gcso-gold);
 }
@@ -2051,6 +2190,35 @@ textarea:focus-visible {
 
 .gcso-info-card__body p {
     margin-bottom: var(--space-sm);
+}
+
+.gcso-card-action {
+    display: inline-block;
+    margin-top: 0.25rem;
+    color: var(--gcso-navy);
+    font-weight: 700;
+}
+
+.gcso-info-card--link:hover .gcso-card-action,
+.gcso-info-card--link:focus-visible .gcso-card-action {
+    color: var(--gcso-gold);
+}
+
+.gcso-card-note {
+    display: inline-block;
+    margin-top: 0.25rem;
+    color: #596979;
+    font-size: var(--fs-sm);
+    font-weight: 700;
+}
+
+.gcso-service-page__section-intro {
+    max-width: 60rem;
+    color: #3f4f5f;
+}
+
+.gcso-fees-card {
+    padding: var(--space-lg);
 }
 
 .gcso-info-card__list {
@@ -2602,6 +2770,38 @@ textarea:focus-visible {
 
 /* Service & contact page responsive */
 @media (max-width: 768px) {
+    .gcso-resources-page .gcso-info-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .gcso-resource-jump {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .gcso-resource-jump a {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .gcso-services-page__nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gcso-resources-page .gcso-info-card__title {
+        min-height: 0;
+    }
+
+    .gcso-services-page__nav a {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .gcso-fees-card {
+        padding: var(--space-md);
+    }
+
     .gcso-info-card__list--columns {
         columns: 1;
     }
@@ -2956,6 +3156,116 @@ textarea:focus-visible {
 }
 
 /* Division Grid */
+.gcso-org-structure__hierarchy {
+    max-width: 1120px;
+    position: relative;
+    padding-top: 1rem;
+}
+
+.gcso-org-structure__intro {
+    margin-bottom: var(--space-xl);
+}
+
+.gcso-org-structure__role {
+    width: min(100%, 320px);
+    min-height: 96px;
+    display: inline-flex;
+    justify-content: center;
+    border: 1px solid var(--gcso-border);
+    border-radius: var(--radius-md);
+    background: var(--gcso-white);
+    color: var(--gcso-navy);
+}
+
+.gcso-org-structure__role--primary {
+    border: 2px solid var(--gcso-gold);
+    background: var(--gcso-navy);
+    color: var(--gcso-white);
+}
+
+.gcso-org-structure__role--primary span {
+    color: var(--gcso-gold-light);
+}
+
+.gcso-org-structure__connector {
+    display: block;
+    width: 2px;
+    height: 3rem;
+    margin: 0 auto;
+    background: var(--gcso-navy);
+}
+
+.gcso-org-structure__connector--split {
+    width: 2px;
+    height: 3rem;
+    position: relative;
+    border: 0;
+    background: var(--gcso-navy);
+}
+
+.gcso-org-structure__connector--split::before {
+    display: none;
+}
+
+.gcso-org-structure__bureaus {
+    max-width: 960px;
+    margin-inline: auto;
+    position: relative;
+    gap: 6rem;
+    padding-top: 4rem;
+}
+
+.gcso-org-structure__bureaus::before {
+    position: absolute;
+    top: 0;
+    left: calc(25% - 1.5rem);
+    right: calc(25% - 1.5rem);
+    border-top: 3px solid var(--gcso-navy);
+    content: '';
+    z-index: 1;
+}
+
+.gcso-org-structure__bureau {
+    position: relative;
+    overflow: visible;
+}
+
+.gcso-org-structure__bureau::before {
+    position: absolute;
+    top: -4rem;
+    left: 50%;
+    width: 2px;
+    height: 4rem;
+    background: var(--gcso-navy);
+    z-index: 1;
+    transform: translateX(-50%);
+    content: '';
+}
+
+.gcso-org-structure__bureau-header {
+    min-height: 4.25rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.gcso-org-structure__bureau-body {
+    min-height: 11rem;
+}
+
+@media (max-width: 767px) {
+    .gcso-org-structure__bureaus {
+        max-width: none;
+        gap: var(--space-lg);
+        padding-top: 0;
+    }
+
+    .gcso-org-structure__bureaus::before,
+    .gcso-org-structure__bureau::before {
+        display: none;
+    }
+}
+
 .gcso-division-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
