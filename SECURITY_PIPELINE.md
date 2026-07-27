@@ -139,6 +139,6 @@ gitleaks detect --source . --verbose
 | `phpcs.xml` | PHP_CodeSniffer / WPCS configuration |
 | `phpstan.neon` | PHPStan configuration (level 5 + WordPress stubs) |
 | `package.json` | Node.js dependencies and scripts |
-| `.eslintrc.json` | ESLint rules for theme JavaScript |
+| `eslint.config.js` | ESLint 9 flat config for theme JavaScript |
 | `.stylelintrc.json` | Stylelint rules for theme CSS |
 | `SECURITY_PIPELINE.md` | This file |
