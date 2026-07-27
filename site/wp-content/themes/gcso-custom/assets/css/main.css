@@ -2121,7 +2121,7 @@ textarea:focus-visible {
 
 .gcso-resources-page .gcso-info-card--notice {
     border-left: 4px solid var(--gcso-gold);
-    background: #fffaf0;
+    background: var(--gcso-white);
 }
 
 .gcso-resources-page .gcso-info-card__title {
@@ -3243,7 +3243,7 @@ textarea:focus-visible {
 }
 
 .gcso-org-structure__bureau-header {
-    min-height: 4.25rem;
+    min-height: 3.5rem;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -3251,6 +3251,20 @@ textarea:focus-visible {
 
 .gcso-org-structure__bureau-body {
     min-height: 11rem;
+    padding: 1rem 1.5rem 1.5rem;
+    text-align: center;
+}
+
+.gcso-org-structure__bureau-body ul {
+    justify-items: center;
+}
+
+.gcso-org-structure__bureau-body li {
+    padding-left: 0;
+}
+
+.gcso-org-structure__bureau-body li::before {
+    display: none;
 }
 
 @media (max-width: 767px) {
@@ -3422,6 +3436,57 @@ a.gcso-info-card--link:focus .gcso-info-card__title {
     line-height: 1.7;
 }
 
+.gcso-about-page .gcso-about-hero {
+    grid-template-columns: 180px minmax(0, 1fr);
+    justify-items: stretch;
+    margin-bottom: var(--space-2xl);
+    text-align: center;
+}
+
+.gcso-about-page .gcso-about-hero__badge img {
+    width: clamp(120px, 14vw, 170px);
+    margin-inline: auto;
+}
+
+.gcso-about-page .gcso-about-hero__content {
+    max-width: 820px;
+}
+
+.gcso-about-page .gcso-about-hero__eyebrow {
+    justify-content: center;
+}
+
+.gcso-about-page .gcso-about-hero p {
+    max-width: 700px;
+    margin-inline: auto;
+}
+
+.gcso-about-page > .gcso-info-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.gcso-about-page .gcso-about-hero + .gcso-info-cards {
+    margin-top: 5rem;
+}
+
+.gcso-about-page .gcso-info-card {
+    min-height: 18rem;
+    padding-bottom: 2.25rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.gcso-about-page .gcso-info-card__body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.gcso-about-page .gcso-card-action {
+    margin-top: auto;
+    padding-top: var(--space-sm);
+}
+
 @media (max-width: 600px) {
     .gcso-about-hero {
         grid-template-columns: 1fr;
@@ -3434,6 +3499,20 @@ a.gcso-info-card--link:focus .gcso-info-card__title {
 
     .gcso-about-hero__eyebrow {
         justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .gcso-about-page > .gcso-info-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .gcso-about-page .gcso-info-card {
+        min-height: 0;
+    }
+
+    .gcso-about-page .gcso-about-hero + .gcso-info-cards {
+        margin-top: 2.5rem;
     }
 }
 
