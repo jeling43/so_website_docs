@@ -33,6 +33,7 @@ get_header();
                     <h3 class="gcso-info-card__title"><?php esc_html_e('Meet the Sheriff', 'gcso'); ?></h3>
                     <div class="gcso-info-card__body">
                         <p><?php esc_html_e('Learn about Sheriff\'s background, experience, and message to the community.', 'gcso'); ?></p>
+                        <span class="gcso-card-action"><?php esc_html_e('Meet the Sheriff', 'gcso'); ?> <span aria-hidden="true">→</span></span>
                     </div>
                 </a>
 
@@ -40,15 +41,14 @@ get_header();
                     <h3 class="gcso-info-card__title"><?php esc_html_e('Mission and Values', 'gcso'); ?></h3>
                     <div class="gcso-info-card__body">
                         <p><?php esc_html_e('Our mission statement, vision, and core values that guide everything we do.', 'gcso'); ?></p>
+                        <span class="gcso-card-action"><?php esc_html_e('Read our mission', 'gcso'); ?> <span aria-hidden="true">→</span></span>
                     </div>
                 </a>
-            </div>
-
-            <div class="gcso-info-cards">
                 <a href="<?php echo esc_url(home_url('/about/organization')); ?>" class="gcso-info-card gcso-info-card--link">
                     <h3 class="gcso-info-card__title"><?php esc_html_e('Organization', 'gcso'); ?></h3>
                     <div class="gcso-info-card__body">
                         <p><?php esc_html_e('View our organizational structure and how our divisions work together.', 'gcso'); ?></p>
+                        <span class="gcso-card-action"><?php esc_html_e('View organization', 'gcso'); ?> <span aria-hidden="true">→</span></span>
                     </div>
                 </a>
             </div>
