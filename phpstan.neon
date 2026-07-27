@@ -6,8 +6,8 @@ parameters:
     paths:
         - gcso-custom
     excludePaths:
-        - gcso-custom/vendor
-        - gcso-custom/node_modules
+        - gcso-custom/vendor (?)
+        - gcso-custom/node_modules (?)
     # Treat unknown WordPress functions/classes from stubs as known
     scanDirectories: []
     # Suppress common WordPress-specific patterns that create noise
