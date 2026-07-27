@@ -16,6 +16,13 @@ get_header();
     <div class="gcso-container gcso-content-area">
         <?php gcso_breadcrumbs(); ?>
 
+        <?php if (is_category('sex-offenders-employed-in-gordon-county')) : ?>
+            <div class="gcso-archive__intro">
+                <p><?php esc_html_e('The following is a list of sex offenders registered and residing in another county who are employed in Gordon County.', 'gcso'); ?></p>
+                <p><?php esc_html_e('Select a name to view the available information. Registry information can change, so please verify current details with the Gordon County Sheriff\'s Office.', 'gcso'); ?></p>
+            </div>
+        <?php endif; ?>
+
         <?php if (have_posts()) : ?>
             <div class="gcso-archive__grid">
                 <?php while (have_posts()) : the_post(); ?>

@@ -9,7 +9,11 @@ defined('ABSPATH') || exit;
 
 $title = '';
 if (is_archive()) {
-    $title = get_the_archive_title();
+    if (is_category()) {
+        $title = single_cat_title('', false);
+    } else {
+        $title = wp_strip_all_tags(get_the_archive_title());
+    }
 } elseif (is_search()) {
     $title = sprintf(esc_html__('Search Results for: %s', 'gcso'), get_search_query());
 } elseif (is_singular()) {

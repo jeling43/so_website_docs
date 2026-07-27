@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Open Records Request
+ * Template Name: Public Records
  *
  * @package GCSO_Custom
  */
@@ -25,7 +25,7 @@ get_header();
                 <div class="gcso-info-card">
                     <h3 class="gcso-info-card__title"><?php esc_html_e('How to Submit a Request', 'gcso'); ?></h3>
                     <div class="gcso-info-card__body">
-                        <p><?php esc_html_e('Open Records Requests must be submitted in writing. You may submit your request:', 'gcso'); ?></p>
+                        <p><?php esc_html_e('Public Records Requests must be submitted in writing. You may submit your request:', 'gcso'); ?></p>
                         <ul class="gcso-info-card__list">
                             <li><?php esc_html_e('In person at the Sheriff\'s Office', 'gcso'); ?></li>
                             <li><?php esc_html_e('By mail', 'gcso'); ?></li>
@@ -69,7 +69,7 @@ get_header();
                         <!-- TODO: VERIFY BEFORE PRODUCTION - Custodian of records contact information -->
                         <p>
                             <strong><?php esc_html_e('Gordon County Sheriff\'s Office', 'gcso'); ?></strong><br>
-                            <?php esc_html_e('Attn: Open Records', 'gcso'); ?><br>
+                            <?php esc_html_e('Attn: Public Records', 'gcso'); ?><br>
                             <?php echo esc_html(gcso_get_option('gcso_address', '2700 Highway 41 North, Calhoun, Georgia 30701')); ?>
                         </p>
                         <p>

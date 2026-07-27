@@ -7,13 +7,27 @@
 
 defined('ABSPATH') || exit;
 
-$news_query = new WP_Query([
+$press_release_category = get_category_by_slug('press-release');
+$press_release_url = $press_release_category
+    ? get_category_link($press_release_category->term_id)
+    : home_url('/category/press-release/');
+
+$news_query_args = [
     'post_type'      => 'post',
     'posts_per_page' => 4,
     'post_status'    => 'publish',
     'orderby'        => 'date',
     'order'          => 'DESC',
-]);
+];
+
+if ($press_release_category) {
+    $news_query_args['cat'] = $press_release_category->term_id;
+} else {
+    // Never fall back to unrelated posts if the category has not been created.
+    $news_query_args['post__in'] = [0];
+}
+
+$news_query = new WP_Query($news_query_args);
 ?>
 
 <section class="gcso-news" aria-labelledby="news-heading">
@@ -24,7 +38,7 @@ $news_query = new WP_Query([
                 <?php esc_html_e('Latest News & Press Releases', 'gcso'); ?>
                 <span class="gcso-section-heading__line"></span>
             </h2>
-            <a href="<?php echo esc_url(get_permalink(get_option('page_for_posts'))); ?>" class="gcso-btn gcso-btn--outline-navy">
+            <a href="<?php echo esc_url($press_release_url); ?>" class="gcso-btn gcso-btn--outline-navy">
                 <?php esc_html_e('View All News', 'gcso'); ?>
             </a>
         </div>

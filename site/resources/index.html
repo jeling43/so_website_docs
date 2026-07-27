@@ -183,21 +183,46 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                 <p>Find commonly requested services, public-safety information, forms, and community resources from the Gordon County Sheriff’s Office.</p>
             </div>
 
+            <nav class="gcso-resource-jump" aria-label="Jump to a resource category">
+                <a href="#resources-popular-heading">Most requested</a>
+                <a href="#resources-records-heading">Reports and records</a>
+                <a href="#resources-safety-heading">Public safety</a>
+                <a href="#resources-permits-heading">Permits and employment</a>
+                <a href="#court-services-fees-heading">Court services</a>
+            </nav>
+
             <section aria-labelledby="resources-popular-heading">
                 <h2 id="resources-popular-heading" class="gcso-section-heading">
                     <span class="gcso-section-heading__line"></span>
                     Most Requested                    <span class="gcso-section-heading__line"></span>
                 </h2>
-                <div class="gcso-info-cards">
+                <div class="gcso-info-cards gcso-info-cards--two">
                     <a href="../services/request-a-report/index.html" class="gcso-info-card gcso-info-card--link">
                         <h3 class="gcso-info-card__title">Request a Report</h3>
-                        <div class="gcso-info-card__body"><p>Request an incident or accident report online.</p></div>
+                        <div class="gcso-info-card__body"><p>Request an incident or accident report online.</p><span class="gcso-card-action">Request a report <span aria-hidden="true">→</span></span></div>
                     </a>
                     <a href="../jail/index.html" class="gcso-info-card gcso-info-card--link">
                         <h3 class="gcso-info-card__title">Jail Information</h3>
-                        <div class="gcso-info-card__body"><p>Find inmate, visitation, bonds, and jail-contact information.</p></div>
+                        <div class="gcso-info-card__body"><p>Find inmate, visitation, bonds, and jail-contact information.</p><span class="gcso-card-action">View jail information <span aria-hidden="true">→</span></span></div>
                     </a>
                 </div>
+            </section>
+
+            <section aria-labelledby="court-services-fees-heading">
+                <h2 id="court-services-fees-heading" class="gcso-section-heading">
+                    <span class="gcso-section-heading__line"></span>
+                    Court Services Fees                    <span class="gcso-section-heading__line"></span>
+                </h2>
+                <dl class="gcso-fee-list">
+                    <div class="gcso-fee-list__row"><dt>Service of Civil Process</dt><dd>$50.00</dd></div>
+                    <div class="gcso-fee-list__row"><dt>Subpoena</dt><dd>$10.00</dd></div>
+                    <div class="gcso-fee-list__row"><dt>Writ of Fieri Facias (Fi. Fa.)</dt><dd>$50.00</dd></div>
+                    <div class="gcso-fee-list__row"><dt>Levy</dt><dd>$50.00</dd></div>
+                    <div class="gcso-fee-list__row"><dt>Nulla Bona</dt><dd>$20.00</dd></div>
+                    <div class="gcso-fee-list__row"><dt>Garnishments</dt><dd>$50.00</dd></div>
+                    <div class="gcso-fee-list__row"><dt>Funeral Transports (Off Duty)</dt><dd>$65.00 per hour for each deputy (paid to deputy) and $0.67 per mile (paid to county)</dd></div>
+                </dl>
+                <p class="gcso-fee-list__note">Fees are provided by the Gordon County Sheriff’s Office for general information and may change. Confirm the current fee and payment requirements before submitting documents.</p>
             </section>
 
             <section aria-labelledby="resources-records-heading">
@@ -205,14 +230,14 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                     <span class="gcso-section-heading__line"></span>
                     Reports and Records                    <span class="gcso-section-heading__line"></span>
                 </h2>
-                <div class="gcso-info-cards">
-                    <a href="../services/open-records/index.html" class="gcso-info-card gcso-info-card--link">
-                        <h3 class="gcso-info-card__title">Open Records Request</h3>
-                        <div class="gcso-info-card__body"><p>Submit a formal request for public records.</p></div>
-                    </a>
+                <div class="gcso-info-cards gcso-info-cards--two">
+                    <div class="gcso-info-card gcso-info-card--notice">
+                        <h3 class="gcso-info-card__title">Public Records</h3>
+                        <div class="gcso-info-card__body"><p>Captain Chuck Kirby is the Gordon County Sheriff’s Office Custodian of Records. Public records requests should be addressed to the Custodian of Records.</p></div>
+                    </div>
                     <a href="../services/submit-additional-information/index.html" class="gcso-info-card gcso-info-card--link">
-                        <h3 class="gcso-info-card__title">Submit Additional Information</h3>
-                        <div class="gcso-info-card__body"><p>Provide information related to an existing report or case.</p></div>
+                        <h3 class="gcso-info-card__title">Add Case Information</h3>
+                        <div class="gcso-info-card__body"><p>Provide information related to an existing report or case.</p><span class="gcso-card-action">Add information <span aria-hidden="true">→</span></span></div>
                     </a>
                 </div>
             </section>
@@ -225,15 +250,15 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                 <div class="gcso-info-cards">
                     <a href="../services/submit-a-tip/index.html" class="gcso-info-card gcso-info-card--link">
                         <h3 class="gcso-info-card__title">Tip Line</h3>
-                        <div class="gcso-info-card__body"><p>Submit confidential information regarding major crimes.</p></div>
+                        <div class="gcso-info-card__body"><p>Submit confidential information regarding major crimes.</p><span class="gcso-card-action">Submit a tip <span aria-hidden="true">→</span></span></div>
                     </a>
                     <a href="../sex-offender-registry/index.html" class="gcso-info-card gcso-info-card--link">
-                        <h3 class="gcso-info-card__title">Sex Offender Registry</h3>
-                        <div class="gcso-info-card__body"><p>Access registration and community-safety information.</p></div>
+                        <h3 class="gcso-info-card__title">Sex Offender Search</h3>
+                        <div class="gcso-info-card__body"><p>Access registration and community-safety information.</p><span class="gcso-card-action">Search registry <span aria-hidden="true">→</span></span></div>
                     </a>
                     <a href="../services/most-wanted/index.html" class="gcso-info-card gcso-info-card--link">
                         <h3 class="gcso-info-card__title">Most Wanted</h3>
-                        <div class="gcso-info-card__body"><p>View individuals currently wanted by the Sheriff’s Office.</p></div>
+                        <div class="gcso-info-card__body"><p>View individuals currently wanted by the Sheriff’s Office.</p><span class="gcso-card-action">View most wanted <span aria-hidden="true">→</span></span></div>
                     </a>
                 </div>
             </section>
@@ -246,15 +271,15 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                 <div class="gcso-info-cards">
                     <a href="../contact/employment/index.html" class="gcso-info-card gcso-info-card--link">
                         <h3 class="gcso-info-card__title">Employment</h3>
-                        <div class="gcso-info-card__body"><p>Learn about careers and employment applications.</p></div>
+                        <div class="gcso-info-card__body"><p>Learn about careers and employment applications.</p><span class="gcso-card-action">View employment information <span aria-hidden="true">→</span></span></div>
                     </a>
                     <a href="../raffle-licenses/index.html" class="gcso-info-card gcso-info-card--link">
                         <h3 class="gcso-info-card__title">Raffle Licenses</h3>
-                        <div class="gcso-info-card__body"><p>Review raffle-license requirements and request information.</p></div>
+                        <div class="gcso-info-card__body"><p>Review raffle-license requirements and request information.</p><span class="gcso-card-action">View raffle licenses <span aria-hidden="true">→</span></span></div>
                     </a>
                     <a href="../services/secondary-metals-recycling/index.html" class="gcso-info-card gcso-info-card--link">
                         <h3 class="gcso-info-card__title">Secondary Metals Recycling</h3>
-                        <div class="gcso-info-card__body"><p>Review registration and transaction requirements.</p></div>
+                        <div class="gcso-info-card__body"><p>Review registration and transaction requirements.</p><span class="gcso-card-action">View requirements <span aria-hidden="true">→</span></span></div>
                     </a>
                 </div>
             </section>
