@@ -21,7 +21,7 @@ get_header();
                 <header class="gcso-single__header">
                     <div class="gcso-single__meta">
                         <time datetime="<?php echo esc_attr(get_the_date('c')); ?>"><?php echo esc_html(get_the_date()); ?></time>
-                        <span class="gcso-single__reading-time"><?php printf(esc_html__('%d min read', 'gcso'), gcso_reading_time()); ?></span>
+                        <span class="gcso-single__reading-time"><?php printf(esc_html__('%d min read', 'gcso'), absint(gcso_reading_time())); ?></span>
                     </div>
                 </header>
 
