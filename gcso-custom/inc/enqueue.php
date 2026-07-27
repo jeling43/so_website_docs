@@ -16,7 +16,7 @@ function gcso_enqueue_assets() {
         'gcso-google-fonts',
         'https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;500;600;700;800;900&display=swap',
         [],
-        null
+        GCSO_VERSION
     );
 
     // Main stylesheet

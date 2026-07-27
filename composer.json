@@ -1,15 +1,37 @@
 {
-	"name": "gordon-county-sheriffs-office/website-theme",
-	"description": "Gordon County Sheriff's Office WordPress theme",
-	"type": "project",
-	"require-dev": {
-		"dealerdirect/phpcodesniffer-composer-installer": "^1.0",
-		"squizlabs/php_codesniffer": "^3.13",
-		"wp-coding-standards/wpcs": "^3.1"
-	},
-	"config": {
-		"allow-plugins": {
-			"dealerdirect/phpcodesniffer-composer-installer": true
-		}
-	}
+    "name": "gcso/gcso-custom-theme",
+    "description": "Gordon County Sheriff's Office custom WordPress theme",
+    "type": "wordpress-theme",
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "php": ">=8.0"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.13",
+        "wp-coding-standards/wpcs": "^3.1",
+        "phpcompatibility/phpcompatibility-wp": "*",
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+        "phpstan/phpstan": "^2.1",
+        "szepeviktor/phpstan-wordpress": "^2.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        },
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "scripts": {
+        "lint": "find gcso-custom -name '*.php' -not -path '*/vendor/*' -not -path '*/node_modules/*' | xargs -n 50 php -l",
+        "phpcs": "phpcs",
+        "phpcbf": "phpcbf",
+        "phpstan": "phpstan analyse --memory-limit=1G",
+        "security": "composer audit --format=plain",
+        "ci": [
+            "@lint",
+            "@phpcs",
+            "@phpstan",
+            "@security"
+        ]
+    }
 }

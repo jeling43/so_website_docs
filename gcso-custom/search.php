@@ -28,7 +28,9 @@ get_header();
 
         <?php if (have_posts()) : ?>
             <p class="gcso-search-results__count">
-                <?php printf(esc_html__('Found %d results', 'gcso'), (int) $wp_query->found_posts); ?>
+                <?php
+                global $wp_query;
+                printf(esc_html__('Found %d results', 'gcso'), (int) $wp_query->found_posts); ?>
             </p>
             <div class="gcso-search-results__list">
                 <?php while (have_posts()) : the_post(); ?>
