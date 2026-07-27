@@ -49,6 +49,10 @@ Sheriff
 
 Put detailed information on the individual division pages.
 
+The current Organization page presents this hierarchy visually with connecting
+lines from the Sheriff to the Chief Deputy and then to the Enforcement and Judicial
+bureaus. Division names remain grouped beneath their bureau cards.
+
 ---
 
 ## 2. Judicial and Jail Content Overlap
@@ -107,16 +111,18 @@ Rename **Press Releases** to **News & Updates** unless formal press releases wil
 
 The Resources page lists links that are repeated again in Quick Links.
 
-### Recommendation
+### Current implementation
 
-Create one organized **Services & Resources** page.
+Services and Resources use consistent, task-focused card layouts. Resources includes
+category navigation, clear action labels, responsive card grids, and a separate
+informational Public Records notice.
 
 ```text
-Services & Resources
+Services and Resources
 ├── Reports & Records
 │   ├── Request a Report
-│   ├── Submit Additional Information
-│   └── Open Records Request
+│   ├── Add Case Information
+│   └── Public Records notice
 ├── Jail & Offender Information
 │   ├── Inmate Search
 │   ├── Jail Information
@@ -128,6 +134,9 @@ Services & Resources
 └── Community
     ├── Submit a Tip
     └── Employment
+
+Services also includes Court Services fees, including civil process, subpoenas,
+levies, garnishments, and funeral transport fees.
 ```
 
 ---
@@ -234,17 +243,19 @@ Verify the card title, image, and destination.
 
 ---
 
-## Public Records Information Is Buried
+## Public Records Information
 
-Public Records information appears on the homepage but is not clearly accessible from the main navigation.
+The official Sheriff’s Office site identifies Captain Chuck Kirby as the Custodian of
+Records. The project presents this as a clearly labeled informational notice rather
+than an unsupported online request form.
 
-### Recommendation
+### Current implementation
 
 ```text
-Records & Reports
+Reports & Records
 ├── Request Incident / Accident Report
-├── Submit Additional Information
-└── Open Records Request
+├── Add Case Information
+└── Public Records notice
 ```
 
 ---
@@ -272,14 +283,15 @@ DIVISIONS
 
 SERVICES
 ├── Request a Report
-├── Submit Additional Information
-├── Open Records Request
+├── Add Case Information
+├── Public Records
 ├── Inmate Search
 ├── Sex Offender Registry
 ├── Most Wanted
 ├── Submit a Tip
 ├── Raffle Licenses
-└── Secondary Metals Recycling
+├── Secondary Metals Recycling
+└── Court Services Fees
 
 JAIL
 ├── Inmate Search
@@ -331,7 +343,7 @@ These should remain visible and easy to access.
 | Captured                        | Section inside Most Wanted         |
 | Additional Report Information   | Records & Reports                  |
 | Press Releases                  | News & Updates                     |
-| Public Records homepage section | Open Records page                  |
+| Public Records homepage section | Public Records notice in Resources |
 | Employment Application          | Employment page                    |
 
 ---

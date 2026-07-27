@@ -2121,7 +2121,7 @@ textarea:focus-visible {
 
 .gcso-resources-page .gcso-info-card--notice {
     border-left: 4px solid var(--gcso-gold);
-    background: #fffaf0;
+    background: var(--gcso-white);
 }
 
 .gcso-resources-page .gcso-info-card__title {
@@ -3243,7 +3243,7 @@ textarea:focus-visible {
 }
 
 .gcso-org-structure__bureau-header {
-    min-height: 4.25rem;
+    min-height: 3.5rem;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -3251,6 +3251,20 @@ textarea:focus-visible {
 
 .gcso-org-structure__bureau-body {
     min-height: 11rem;
+    padding: 1rem 1.5rem 1.5rem;
+    text-align: center;
+}
+
+.gcso-org-structure__bureau-body ul {
+    justify-items: center;
+}
+
+.gcso-org-structure__bureau-body li {
+    padding-left: 0;
+}
+
+.gcso-org-structure__bureau-body li::before {
+    display: none;
 }
 
 @media (max-width: 767px) {
