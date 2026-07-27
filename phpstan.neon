@@ -3,13 +3,15 @@ includes:
 
 parameters:
     level: 5
+    bootstrapFiles:
+        - phpstan-bootstrap.php
     paths:
         - gcso-custom
     excludePaths:
         - gcso-custom/vendor (?)
         - gcso-custom/node_modules (?)
-    # Treat unknown WordPress functions/classes from stubs as known
-    scanDirectories: []
-    # Suppress common WordPress-specific patterns that create noise
+    # Suppress wp_nav_menu array-shape mismatches caused by passing `false` for
+    # `container` and a string callable for `fallback_cb` — both are valid WP usage
+    # but the phpstan-wordpress stubs type them more narrowly.
     ignoreErrors:
-        - '#Function [a-zA-Z_]+ not found\.#'
+        - '#Parameter \#1 \$args of function wp_nav_menu expects#'

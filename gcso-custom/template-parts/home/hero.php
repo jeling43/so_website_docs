@@ -64,7 +64,7 @@ $slide_count = count($slides);
                  role="group"
                  aria-roledescription="slide"
                  aria-label="<?php printf(esc_attr__('Slide %1$d of %2$d', 'gcso'), absint($index + 1), absint($slide_count)); ?>"
-                 data-slide="<?php echo esc_attr($index); ?>">
+                 data-slide="<?php echo esc_attr((string) $index); ?>">
                 <?php if (!empty($slide['image'])) : ?>
                     <div class="gcso-hero-carousel__bg" style="background-image: url('<?php echo esc_url($slide['image']); ?>');" role="img" aria-label="<?php echo esc_attr($slide['heading']); ?>"></div>
                 <?php endif; ?>
@@ -103,7 +103,7 @@ $slide_count = count($slides);
                         role="tab"
                         aria-selected="<?php echo $i === 0 ? 'true' : 'false'; ?>"
                         aria-label="<?php printf(esc_attr__('Go to slide %d', 'gcso'), absint($i + 1)); ?>"
-                        data-slide="<?php echo esc_attr($i); ?>"></button>
+                        data-slide="<?php echo esc_attr((string) $i); ?>"></button>
             <?php endfor; ?>
         </div>
     <?php endif; ?>
