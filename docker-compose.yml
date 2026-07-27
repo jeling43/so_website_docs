@@ -16,6 +16,7 @@ services:
     volumes:
       - wordpress_data:/var/www/html
       - ./gcso-custom:/var/www/html/wp-content/themes/gcso-custom
+      - ./docker/php/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini:ro
     depends_on:
       - db
     networks:
