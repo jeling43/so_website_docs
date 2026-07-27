@@ -25,7 +25,7 @@
         "lint": "find gcso-custom -name '*.php' -not -path '*/vendor/*' -not -path '*/node_modules/*' | xargs -n 50 php -l",
         "phpcs": "phpcs",
         "phpcbf": "phpcbf",
-        "phpstan": "phpstan analyse --memory-limit=512M",
+        "phpstan": "phpstan analyse --memory-limit=1G",
         "security": "composer audit --format=plain",
         "ci": [
             "@lint",
