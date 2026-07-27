@@ -21,3 +21,9 @@ Thumbs.db
 
 # Docker volumes
 docker-compose.override.yml
+
+# CI / build artifacts
+phpcs-report.xml
+semgrep-report.json
+gitleaks-report.json
+phpstan-baseline.neon

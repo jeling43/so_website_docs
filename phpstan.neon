@@ -1,0 +1,15 @@
+includes:
+    - vendor/szepeviktor/phpstan-wordpress/extension.neon
+
+parameters:
+    level: 5
+    paths:
+        - gcso-custom
+    excludePaths:
+        - gcso-custom/vendor
+        - gcso-custom/node_modules
+    # Treat unknown WordPress functions/classes from stubs as known
+    scanDirectories: []
+    # Suppress common WordPress-specific patterns that create noise
+    ignoreErrors:
+        - '#Function [a-zA-Z_]+ not found\.#'

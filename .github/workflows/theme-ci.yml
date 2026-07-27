@@ -1,0 +1,177 @@
+name: Theme CI – Security & Code Quality
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+permissions:
+  contents: read
+
+jobs:
+  # ── PHP Checks ─────────────────────────────────────────────────────────────
+  php:
+    name: PHP Lint · PHPCS · PHPStan · Composer Audit
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository (full history)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.2"
+          tools: composer:v2
+          coverage: none
+
+      - name: Composer cache
+        uses: actions/cache@v4
+        with:
+          path: vendor
+          key: composer-${{ runner.os }}-${{ hashFiles('composer.lock', 'composer.json') }}
+          restore-keys: composer-${{ runner.os }}-
+
+      - name: Validate composer.json
+        run: composer validate --strict --no-check-publish
+
+      - name: Install Composer dependencies
+        run: composer install --no-interaction --prefer-dist --no-progress
+
+      - name: PHP syntax check
+        run: |
+          find gcso-custom -name '*.php' \
+            -not -path '*/vendor/*' \
+            -not -path '*/node_modules/*' \
+            | xargs -n 50 php -l
+
+      - name: WordPress Coding Standards (PHPCS)
+        run: composer phpcs -- --report=checkstyle --report-file=phpcs-report.xml || true
+        # Always generate the report; the next step evaluates pass/fail.
+
+      - name: Upload PHPCS report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phpcs-report
+          path: phpcs-report.xml
+          if-no-files-found: ignore
+
+      - name: Fail on PHPCS errors
+        run: composer phpcs
+
+      - name: PHPStan static analysis
+        run: composer phpstan -- --error-format=github
+
+      - name: Composer audit (vulnerable dependencies)
+        run: composer audit --format=plain
+
+  # ── Semgrep ────────────────────────────────────────────────────────────────
+  semgrep:
+    name: Semgrep SAST
+    runs-on: ubuntu-latest
+    container:
+      image: semgrep/semgrep:latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Run Semgrep
+        run: |
+          semgrep scan \
+            --config=auto \
+            --config=p/php \
+            --config=p/javascript \
+            --config=p/wordpress \
+            --config=p/owasp-top-ten \
+            --config=p/security-audit \
+            --json --output=semgrep-report.json \
+            --exclude='vendor' \
+            --exclude='node_modules' \
+            --exclude='dist' \
+            --exclude='build' \
+            --exclude='*.min.js' \
+            --exclude='*.min.css' \
+            gcso-custom || true
+
+      - name: Upload Semgrep report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: semgrep-report
+          path: semgrep-report.json
+          if-no-files-found: ignore
+
+      - name: Fail on Semgrep findings
+        run: |
+          semgrep scan \
+            --config=auto \
+            --config=p/php \
+            --config=p/javascript \
+            --config=p/wordpress \
+            --config=p/owasp-top-ten \
+            --config=p/security-audit \
+            --error \
+            --exclude='vendor' \
+            --exclude='node_modules' \
+            --exclude='dist' \
+            --exclude='build' \
+            --exclude='*.min.js' \
+            --exclude='*.min.css' \
+            gcso-custom
+
+  # ── Gitleaks ───────────────────────────────────────────────────────────────
+  gitleaks:
+    name: Gitleaks Secret Scan
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository (full history)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install Gitleaks
+        run: |
+          GITLEAKS_VERSION="8.21.2"
+          curl -sSfL "https://github.com/gitleaks/gitleaks/releases/download/v${GITLEAKS_VERSION}/gitleaks_${GITLEAKS_VERSION}_linux_x64.tar.gz" \
+            | tar -xz -C /usr/local/bin gitleaks
+
+      - name: Run Gitleaks
+        run: gitleaks detect --source . --report-format json --report-path gitleaks-report.json --verbose
+
+      - name: Upload Gitleaks report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gitleaks-report
+          path: gitleaks-report.json
+          if-no-files-found: ignore
+
+  # ── JavaScript & CSS ───────────────────────────────────────────────────────
+  frontend:
+    name: ESLint · Stylelint · npm audit
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Install npm dependencies
+        run: npm ci
+
+      - name: ESLint
+        run: npm run lint:js
+
+      - name: Stylelint
+        run: npm run lint:css
+
+      - name: npm audit (high + critical)
+        run: npm audit --audit-level=high
+        continue-on-error: true  # All deps are dev-only linting tools; flag but don't block
