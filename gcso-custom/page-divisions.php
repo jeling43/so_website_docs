@@ -111,10 +111,10 @@ $ranks = [
                             <strong><?php esc_html_e('Bureau', 'gcso'); ?></strong>
                         </div>
                         <div class="gcso-bureau-card__body">
-                            <p><?php esc_html_e('The Judicial Bureau includes the Jail Operations Division and Court Services Division.', 'gcso'); ?></p>
+                            <p><?php esc_html_e('The Judicial Bureau includes the Jail Division and Court Services Division.', 'gcso'); ?></p>
                             <h3><?php esc_html_e('Court Services Division', 'gcso'); ?></h3>
                             <p><?php esc_html_e('Receives and serves court process—including warrants, civil actions, and summonses—transports inmates, and provides physical security for Superior Court and judges.', 'gcso'); ?></p>
-                            <h3><?php esc_html_e('Jail Operations Division', 'gcso'); ?></h3>
+                            <h3><?php esc_html_e('Jail Division', 'gcso'); ?></h3>
                             <p><?php esc_html_e('Provides safe and secure operation of the county jail, safeguards inmate occupants, and maintains required incarceration records.', 'gcso'); ?></p>
                             <p class="gcso-bureau-card__action">
                                 <a href="<?php echo esc_url(get_permalink(get_page_by_path('jail'))); ?>" class="gcso-btn gcso-btn--gold">

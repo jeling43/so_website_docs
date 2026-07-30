@@ -55,7 +55,7 @@ get_header();
                     <span class="gcso-section-heading__line"></span>
                 </h2>
                 <div class="gcso-info-cards gcso-judicial-contacts">
-                    <div class="gcso-info-card"><h3 class="gcso-info-card__title"><?php esc_html_e('Major Pat Bedford', 'gcso'); ?></h3><div class="gcso-info-card__body"><p><?php esc_html_e('Commanding Officer, Judicial Bureau', 'gcso'); ?></p></div></div>
+                    <div class="gcso-info-card gcso-info-card--full gcso-leadership-card--primary"><h3 class="gcso-info-card__title"><?php esc_html_e('Major Pat Bedford', 'gcso'); ?></h3><div class="gcso-info-card__body"><p><?php esc_html_e('Commanding Officer, Judicial Bureau', 'gcso'); ?></p></div></div>
                     <div class="gcso-info-card"><h3 class="gcso-info-card__title"><?php esc_html_e('Captain Dylan Nicholas', 'gcso'); ?></h3><div class="gcso-info-card__body"><p><?php esc_html_e('Commander, Jail Division', 'gcso'); ?></p></div></div>
                     <div class="gcso-info-card"><h3 class="gcso-info-card__title"><?php esc_html_e('Captain Keith Henson', 'gcso'); ?></h3><div class="gcso-info-card__body"><p><?php esc_html_e('Commander, Court Services Division', 'gcso'); ?></p></div></div>
                 </div>

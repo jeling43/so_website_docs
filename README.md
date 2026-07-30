@@ -23,6 +23,8 @@ See [docs/LOCAL-DEVELOPMENT.md](docs/LOCAL-DEVELOPMENT.md) for the full setup gu
 
 ## Documentation
 
+- [Documentation Index](docs/README.md) — Complete documentation and wiki index
+- [Project Wiki](docs/wiki/Home.md) — Site overview, architecture, maintenance, and troubleshooting
 - [Local Development](docs/LOCAL-DEVELOPMENT.md) — Docker setup and workflow
 - [Theme README](gcso-custom/README.md) — Installation, configuration, and usage
 - [Upload & Deploy](docs/UPLOAD-TO-WORDPRESS.md) — Packaging and deployment
