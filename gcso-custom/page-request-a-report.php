@@ -65,21 +65,6 @@ get_header();
                 </div>
             </div>
 
-            <section class="gcso-report-request-form" aria-labelledby="report-request-form-heading">
-                <div class="gcso-report-request-form__heading">
-                    <span class="gcso-section-heading__line"></span>
-                    <h2 id="report-request-form-heading"><?php esc_html_e('Request a Report Online', 'gcso'); ?></h2>
-                    <span class="gcso-section-heading__line"></span>
-                </div>
-                <div class="gcso-report-request-form__frame">
-                    <iframe
-                        src="https://docs.google.com/forms/d/e/1FAIpQLSdkIxR5IizfvJMf5SYosStWE6GGOkEdy6TzCcoCSAryrAce_A/viewform?embedded=true"
-                        title="Request a Report form"
-                        loading="lazy"
-                    ><?php esc_html_e('Loading the report request form…', 'gcso'); ?></iframe>
-                </div>
-            </section>
-
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                 <?php if (get_the_content()) : ?>
                     <article class="gcso-page-content">

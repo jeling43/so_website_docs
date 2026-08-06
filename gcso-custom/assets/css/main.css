@@ -2053,6 +2053,154 @@ textarea:focus-visible {
     padding: var(--space-lg) 0;
 }
 
+/* News & alerts landing page */
+.gcso-news-alerts {
+    padding: var(--space-lg) 0;
+}
+
+.gcso-news-alerts__filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin: 0 0 var(--space-xl);
+    padding: 0.85rem;
+    border: 1px solid var(--gcso-border);
+    border-radius: var(--radius-md);
+    background: var(--gcso-light-gray);
+}
+
+.gcso-news-alerts__filters a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+    padding: 0.55rem 0.9rem;
+    border: 1px solid var(--gcso-border);
+    border-radius: 999px;
+    background: var(--gcso-white);
+    color: var(--gcso-navy);
+    font-weight: 700;
+}
+
+.gcso-news-alerts__filters a:hover,
+.gcso-news-alerts__filters a:focus-visible {
+    border-color: var(--gcso-navy);
+    background: var(--gcso-navy);
+    color: var(--gcso-white);
+}
+
+.gcso-news-alerts > section {
+    margin-bottom: var(--space-2xl);
+}
+
+.gcso-news-alerts__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-md);
+}
+
+.gcso-news-alerts__grid .gcso-news__card {
+    flex-direction: column;
+}
+
+.gcso-news-alerts__grid .gcso-news__image img {
+    width: 100%;
+    height: 180px;
+}
+
+.gcso-news-alerts__empty,
+.gcso-news-alerts__social {
+    padding: var(--space-xl);
+    border: 1px solid var(--gcso-border);
+    border-radius: var(--radius-md);
+    background: var(--gcso-light-gray);
+    text-align: center;
+}
+
+.gcso-news-alerts__empty h2 {
+    margin-bottom: var(--space-sm);
+}
+
+.gcso-news-alerts__social .gcso-section-heading {
+    margin-bottom: var(--space-sm);
+}
+
+.gcso-news-alerts__social p {
+    max-width: 42rem;
+    margin: 0 auto var(--space-md);
+}
+
+.gcso-news-alerts__archive-link {
+    margin: calc(var(--space-lg) * -1) 0 var(--space-xl);
+    text-align: center;
+}
+
+.gcso-news-alerts__archive-link a {
+    color: var(--gcso-navy);
+    font-weight: 700;
+}
+
+@media (max-width: 600px) {
+    .gcso-news-alerts__filters {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gcso-news-alerts__filters a {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .gcso-news-alerts__empty,
+    .gcso-news-alerts__social {
+        padding: var(--space-md);
+    }
+}
+
+/* Services landing page */
+.gcso-services-main .gcso-content-area {
+    max-width: var(--container-width);
+}
+
+.gcso-services-main .gcso-service-page__intro {
+    max-width: 52rem;
+}
+
+.gcso-services-main .gcso-info-cards--services {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    align-items: stretch;
+}
+
+.gcso-services-main .gcso-info-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.gcso-services-main .gcso-info-card__title {
+    min-height: 0;
+}
+
+.gcso-services-main .gcso-info-card__body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.gcso-services-main .gcso-card-action,
+.gcso-services-main .gcso-info-card__body .gcso-btn {
+    margin-top: auto;
+}
+
+.gcso-services-main .gcso-info-card--notice {
+    border-left: 4px solid var(--gcso-gold);
+}
+
+.gcso-services-main .gcso-info-card--full {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: min(100%, 56rem);
+}
+
 .gcso-service-page__intro {
     max-width: var(--content-width);
     margin-bottom: var(--space-lg);
@@ -2171,6 +2319,12 @@ textarea:focus-visible {
 .gcso-resources-page .gcso-info-card--notice {
     border-left: 4px solid var(--gcso-gold);
     background: var(--gcso-white);
+}
+
+.gcso-resources-page .gcso-info-card--full {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: min(100%, 56rem);
 }
 
 .gcso-resources-page .gcso-info-card__title {
@@ -2819,6 +2973,13 @@ textarea:focus-visible {
 
 /* Service & contact page responsive */
 @media (max-width: 768px) {
+    .gcso-info-cards,
+    .gcso-archive__grid,
+    .gcso-social-feed__widgets,
+    .gcso-division-grid {
+        grid-template-columns: 1fr;
+    }
+
     .gcso-resources-page .gcso-info-cards {
         grid-template-columns: 1fr;
     }
@@ -2861,6 +3022,12 @@ textarea:focus-visible {
 
     .gcso-staff-directory__grid {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .gcso-info-card,
+    .gcso-archive__card,
+    .gcso-division-grid__card {
+        min-width: 0;
     }
 }
 
@@ -3964,42 +4131,6 @@ a.gcso-info-card--link:focus .gcso-info-card__title {
     width: clamp(280px, 36vw, 360px);
     height: auto;
     object-fit: contain;
-}
-
-/* Embedded report request form */
-.gcso-report-request-form {
-    margin-top: var(--spacing-lg);
-}
-
-.gcso-report-request-form__heading {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: var(--spacing-md);
-}
-
-.gcso-report-request-form__heading h2 {
-    margin: 0;
-    color: var(--color-navy);
-    font-family: var(--font-heading);
-    font-size: clamp(1.5rem, 3vw, 2.2rem);
-    text-align: center;
-}
-
-.gcso-report-request-form__frame {
-    overflow: hidden;
-    background: var(--color-white);
-    border: 1px solid var(--color-light-gray);
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-card);
-}
-
-.gcso-report-request-form__frame iframe {
-    display: block;
-    width: 100%;
-    min-height: 1500px;
-    border: 0;
 }
 
 /* Jail Actions Section */

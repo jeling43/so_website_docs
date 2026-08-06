@@ -16,10 +16,10 @@ $paytel_url  = 'https://www.paytelconnect.com/';
 $maps_url    = 'https://www.google.com/maps/search/?api=1&query=2700+Highway+41+North+Calhoun+Georgia+30701';
 ?>
 
-<main id="main-content" class="gcso-main" role="main">
+<main id="main-content" class="gcso-main gcso-wide-page" role="main">
     <?php get_template_part('template-parts/content/page-banner'); ?>
 
-    <div class="gcso-container gcso-content-area">
+    <div class="gcso-container gcso-content-area gcso-content-area--wide">
         <?php gcso_breadcrumbs(); ?>
 
         <div class="gcso-service-page gcso-jail-page">

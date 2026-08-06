@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Production Readiness Checklist</title>
+  <style>
+    :root { color-scheme: light; --ink:#172033; --muted:#536174; --line:#cbd5e1; --blue:#17365d; }
+    * { box-sizing: border-box; }
+    body { margin:0; color:var(--ink); font:14px/1.45 Arial, sans-serif; background:#eef2f6; }
+    main { max-width:980px; margin:24px auto; padding:42px 48px; background:#fff; box-shadow:0 2px 14px #0002; }
+    h1 { margin:0 0 6px; color:var(--blue); font-size:30px; }
+    h2 { margin:30px 0 8px; padding-bottom:5px; color:var(--blue); border-bottom:2px solid var(--blue); font-size:19px; }
+    p { color:var(--muted); }
+    ul { margin:8px 0 0; padding-left:25px; }
+    li { margin:5px 0; break-inside:avoid; }
+    .intro { padding:12px 15px; border-left:4px solid var(--blue); background:#eef5fc; }
+    .owner { color:#7a4b00; }
+    .signoff { width:100%; margin-top:12px; border-collapse:collapse; }
+    .signoff th, .signoff td { border:1px solid var(--line); padding:10px; text-align:left; height:34px; }
+    .signoff th { background:#eaf0f7; }
+    .actions { display:flex; gap:10px; margin:18px 0; }
+    button, a.download { border:0; border-radius:5px; padding:10px 14px; color:#fff; background:var(--blue); font-weight:600; text-decoration:none; cursor:pointer; }
+    a.download { background:#536174; }
+    footer { margin-top:28px; color:var(--muted); font-size:12px; }
+    @media print {
+      @page { size:letter; margin:0.55in; }
+      body { background:#fff; font-size:10.5px; }
+      main { max-width:none; margin:0; padding:0; box-shadow:none; }
+      h1 { font-size:22px; }
+      h2 { margin-top:16px; font-size:14px; break-after:avoid; }
+      li { margin:2px 0; }
+      .actions { display:none; }
+      .intro { padding:7px 10px; }
+      footer { margin-top:12px; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Production Readiness Checklist</h1>
+  <p class="intro"><strong>Release gate:</strong> Check, document, and sign off every required item before production deployment. Items marked <span class="owner">Owner decision</span> require an explicit decision from the project owner, captain, or IT administrator.</p>
+  <div class="actions">
+    <button onclick="window.print()">Print / Save as PDF</button>
+    <a class="download" href="PRODUCTION_READINESS_CHECKLIST.md" download>Download Markdown</a>
+  </div>
+
+  <h2>1. Scope and approval</h2>
+  <ul>
+    <li>☐ Confirm release scope, version, production owner, technical owner, and support contact.</li>
+    <li>☐ Confirm this is an offline administrative statistics dashboard, not a case-management system.</li>
+    <li>☐ Confirm Windows desktop is the production target; document macOS separately.</li>
+    <li>☐ Confirm captain and secretary workflow review and written production approval.</li>
+    <li>☐ Record known limitations, deferred features, and accepted risks.</li>
+  </ul>
+
+  <h2>2. Workbook and data accuracy</h2>
+  <ul>
+    <li>☐ Test with the current official workbook and confirm all populated monthly sheets.</li>
+    <li>☐ Confirm YEAR END is ignored as a monthly source and TOTAL is recalculated by the app.</li>
+    <li>☐ Confirm headers come from row 1 beginning in column B and activities from column A.</li>
+    <li>☐ Confirm blanks, true zeros, future blank months, formulas, and non-numeric cells behave as documented.</li>
+    <li>☐ Confirm duplicate detective columns, duplicate activity rows, missing headers, and unexpected sheets are reported.</li>
+    <li>☐ Confirm detective and activity aliases normalize correctly; unknown categories remain visible.</li>
+    <li>☐ Confirm the original workbook is never modified.</li>
+    <li>☐ Reconcile January through the latest populated month against Excel.</li>
+    <li>☐ Reconcile division totals and at least three detectives across multiple months.</li>
+    <li>☐ Save the import audit with workbook name, date, file hash, and reviewer initials.</li>
+  </ul>
+
+  <h2>3. Analytics calculations</h2>
+  <ul>
+    <li>☐ Verify assigned, completed/closed, reports, warrants, callouts, agencies, scenes, and mileage totals.</li>
+    <li>☐ Verify completion gap: assigned minus completed.</li>
+    <li>☐ Verify recorded completion ratio and zero-denominator “Not available” behavior.</li>
+    <li>☐ Verify month, year, detective, activity, all-month, and clear-filter behavior.</li>
+    <li>☐ Verify averages, medians, assignment shares, previous-month comparisons, and missing-data handling.</li>
+    <li>☐ Verify small-number changes do not create misleading alerts.</li>
+    <li>☐ Confirm no overall detective performance score is displayed.</li>
+    <li>☐ Confirm labels describe operational context, not quality, effectiveness, or misconduct.</li>
+  </ul>
+
+  <h2>4. User interface, HCI, and accessibility</h2>
+  <ul>
+    <li>☐ Confirm the dashboard answers the captain’s key questions quickly.</li>
+    <li>☐ Confirm reporting period, workbook name, refresh time, filters, and clear-filters action are visible.</li>
+    <li>☐ Confirm Dashboard is division-wide and Detective Detail requires a selected detective.</li>
+    <li>☐ Confirm charts precede detailed tables and all charts have legends, labels, and empty states.</li>
+    <li>☐ Resize to minimum, typical, and wide desktop sizes; confirm no horizontal clipping or hidden cards.</li>
+    <li>☐ Confirm tables scroll when necessary and card values remain readable.</li>
+    <li>☐ Confirm color is not the only signal; verify contrast, focus states, keyboard navigation, and text scaling.</li>
+    <li>☐ Confirm zero values differ from unavailable values.</li>
+    <li>☐ Confirm analytical terms have explanations and loading/error/empty states are actionable.</li>
+  </ul>
+
+  <h2>5. Detective Detail and exports</h2>
+  <ul>
+    <li>☐ Confirm selected detective, period, summary values, monthly totals, categories, and division comparison.</li>
+    <li>☐ Confirm missing months, ties, and incomplete periods are explained.</li>
+    <li>☐ Confirm PDF export uses current filters and includes source, date, summary, monthly comparison, categories, quality notes, and disclaimer.</li>
+    <li>☐ Confirm PDF is readable on screen and paper, uses a safe filename, and handles failures.</li>
+    <li>☐ Confirm CSV/PDF exports contain only filtered data and no new sensitive information.</li>
+  </ul>
+
+  <h2>6. Security and privacy</h2>
+  <ul>
+    <li>☐ Confirm no network calls, telemetry, cloud storage, or workbook upload.</li>
+    <li>☐ Confirm logs exclude workbook contents, case information, and sensitive identifiers.</li>
+    <li>☐ Confirm workbook is read-only, extensions are validated, and malformed files are handled safely.</li>
+    <li>☐ Confirm local settings, logs, exports, and temporary files use appropriate permissions.</li>
+    <li>☐ Confirm workstation OS updates and endpoint protection.</li>
+    <li class="owner">☐ Owner decision: define retention/deletion policy for reports, logs, and settings.</li>
+    <li class="owner">☐ Owner decision: define who may access workbooks and generated reports.</li>
+  </ul>
+
+  <h2>7. Import resilience</h2>
+  <ul>
+    <li>☐ Test missing, moved, deleted, wrong-extension, corrupted, blank, and no-month workbook files.</li>
+    <li>☐ Test unexpected sheets, missing/duplicate headers, formulas, text in numeric cells, and blank numeric cells.</li>
+    <li>☐ Test new activity categories and renamed detective headers.</li>
+    <li>☐ Confirm valid data loads when one cell or sheet is invalid.</li>
+  </ul>
+
+  <h2>8. Automated testing</h2>
+  <ul>
+    <li>☐ Run <code>flutter test</code> successfully.</li>
+    <li>☐ Run <code>flutter analyze</code>; resolve errors and review production-relevant warnings.</li>
+    <li>☐ Run importer, normalization, analytics, insight, filter, empty-state, PDF, and widget tests.</li>
+    <li>☐ Run an integration test with a sanitized fixture workbook.</li>
+    <li>☐ Test on a clean workstation with the actual production workbook copy.</li>
+    <li>☐ Record Flutter, Dart, OS versions, test date, and results.</li>
+  </ul>
+
+  <h2>9. Windows packaging and deployment</h2>
+  <ul>
+    <li>☐ Build and test <code>flutter build windows --release</code> on a clean Windows workstation.</li>
+    <li>☐ Confirm runtime dependencies, startup, file picker, drag-and-drop, PDF save, and path persistence.</li>
+    <li>☐ Confirm endpoint protection accepts the build.</li>
+    <li>☐ Generate a versioned artifact and checksum.</li>
+    <li>☐ Document installation, upgrade, rollback, and uninstall.</li>
+    <li class="owner">☐ Owner decision: portable folder versus installer, signing certificate, and update process.</li>
+  </ul>
+
+  <h2>10. Logging, support, and documentation</h2>
+  <ul>
+    <li>☐ Confirm startup, selection, import, validation, and export events are logged without sensitive data.</li>
+    <li>☐ Confirm log limits/rotation, log location, support contact, and safe log-collection procedure.</li>
+    <li>☐ Update README, installation/build instructions, supervisor guide, workbook replacement procedure, and data-quality guidance.</li>
+    <li>☐ Document aliases, blanks/zeros, monthly versus year-to-date values, completion-ratio limitations, and report retention.</li>
+    <li>☐ Provide a captain walkthrough and secretary workbook-maintenance checklist.</li>
+  </ul>
+
+  <h2>11. Production handoff</h2>
+  <ul>
+    <li>☐ Create approved data, exports, and logs folders with correct permissions.</li>
+    <li>☐ Back up the official workbook before first production import.</li>
+    <li>☐ Record official filename, location, workbook hash, release version, and build checksum.</li>
+    <li>☐ Import the workbook and obtain captain sign-off on displayed totals and latest populated month.</li>
+    <li>☐ Confirm recovery from moved/deleted workbook and successful briefing export.</li>
+    <li>☐ Define monthly refresh and workbook-template-change procedures.</li>
+  </ul>
+
+  <h2>12. Final go / no-go review</h2>
+  <ul>
+    <li>☐ No blocking defects or unexplained total discrepancies.</li>
+    <li>☐ No critical security, privacy, accessibility, or overflow defects.</li>
+    <li>☐ Release build passes clean-workstation testing.</li>
+    <li>☐ Production reconciliation, user guide, support contacts, and rollback build are ready.</li>
+    <li>☐ Captain approval received.</li>
+    <li>☐ IT/deployment approval received.</li>
+    <li>☐ Go-live date and owner confirmed.</li>
+  </ul>
+
+  <h2>Sign-off</h2>
+  <table class="signoff">
+    <tr><th>Role</th><th>Name</th><th>Date</th><th>Signature / approval</th></tr>
+    <tr><td>Project owner</td><td></td><td></td><td></td></tr>
+    <tr><td>Captain / supervisor</td><td></td><td></td><td></td></tr>
+    <tr><td>Technical reviewer</td><td></td><td></td><td></td></tr>
+    <tr><td>IT / deployment reviewer</td><td></td><td></td><td></td></tr>
+  </table>
+  <footer>Prepared for production-readiness review. Print copies should be dated and retained according to local policy.</footer>
+</main>
+</body>
+</html>

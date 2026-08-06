@@ -176,7 +176,7 @@ function gcso_customize_register($wp_customize) {
     ]));
 
     $wp_customize->add_setting('gcso_hero_slide2_btn_text', [
-        'default'           => 'Explore Patrol Services',
+        'default'           => 'Explore Enforcement Services',
         'sanitize_callback' => 'sanitize_text_field',
     ]);
     $wp_customize->add_control('gcso_hero_slide2_btn_text', [
@@ -186,7 +186,7 @@ function gcso_customize_register($wp_customize) {
     ]);
 
     $wp_customize->add_setting('gcso_hero_slide2_btn_url', [
-        'default'           => home_url('/patrol/'),
+        'default'           => home_url('/divisions/enforcement-bureau/'),
         'sanitize_callback' => 'esc_url_raw',
     ]);
     $wp_customize->add_control('gcso_hero_slide2_btn_url', [
