@@ -10,6 +10,13 @@ defined('ABSPATH') || exit;
 // Build slides array — Slide 1 comes from existing customizer fields; slides 2 & 3 use their own settings.
 $slides = [];
 $primary_hero_image = gcso_get_option('gcso_hero_image', '');
+$contact_url = gcso_get_option('gcso_hero_btn2_url', '');
+
+// Older theme settings used "#" as the default, which made the button
+// appear clickable but only jump to the top of the homepage.
+if (empty($contact_url) || '#' === trim($contact_url)) {
+    $contact_url = home_url('/contact/');
+}
 
 if (empty($primary_hero_image)) {
     $primary_hero_image = GCSO_URI . '/assets/images/badge-hero.png';
@@ -23,7 +30,7 @@ $slides[] = [
     'btn_text'    => gcso_get_option('gcso_hero_btn1_text', 'Inmate Search'),
     'btn_url'     => gcso_get_inmate_search_url(),
     'btn2_text'   => gcso_get_option('gcso_hero_btn2_text', 'Contact Us'),
-    'btn2_url'    => gcso_get_option('gcso_hero_btn2_url', '#'),
+    'btn2_url'    => $contact_url,
 ];
 
 // Slide 2
