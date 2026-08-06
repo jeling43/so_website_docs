@@ -10,10 +10,10 @@ defined('ABSPATH') || exit;
 get_header();
 ?>
 
-<main id="main-content" class="gcso-main" role="main">
+<main id="main-content" class="gcso-main gcso-services-main" role="main">
     <?php get_template_part('template-parts/content/page-banner'); ?>
 
-    <div class="gcso-container gcso-content-area">
+    <div class="gcso-container gcso-content-area gcso-content-area--wide">
         <?php gcso_breadcrumbs(); ?>
 
         <div class="gcso-service-page">
@@ -45,13 +45,6 @@ get_header();
                         </div>
                     </a>
 
-                    <a href="<?php echo esc_url(home_url('/services/submit-additional-information')); ?>" class="gcso-info-card gcso-info-card--link">
-                        <h3 class="gcso-info-card__title"><?php esc_html_e('Add Case Information', 'gcso'); ?></h3>
-                        <div class="gcso-info-card__body">
-                            <p><?php esc_html_e('Provide additional information for an existing report or case.', 'gcso'); ?></p>
-                            <span class="gcso-card-action"><?php esc_html_e('Submit information', 'gcso'); ?> <span aria-hidden="true">→</span></span>
-                        </div>
-                    </a>
                     <div class="gcso-info-card gcso-info-card--full gcso-info-card--notice">
                         <h3 class="gcso-info-card__title"><?php esc_html_e('Public Records', 'gcso'); ?></h3>
                         <div class="gcso-info-card__body">

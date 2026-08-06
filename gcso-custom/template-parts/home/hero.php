@@ -33,8 +33,8 @@ if ($s2_heading) {
         'heading'     => $s2_heading,
         'description' => gcso_get_option('gcso_hero_slide2_description', 'Professional service, visible presence, and dedicated protection across our community.'),
         'image'       => gcso_get_option('gcso_hero_slide2_image', GCSO_URI . '/assets/images/hero-car-1.png'),
-        'btn_text'    => gcso_get_option('gcso_hero_slide2_btn_text', 'Explore Patrol Services'),
-        'btn_url'     => gcso_get_option('gcso_hero_slide2_btn_url', home_url('/patrol/')),
+        'btn_text'    => gcso_get_option('gcso_hero_slide2_btn_text', 'Explore Enforcement Services'),
+        'btn_url'     => gcso_get_option('gcso_hero_slide2_btn_url', home_url('/divisions/enforcement-bureau/')),
         'btn2_text'   => '',
         'btn2_url'    => '',
     ];

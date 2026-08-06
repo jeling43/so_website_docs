@@ -15,7 +15,7 @@ get_header();
 <main id="main-content" class="gcso-main gcso-services-main" role="main">
     <?php get_template_part('template-parts/content/page-banner'); ?>
 
-    <div class="gcso-container gcso-content-area">
+    <div class="gcso-container gcso-content-area gcso-content-area--wide">
         <?php gcso_breadcrumbs(); ?>
 
         <div class="gcso-service-page gcso-resources-page">
@@ -56,16 +56,12 @@ get_header();
                     <span class="gcso-section-heading__line"></span>
                 </h2>
                 <div class="gcso-info-cards gcso-info-cards--two">
-                    <div class="gcso-info-card gcso-info-card--notice">
+                    <div class="gcso-info-card gcso-info-card--full gcso-info-card--notice">
                         <h3 class="gcso-info-card__title"><?php esc_html_e('Public Records', 'gcso'); ?></h3>
                         <div class="gcso-info-card__body">
                             <p><?php esc_html_e('Captain Chuck Kirby is the Gordon County Sheriff’s Office Custodian of Records. Public records requests should be addressed to the Custodian of Records.', 'gcso'); ?></p>
                         </div>
                     </div>
-                    <a href="<?php echo esc_url(home_url('/services/submit-additional-information/')); ?>" class="gcso-info-card gcso-info-card--link">
-                        <h3 class="gcso-info-card__title"><?php esc_html_e('Add Case Information', 'gcso'); ?></h3>
-                        <div class="gcso-info-card__body"><p><?php esc_html_e('Provide information related to an existing report or case.', 'gcso'); ?></p><span class="gcso-card-action"><?php esc_html_e('Add information', 'gcso'); ?> <span aria-hidden="true">→</span></span></div>
-                    </a>
                 </div>
             </section>
 
