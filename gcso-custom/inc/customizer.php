@@ -130,7 +130,7 @@ function gcso_customize_register($wp_customize) {
     ]);
 
     $wp_customize->add_setting('gcso_hero_btn2_url', [
-        'default'           => '#',
+        'default'           => home_url('/contact/'),
         'sanitize_callback' => 'esc_url_raw',
     ]);
     $wp_customize->add_control('gcso_hero_btn2_url', [
@@ -331,14 +331,14 @@ function gcso_customize_register($wp_customize) {
         'type'    => 'textarea',
     ]);
 
-    // --- CTA / Careers Section ---
+    // --- Homepage Information CTA Section ---
     $wp_customize->add_section('gcso_cta', [
-        'title' => __('Careers CTA', 'gcso'),
+        'title' => __('Homepage Information CTA', 'gcso'),
         'panel' => 'gcso_general',
     ]);
 
     $wp_customize->add_setting('gcso_cta_heading', [
-        'default'           => 'Making a Difference.',
+        'default'           => 'Serving Gordon County.',
         'sanitize_callback' => 'sanitize_text_field',
     ]);
     $wp_customize->add_control('gcso_cta_heading', [
@@ -348,7 +348,7 @@ function gcso_customize_register($wp_customize) {
     ]);
 
     $wp_customize->add_setting('gcso_cta_subheading', [
-        'default'           => 'Start Your Career with GCSO.',
+        'default'           => 'Learn About the Sheriff\'s Office.',
         'sanitize_callback' => 'sanitize_text_field',
     ]);
     $wp_customize->add_control('gcso_cta_subheading', [
@@ -358,7 +358,7 @@ function gcso_customize_register($wp_customize) {
     ]);
 
     $wp_customize->add_setting('gcso_cta_description', [
-        'default'           => 'Join a team dedicated to service, leadership, and community.',
+        'default'           => 'Explore our mission, divisions, services, and commitment to the community.',
         'sanitize_callback' => 'sanitize_text_field',
     ]);
     $wp_customize->add_control('gcso_cta_description', [
@@ -368,7 +368,7 @@ function gcso_customize_register($wp_customize) {
     ]);
 
     $wp_customize->add_setting('gcso_cta_btn_text', [
-        'default'           => 'View Open Positions',
+        'default'           => 'Learn About the Sheriff\'s Office',
         'sanitize_callback' => 'sanitize_text_field',
     ]);
     $wp_customize->add_control('gcso_cta_btn_text', [
@@ -378,7 +378,7 @@ function gcso_customize_register($wp_customize) {
     ]);
 
     $wp_customize->add_setting('gcso_cta_btn_url', [
-        'default'           => '#',
+        'default'           => home_url('/about/organization/'),
         'sanitize_callback' => 'esc_url_raw',
     ]);
     $wp_customize->add_control('gcso_cta_btn_url', [

@@ -1,20 +1,37 @@
 <?php
 /**
- * Careers CTA Section Template Part
+ * Homepage information CTA section template part.
  *
  * @package GCSO_Custom
  */
 
 defined('ABSPATH') || exit;
 
-$cta_heading     = gcso_get_option('gcso_cta_heading', 'Making a Difference.');
-$cta_subheading  = gcso_get_option('gcso_cta_subheading', 'Start Your Career with GCSO.');
-$cta_description = gcso_get_option('gcso_cta_description', 'Join a team dedicated to service, leadership, and community.');
-$cta_btn_text    = gcso_get_option('gcso_cta_btn_text', 'View Open Positions');
-$cta_btn_url     = gcso_get_option('gcso_cta_btn_url', '#');
+$cta_heading     = gcso_get_option('gcso_cta_heading', 'Serving Gordon County.');
+$cta_subheading  = gcso_get_option('gcso_cta_subheading', 'Learn About the Sheriff\'s Office.');
+$cta_description = gcso_get_option('gcso_cta_description', 'Explore our mission, divisions, services, and commitment to the community.');
+$cta_btn_text    = gcso_get_option('gcso_cta_btn_text', 'Learn About the Sheriff\'s Office');
+$cta_btn_url     = gcso_get_option('gcso_cta_btn_url', '');
+
+// Replace the old career defaults even when they were saved by an earlier theme version.
+if ('Making a Difference.' === $cta_heading) {
+    $cta_heading = 'Serving Gordon County.';
+}
+if ('Start Your Career with GCSO.' === $cta_subheading) {
+    $cta_subheading = 'Learn About the Sheriff\'s Office.';
+}
+if ('Join a team dedicated to service, leadership, and community.' === $cta_description) {
+    $cta_description = 'Explore our mission, divisions, services, and commitment to the community.';
+}
+if ('View Open Positions' === $cta_btn_text) {
+    $cta_btn_text = 'Learn About the Sheriff\'s Office';
+}
+if (empty($cta_btn_url) || '#' === trim($cta_btn_url)) {
+    $cta_btn_url = home_url('/about/organization/');
+}
 ?>
 
-<section class="gcso-cta" aria-label="<?php esc_attr_e('Career Opportunities', 'gcso'); ?>">
+<section class="gcso-cta" aria-label="<?php esc_attr_e('About the Sheriff\'s Office', 'gcso'); ?>">
     <div class="gcso-container gcso-cta__inner">
         <div class="gcso-cta__badge" aria-hidden="true">
             <img src="<?php echo esc_url(GCSO_URI . '/assets/images/badge-Photoroom.png'); ?>" alt="" width="60" height="60">

@@ -18,7 +18,7 @@ get_header();
 
         <div class="gcso-service-page">
             <div class="gcso-service-page__intro">
-                <p><?php esc_html_e('Request a copy of an incident report or accident report from the Gordon County Sheriff\'s Office. Please review the requirements below before submitting your request.', 'gcso'); ?></p>
+                <p><?php esc_html_e('Learn how to request a copy of an incident report or accident report from the Gordon County Sheriff\'s Office. Requests are handled in person or by mail; this page does not submit reports online.', 'gcso'); ?></p>
             </div>
 
             <div class="gcso-info-cards">

@@ -18,6 +18,7 @@ get_header();
 
         <article class="gcso-page-content gcso-legal-page">
             <div class="gcso-page-content__body gcso-content">
+                <p><strong><?php esc_html_e('Last updated: August 6, 2026', 'gcso'); ?></strong></p>
                 <h2><?php esc_html_e('Our Commitment', 'gcso'); ?></h2>
                 <p><?php esc_html_e('The Gordon County Sheriff’s Office is committed to making this website accessible and usable for everyone, including people with disabilities. We work to provide an inclusive online experience and to improve the site as technology and accessibility guidance evolve.', 'gcso'); ?></p>
 

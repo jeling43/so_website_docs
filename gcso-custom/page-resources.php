@@ -38,9 +38,9 @@ get_header();
                     <span class="gcso-section-heading__line"></span>
                 </h2>
                 <div class="gcso-info-cards gcso-info-cards--two">
-                    <a href="<?php echo esc_url(home_url('/services/request-a-report/')); ?>" class="gcso-info-card gcso-info-card--link">
+                    <a href="<?php echo esc_url(home_url('/resources/request-a-report/')); ?>" class="gcso-info-card gcso-info-card--link">
                         <h3 class="gcso-info-card__title"><?php esc_html_e('Request a Report', 'gcso'); ?></h3>
-                        <div class="gcso-info-card__body"><p><?php esc_html_e('Request an incident or accident report online.', 'gcso'); ?></p><span class="gcso-card-action"><?php esc_html_e('Request a report', 'gcso'); ?> <span aria-hidden="true">→</span></span></div>
+                        <div class="gcso-info-card__body"><p><?php esc_html_e('Learn how to request a copy of an incident or accident report.', 'gcso'); ?></p><span class="gcso-card-action"><?php esc_html_e('View request instructions', 'gcso'); ?> <span aria-hidden="true">→</span></span></div>
                     </a>
                     <a href="<?php echo esc_url(home_url('/jail/')); ?>" class="gcso-info-card gcso-info-card--link">
                         <h3 class="gcso-info-card__title"><?php esc_html_e('Jail Information', 'gcso'); ?></h3>
@@ -71,18 +71,14 @@ get_header();
                     <?php esc_html_e('Public Safety', 'gcso'); ?>
                     <span class="gcso-section-heading__line"></span>
                 </h2>
-                <div class="gcso-info-cards">
-                    <a href="<?php echo esc_url(home_url('/services/submit-a-tip/')); ?>" class="gcso-info-card gcso-info-card--link">
+                <div class="gcso-info-cards gcso-info-cards--two">
+                    <a href="<?php echo esc_url(home_url('/submit-a-tip/')); ?>" class="gcso-info-card gcso-info-card--link">
                         <h3 class="gcso-info-card__title"><?php esc_html_e('Tip Line', 'gcso'); ?></h3>
                         <div class="gcso-info-card__body"><p><?php esc_html_e('Submit confidential information regarding major crimes.', 'gcso'); ?></p><span class="gcso-card-action"><?php esc_html_e('Submit a tip', 'gcso'); ?> <span aria-hidden="true">→</span></span></div>
                     </a>
                     <a href="<?php echo esc_url(home_url('/sex-offender-registry/')); ?>" class="gcso-info-card gcso-info-card--link">
                         <h3 class="gcso-info-card__title"><?php esc_html_e('Sex Offender Search', 'gcso'); ?></h3>
                         <div class="gcso-info-card__body"><p><?php esc_html_e('Access registration and community-safety information.', 'gcso'); ?></p><span class="gcso-card-action"><?php esc_html_e('Search registry', 'gcso'); ?> <span aria-hidden="true">→</span></span></div>
-                    </a>
-                    <a href="<?php echo esc_url(home_url('/services/most-wanted/')); ?>" class="gcso-info-card gcso-info-card--link">
-                        <h3 class="gcso-info-card__title"><?php esc_html_e('Most Wanted', 'gcso'); ?></h3>
-                        <div class="gcso-info-card__body"><p><?php esc_html_e('View individuals currently wanted by the Sheriff’s Office.', 'gcso'); ?></p><span class="gcso-card-action"><?php esc_html_e('View most wanted', 'gcso'); ?> <span aria-hidden="true">→</span></span></div>
                     </a>
                 </div>
             </section>

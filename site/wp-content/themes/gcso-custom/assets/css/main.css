@@ -1481,11 +1481,18 @@ p:last-child {
 }
 
 .gcso-cta__heading {
-    font-size: var(--fs-2xl);
+    max-width: none;
+    font-size: clamp(1.8rem, 2.8vw, 2.8rem);
     color: var(--gcso-white);
     margin: 0;
     font-weight: 900;
+    line-height: 1.05;
     text-transform: uppercase;
+}
+
+.gcso-cta__text,
+.gcso-cta__description {
+    min-width: 0;
 }
 
 .gcso-cta__subheading {
@@ -1746,6 +1753,32 @@ textarea:focus-visible {
 .gcso-content img {
     border-radius: var(--radius-md);
     margin: var(--space-md) 0;
+}
+
+.gcso-policy-notice {
+    margin: 0 0 var(--space-lg);
+    padding: 1.15rem 1.35rem 1.05rem;
+    background: #fff8e8;
+    border: 1px solid #e4c878;
+    border-left: 0.45rem solid var(--gcso-gold);
+    border-radius: var(--radius-md);
+    box-shadow: 0 2px 8px rgba(25, 45, 35, 0.08);
+}
+
+.gcso-policy-notice strong {
+    display: block;
+    margin-bottom: 0.35rem;
+    color: var(--gcso-navy);
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+}
+
+.gcso-policy-notice p {
+    margin: 0;
+    color: var(--gcso-navy);
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.55;
 }
 
 /* Court services fee list */
@@ -2725,6 +2758,26 @@ textarea:focus-visible {
     height: 18px;
 }
 
+.gcso-footer__social-copy {
+    max-width: 18rem;
+    margin: 0 0 var(--space-sm);
+    font-size: var(--fs-xs) !important;
+    line-height: 1.5 !important;
+}
+
+.gcso-footer__facebook-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: var(--gcso-gold);
+    font-size: var(--fs-sm);
+    font-weight: 700;
+}
+
+.gcso-footer__facebook-link:hover {
+    color: var(--gcso-white);
+}
+
 .gcso-footer__badge {
     margin-top: var(--space-md);
     padding: var(--space-sm);
@@ -2887,8 +2940,33 @@ textarea:focus-visible {
     }
 
     .gcso-cta__inner {
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: auto minmax(0, 1.25fr) minmax(220px, 0.9fr) auto;
         text-align: left;
+    }
+
+    .gcso-cta__text {
+        min-width: 0;
+    }
+
+    .gcso-cta__description {
+        flex: 1 1 0;
+        max-width: 24rem;
+    }
+
+    .gcso-cta__inner > .gcso-btn {
+        flex: 0 0 auto;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1050px) {
+    .gcso-cta__inner {
+        grid-template-columns: auto minmax(0, 1fr) minmax(190px, 0.85fr);
+    }
+
+    .gcso-cta__inner > .gcso-btn {
+        grid-column: 3;
+        justify-self: start;
     }
 }
 

@@ -64,13 +64,6 @@ get_header();
                 </h2>
 
                 <div class="gcso-info-cards gcso-info-cards--services">
-                    <a href="<?php echo esc_url(home_url('/services/most-wanted')); ?>" class="gcso-info-card gcso-info-card--link">
-                        <h3 class="gcso-info-card__title"><?php esc_html_e('Most Wanted', 'gcso'); ?></h3>
-                        <div class="gcso-info-card__body">
-                            <p><?php esc_html_e('View individuals currently wanted by the Gordon County Sheriff\'s Office.', 'gcso'); ?></p>
-                            <span class="gcso-card-action"><?php esc_html_e('View most wanted', 'gcso'); ?> <span aria-hidden="true">→</span></span>
-                        </div>
-                    </a>
 
                     <a href="<?php echo esc_url(home_url('/services/submit-a-tip')); ?>" class="gcso-info-card gcso-info-card--link">
                         <h3 class="gcso-info-card__title"><?php esc_html_e('Submit a Tip', 'gcso'); ?></h3>

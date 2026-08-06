@@ -71,6 +71,13 @@ defined('ABSPATH') || exit;
             <div class="gcso-footer__col gcso-footer__col--social">
                 <h4 class="gcso-footer__heading"><?php esc_html_e('Follow Us', 'gcso'); ?></h4>
                 <?php gcso_social_icons(); ?>
+                <?php $facebook_url = gcso_get_social_links()['facebook'] ?? ''; ?>
+                <?php if ($facebook_url) : ?>
+                    <p class="gcso-footer__social-copy"><?php esc_html_e('Follow Gordon County Sheriff\'s Office on Facebook for updates, community news, and safety information.', 'gcso'); ?></p>
+                    <a class="gcso-footer__facebook-link" href="<?php echo esc_url($facebook_url); ?>" target="_blank" rel="noopener noreferrer">
+                        <?php esc_html_e('Visit us on Facebook', 'gcso'); ?> <span aria-hidden="true">↗</span>
+                    </a>
+                <?php endif; ?>
                 <div class="gcso-footer__badge">
                     <p><strong>Proudly Serving<br>Gordon County<br>Since 1857</strong></p>
                 </div>

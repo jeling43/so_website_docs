@@ -13,17 +13,11 @@ $news_query = new WP_Query([
     'post_type'      => 'post',
     'posts_per_page' => 7,
     'post_status'    => 'publish',
+    // Keep registry and other administrative posts out of the public news feed.
+    'category_name'  => 'press-release',
     'orderby'        => 'date',
     'order'          => 'DESC',
 ]);
-
-$news_categories = [];
-foreach (['press-release', 'public-alert', 'community-news', 'sheriffs-office-updates'] as $slug) {
-    $category = get_category_by_slug($slug);
-    if ($category) {
-        $news_categories[] = $category;
-    }
-}
 
 $archive_url = home_url('/category/press-release/');
 $press_release_category = get_category_by_slug('press-release');
@@ -46,10 +40,7 @@ $social_links = gcso_get_social_links();
             </div>
 
             <nav class="gcso-news-alerts__filters" aria-label="News categories">
-                <a href="#latest-news"><?php esc_html_e('All Updates', 'gcso'); ?></a>
-                <?php foreach ($news_categories as $category) : ?>
-                    <a href="<?php echo esc_url(get_category_link($category->term_id)); ?>"><?php echo esc_html($category->name); ?></a>
-                <?php endforeach; ?>
+                <a href="#latest-news"><?php esc_html_e('Press Releases', 'gcso'); ?></a>
             </nav>
 
             <?php if ($news_query->have_posts()) : ?>
@@ -57,7 +48,7 @@ $social_links = gcso_get_social_links();
                 <section id="latest-news" aria-labelledby="latest-news-heading">
                     <h2 id="latest-news-heading" class="gcso-section-heading">
                         <span class="gcso-section-heading__line"></span>
-                        <?php esc_html_e('Featured Latest Announcement', 'gcso'); ?>
+                            <?php esc_html_e('Featured Press Release', 'gcso'); ?>
                         <span class="gcso-section-heading__line"></span>
                     </h2>
 
@@ -83,7 +74,7 @@ $social_links = gcso_get_social_links();
                     <section aria-labelledby="recent-news-heading">
                         <h2 id="recent-news-heading" class="gcso-section-heading">
                             <span class="gcso-section-heading__line"></span>
-                            <?php esc_html_e('Recent News and Press Releases', 'gcso'); ?>
+                            <?php esc_html_e('Recent Press Releases', 'gcso'); ?>
                             <span class="gcso-section-heading__line"></span>
                         </h2>
                         <div class="gcso-news-alerts__grid">
@@ -106,7 +97,7 @@ $social_links = gcso_get_social_links();
             <?php else : ?>
                 <section class="gcso-news-alerts__empty" aria-labelledby="latest-news-heading">
                     <h2 id="latest-news-heading"><?php esc_html_e('No current announcements', 'gcso'); ?></h2>
-                    <p><?php esc_html_e('This page will display announcements and press releases as they are published.', 'gcso'); ?></p>
+                    <p><?php esc_html_e('This page will display press releases as they are published.', 'gcso'); ?></p>
                 </section>
             <?php endif; ?>
 
