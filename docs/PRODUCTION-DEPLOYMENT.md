@@ -99,8 +99,9 @@ Important pages to verify:
 - Meet the Sheriff
 - Mission and Values
 - Organization
-- Services
+- Resources
 - Request a Report
+- Secondary Metals Recycler Information
 - Jail
 - Judicial Bureau
 - Enforcement Bureau
@@ -109,6 +110,10 @@ Important pages to verify:
 - Accessibility Statement
 - Privacy Policy
 - Terms of Use
+
+The News & Alerts page is limited to posts in the `press-release` category. Registry,
+administrative, and other non-press-release posts must not be assigned to that category
+or they will appear in the public press-release feed.
 
 ## 3. Prepare backups
 

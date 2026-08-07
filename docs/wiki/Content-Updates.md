@@ -17,6 +17,16 @@ WordPress page templates are in `gcso-custom/`. Common templates include:
 
 When the static export is maintained, update the matching file under `site/` and the copied theme stylesheet under `site/wp-content/themes/gcso-custom/assets/css/`.
 
+Current legal and service pages include:
+
+- `page-privacy-policy.php` → `/privacy-policy/`
+- `page-accessibility.php` → `/accessibility-statement/`
+- `page-terms-of-use.php` → `/terms-of-use/`
+- `page-secondary-metals-recycling.php` → `/services/secondary-metals-recycling/` when the page is nested under Services
+
+The News & Alerts template queries only posts in the `press-release` category. Do not
+assign registry, administrative, or unrelated posts to that category.
+
 ## Content rules
 
 - Use descriptive action labels such as “Request a Report” or “View Organization.”

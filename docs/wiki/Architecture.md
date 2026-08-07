@@ -43,7 +43,7 @@ The `site/` directory is a static representation used for review, sharing, and d
 
 ### Public information pages
 
-Additional templates cover reports, tips, most wanted, sex offender information, jail information, contact, accessibility, privacy, and terms of use.
+Additional templates cover reports, tips, sex offender information, secondary-metals recycling, jail information, contact, accessibility, privacy, and terms of use. Most Wanted is not part of the current public navigation.
 
 ## Design system
 

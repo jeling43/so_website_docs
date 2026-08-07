@@ -2,7 +2,7 @@
 
 Custom WordPress theme and documentation for the **Gordon County Sheriff's Office** website. Built from scratch using clean PHP, HTML5, CSS, and vanilla JavaScript — no page builders (no Divi, Elementor, or Gutenberg blocks for layout).
 
-## Quick Start
+## Quick Start — local development only
 
 ```bash
 cp .env.example .env
@@ -11,6 +11,9 @@ docker compose up -d
 ```
 
 See [docs/LOCAL-DEVELOPMENT.md](docs/LOCAL-DEVELOPMENT.md) for the full setup guide.
+
+For the live website, do not run or upload Docker. Package and deploy only the
+`gcso-custom` theme through [Upload & Deploy](docs/UPLOAD-TO-WORDPRESS.md).
 
 ## Repository Structure
 
