@@ -10,7 +10,7 @@ defined('ABSPATH') || exit;
 get_header();
 ?>
 
-<main id="main-content" class="gcso-main" role="main">
+<main id="main-content" class="gcso-main gcso-open-records-page" role="main">
     <?php get_template_part('template-parts/content/page-banner'); ?>
 
     <div class="gcso-container gcso-content-area">
@@ -46,15 +46,25 @@ get_header();
             </div>
 
             <div class="gcso-info-cards">
-                <div class="gcso-info-card">
+                <div class="gcso-info-card gcso-info-card--full">
                     <h3 class="gcso-info-card__title"><?php esc_html_e('Fees', 'gcso'); ?></h3>
                     <div class="gcso-info-card__body">
-                        <!-- TODO: VERIFY BEFORE PRODUCTION - Open records fees -->
-                        <p><?php esc_html_e('Fees may apply for searching, retrieving, and copying records. You will be notified of any charges before records are produced.', 'gcso'); ?></p>
+                        <p><strong><?php esc_html_e('Effective August 15, 2026', 'gcso'); ?></strong></p>
+                        <p><?php esc_html_e('Pursuant to GCSO ORR Policy No. 33 and O.C.G.A. § 50-18-71(c)(1)-(2), the hourly rate used to calculate search, retrieval, redaction, and transmission fees is $21.68 per hour. This rate does not exceed the salary of the lowest-paid full-time GCSO employee with the necessary skill and training to perform the request.', 'gcso'); ?></p>
+                        <p><?php esc_html_e('Records will be transmitted electronically whenever possible. Copying fees may apply: $0.10 per paper page, $0.25 per disk, and $5.00 or $10.00 per thumb drive, depending on the drive size.', 'gcso'); ?></p>
+                        <p><?php esc_html_e('The first 15 minutes of search, retrieval, redaction, and transmission time are provided at no charge. After the first 15 minutes, each additional 15-minute increment is billed at $5.42.', 'gcso'); ?></p>
+                        <ul class="gcso-info-card__list">
+                            <li><?php esc_html_e('15 minutes total: $0.00', 'gcso'); ?></li>
+                            <li><?php esc_html_e('30 minutes total: $5.42', 'gcso'); ?></li>
+                            <li><?php esc_html_e('45 minutes total: $10.84', 'gcso'); ?></li>
+                            <li><?php esc_html_e('60 minutes total: $16.26', 'gcso'); ?></li>
+                        </ul>
+                        <p><?php esc_html_e('Invoices for amounts under $30.00 will be sent with the records and are due within 90 days of the date of electronic transmission or receipt. If the anticipated cost exceeds $25.00, the requester will be notified and must either provide written confirmation that payment will be made within 90 days or prepay the anticipated cost. Prepayment is required when the anticipated cost exceeds $500.00.', 'gcso'); ?></p>
+                        <p><em><?php esc_html_e('Fees are subject to change based on salary increases and applicable law or policy updates.', 'gcso'); ?></em></p>
                     </div>
                 </div>
 
-                <div class="gcso-info-card">
+                <div class="gcso-info-card gcso-info-card--full">
                     <h3 class="gcso-info-card__title"><?php esc_html_e('Response Time', 'gcso'); ?></h3>
                     <div class="gcso-info-card__body">
                         <p><?php esc_html_e('Under Georgia law, the agency must respond within three (3) business days of receiving your request. The response may include the records, an estimated timeline for production, or a denial with legal basis.', 'gcso'); ?></p>

@@ -46,7 +46,7 @@ $quick_links = [
     ],
     [
         'title'    => __('Apply for Employment', 'gcso'),
-        'url'      => home_url('/contact/employment'),
+        'url'      => home_url('/contact/employment/'),
         'icon'     => '<svg viewBox="0 0 64 64" fill="currentColor" width="48" height="48"><rect x="8" y="20" width="48" height="34" rx="3" fill="none" stroke="currentColor" stroke-width="3"/><path d="M24 20v-6a4 4 0 014-4h8a4 4 0 014 4v6" fill="none" stroke="currentColor" stroke-width="3"/><line x1="8" y1="36" x2="56" y2="36" stroke="currentColor" stroke-width="2"/></svg>',
         'external' => false,
     ],

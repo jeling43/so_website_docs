@@ -2242,9 +2242,79 @@ textarea:focus-visible {
     color: #444;
 }
 
+.gcso-open-records-page .gcso-content-area {
+    max-width: var(--container-width);
+}
+
+.gcso-open-records-page .gcso-service-page__intro {
+    max-width: 58rem;
+    margin-inline: auto;
+    font-size: clamp(1.2rem, 1.5vw, 1.5rem);
+    line-height: 1.7;
+}
+
+.gcso-open-records-page .gcso-info-card__body {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.gcso-open-records-page .gcso-info-card--full {
+    width: min(100%, 70rem);
+    justify-self: center;
+}
+
+.gcso-employment-page .gcso-service-page__intro {
+    max-width: 52rem;
+    margin-inline: auto;
+    text-align: left;
+    font-size: clamp(1.05rem, 1.25vw, 1.25rem);
+    line-height: 1.6;
+}
+
+.gcso-employment-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 0 auto var(--space-xl);
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+    border-left: 0.35rem solid var(--gcso-gold);
+    border-radius: var(--radius-md);
+    background: var(--gcso-navy);
+    color: var(--gcso-white);
+    box-shadow: var(--shadow-card);
+}
+
+.gcso-employment-cta h2 {
+    margin: 0 0 0.5rem;
+    color: var(--gcso-white);
+    font-size: clamp(1.35rem, 1.8vw, 1.75rem);
+}
+
+.gcso-employment-cta p {
+    max-width: 58rem;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+}
+
+.gcso-employment-cta .gcso-btn {
+    width: auto;
+    max-width: 100%;
+    text-align: left;
+    white-space: normal;
+}
+
+@media (max-width: 700px) {
+    .gcso-employment-cta {
+        align-items: flex-start;
+    }
+}
+
 .gcso-services-page__nav {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 0.65rem;
     margin: 0 0 var(--space-xl);
     padding: 0.85rem;
@@ -2304,6 +2374,7 @@ textarea:focus-visible {
 .gcso-resource-jump {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 0.5rem;
     margin: 0 auto var(--space-xl);
     padding: 0.75rem;
@@ -3898,8 +3969,8 @@ a.gcso-info-card--link:focus .gcso-info-card__title {
 
 .gcso-sheriff-profile__biography {
     display: grid;
-    grid-template-columns: minmax(190px, 0.35fr) minmax(0, 1fr);
-    gap: clamp(2rem, 6vw, 5rem);
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
     padding: clamp(2rem, 5vw, 4rem);
     background: var(--color-white);
     border: 1px solid var(--color-light-gray);
@@ -3915,9 +3986,10 @@ a.gcso-info-card--link:focus .gcso-info-card__title {
 }
 
 .gcso-sheriff-profile__text {
+    max-width: 68rem;
     color: var(--color-dark-text);
-    font-size: 1.05rem;
-    line-height: 1.8;
+    font-size: 1.1rem;
+    line-height: 1.85;
 }
 
 .gcso-sheriff-profile__text p {
@@ -4264,6 +4336,14 @@ a.gcso-info-card--link:focus .gcso-info-card__title {
 /* Jail information page */
 .gcso-jail-page section {
     margin-bottom: var(--space-xl);
+}
+
+.gcso-jail-page > p {
+    max-width: 72rem;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
 }
 
 .gcso-jail-mission {
