@@ -155,7 +155,7 @@ docker compose exec wordpress wp --allow-root plugin install wordpress-importer 
 #### Footer Navigation
 - Menu Name: `Footer Navigation`
 - Assign to location: **Footer Navigation**
-- Add links: Inmate Information, Sex Offender Registry, Most Wanted, Tip Line, Request a Report, Public Records
+- Add links: Inmate Information, Sex Offender Registry, Tip Line, Request a Report, Public Records, and Secondary Metals Recycling
 
 ### Adding Dropdown Items
 

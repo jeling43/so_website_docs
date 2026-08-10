@@ -46,10 +46,12 @@ get_header();
                     </a>
 
                     <div class="gcso-info-card gcso-info-card--full gcso-info-card--notice">
-                        <h3 class="gcso-info-card__title"><?php esc_html_e('Public Records', 'gcso'); ?></h3>
+                        <h3 class="gcso-info-card__title"><?php esc_html_e('Open Records Fees', 'gcso'); ?></h3>
                         <div class="gcso-info-card__body">
-                            <p><?php esc_html_e('Captain Chuck Kirby is the Gordon County Sheriff’s Office Custodian of Records. Public records requests should be addressed to the Custodian of Records.', 'gcso'); ?></p>
-                            <span class="gcso-card-note"><?php esc_html_e('Information only', 'gcso'); ?></span>
+                            <p><strong><?php esc_html_e('Effective August 15, 2026', 'gcso'); ?></strong></p>
+                            <p><?php esc_html_e('The search, retrieval, redaction, and transmission rate is $21.68 per hour under GCSO ORR Policy No. 33. The first 15 minutes are provided at no charge; each additional 15-minute increment is $5.42.', 'gcso'); ?></p>
+                            <p><?php esc_html_e('Copying fees: $0.10 per paper page, $0.25 per disk, and $5.00 or $10.00 per thumb drive, depending on size. Prepayment is required when anticipated costs exceed $500.00.', 'gcso'); ?></p>
+                            <p><a href="<?php echo esc_url(home_url('/services/public-records/')); ?>" class="gcso-card-action"><?php esc_html_e('View complete ORR fee information', 'gcso'); ?> <span aria-hidden="true">→</span></a></p>
                         </div>
                     </div>
                 </div>

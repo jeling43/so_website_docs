@@ -20,6 +20,7 @@ get_header();
             <div class="gcso-page-content__body gcso-content">
                 <p><strong><?php esc_html_e('Last updated: August 6, 2026', 'gcso'); ?></strong></p>
                 <p><?php esc_html_e('The Gordon County Sheriff’s Office respects the privacy of visitors to this Site. This Privacy Policy explains what information we collect, how we use it, and how we protect it.', 'gcso'); ?></p>
+                <p class="gcso-policy-notice"><strong><?php esc_html_e('Sensitive law-enforcement information', 'gcso'); ?></strong><br><?php esc_html_e('This website is intended for public information and services. Do not submit criminal-history information, NCIC/GCIC information, investigative records, or other sensitive law-enforcement information through this website. The Gordon County Sheriff’s Office does not use this public website to collect or store CJIS data.', 'gcso'); ?></p>
 
                 <h2><?php esc_html_e('1. Information We Collect', 'gcso'); ?></h2>
                 <p><?php esc_html_e('When you use this website, we may collect:', 'gcso'); ?></p>

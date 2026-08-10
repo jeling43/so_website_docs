@@ -2,6 +2,23 @@
 
 This guide covers how to package the GCSO Custom theme and deploy it to a WordPress site — whether it's a staging copy, WP Staging, or the live production server.
 
+## Production boundary: WordPress, not Docker
+
+For the live website, deploy only the `gcso-custom` theme to the existing production
+WordPress installation. Docker is for local development and testing only.
+
+**Do not upload or restore these into production:**
+
+- `docker-compose.yml`
+- `.env` files or local credentials
+- MySQL/Docker database volumes
+- The local Docker database
+- The `site/` static export when the production site is WordPress
+
+The production database remains the source of truth for pages, posts, users, menus,
+forms, and settings. The theme package contains the PHP, CSS, JavaScript, and theme
+assets only.
+
 ---
 
 ## Table of Contents
@@ -35,6 +52,9 @@ cd ..
 # Windows (PowerShell)
 Compress-Archive -Path gcso-custom\* -DestinationPath gcso-custom.zip
 ```
+
+This creates the deployable `gcso-custom.zip` package. Upload only this theme package
+to production; do not upload the project folder, Docker environment, or local database.
 
 ### Verify the ZIP Structure
 
@@ -231,7 +251,22 @@ Complete these steps immediately after activating:
    - Footer Navigation → **Footer Navigation** location
    - Utility Navigation → **Utility Navigation** location
 
-### 3. Upload Logo
+### 3. Create or verify required pages
+
+In **Pages**, create or verify these pages and select the matching template:
+
+| Page title | Slug | Template |
+|---|---|---|
+| Privacy Policy | `privacy-policy` | Privacy Policy |
+| Accessibility Statement | `accessibility-statement` | Accessibility Statement |
+| Terms of Use | `terms-of-use` | Terms of Use |
+| Secondary Metals Recycler Information | `secondary-metals-recycling` | Secondary Metals Recycling |
+
+If the Secondary Metals page is nested under a Services parent, its URL will normally
+be `/services/secondary-metals-recycling/`. After creating or renaming pages, go to
+**Settings → Permalinks** and click **Save Changes** to flush rewrite rules.
+
+### 4. Upload Logo
 
 1. **Appearance > Customize > Site Identity**
 2. Upload logo (200×200px recommended)

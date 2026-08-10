@@ -1,5 +1,12 @@
 # Gordon County Sheriff's Office Website Structure Review
 
+> **Current implementation note (August 7, 2026):** The generated page tree and
+> production link checklist in [`SITE_PAGE_MAP.md`](../SITE_PAGE_MAP.md) are the
+> source of truth. This document retains historical review notes below, but the
+> current site does not publish a Most Wanted section. News & Alerts is reserved
+> for press-release posts, and the site includes Privacy Policy, Accessibility
+> Statement, Terms of Use, and Secondary Metals Recycler Information pages.
+
 ## Current Site Structure
 
 ```text
@@ -12,8 +19,6 @@ Home
 │   └── Judicial
 │       └── Jail Division
 ├── Resources
-│   ├── Most Wanted
-│   │   └── Captured
 │   ├── Request an Incident / Accident Report
 │   │   └── Additional Information for Reports
 │   ├── Secondary Metals Recycler Information
@@ -24,7 +29,7 @@ Home
 │   ├── Employment Application
 │   ├── Raffle Permits
 │   └── Georgia Criminal Alien Quarterly Report
-├── Press Releases
+├── News & Alerts (press releases only)
 └── Contact Us
 ```
 
@@ -88,9 +93,9 @@ Keep jail policies, visitation, bonds, mail, and commissary information on the m
 
 ---
 
-## 4. Homepage News Duplicates Press Releases
+## 4. Homepage News and Press Releases
 
-The homepage and Press Releases page display much of the same content.
+The homepage and News & Alerts page may display overlapping press-release content.
 
 ### Recommendation
 
@@ -99,11 +104,12 @@ Homepage
 └── 3 Latest News Items
     └── View All News
 
-News & Updates
-└── Full News Archive
+News & Alerts
+└── Press-release archive
 ```
 
-Rename **Press Releases** to **News & Updates** unless formal press releases will be published separately.
+The current News & Alerts page is reserved for official press releases. Registry and
+other non-press-release posts should not be assigned to the `press-release` category.
 
 ---
 
@@ -121,13 +127,11 @@ informational Public Records notice.
 Services and Resources
 ├── Reports & Records
 │   ├── Request a Report
-│   ├── Add Case Information
 │   └── Public Records notice
 ├── Jail & Offender Information
 │   ├── Inmate Search
 │   ├── Jail Information
 │   ├── Sex Offender Registry
-│   └── Most Wanted
 ├── Permits & Licensing
 │   ├── Raffle Licenses
 │   └── Secondary Metals Recycling
@@ -168,21 +172,19 @@ Contact Us
 
 ---
 
-## 7. Most Wanted and Captured Are Overused
+## 7. Historical Most Wanted and Captured Content
 
-Most Wanted and Captured appear in several navigation areas.
+Most Wanted and Captured were identified in the original site review, but they have
+since been removed from the current public cards and fallback navigation.
 
-### Recommendation
+### Current status
 
-Use one page:
+Do not add these links back to public navigation unless the Sheriff’s Office provides
+current, approved content and a specific publishing requirement.
 
 ```text
-Most Wanted
-├── Currently Wanted
-└── Captured
+Removed from current public navigation
 ```
-
-Use tabs or filters instead of separate pages.
 
 ---
 
@@ -254,7 +256,6 @@ than an unsupported online request form.
 ```text
 Reports & Records
 ├── Request Incident / Accident Report
-├── Add Case Information
 └── Public Records notice
 ```
 
@@ -283,11 +284,9 @@ DIVISIONS
 
 SERVICES
 ├── Request a Report
-├── Add Case Information
 ├── Public Records
 ├── Inmate Search
 ├── Sex Offender Registry
-├── Most Wanted
 ├── Submit a Tip
 ├── Raffle Licenses
 ├── Secondary Metals Recycling
@@ -303,7 +302,7 @@ JAIL
 └── Contact Information
 
 NEWS
-├── News & Updates
+├── News & Alerts (press releases)
 ├── Annual Reports
 └── Criminal Alien Quarterly Reports
 
@@ -342,7 +341,7 @@ These should remain visible and easy to access.
 | Inmate Information              | Direct Inmate Search               |
 | Captured                        | Section inside Most Wanted         |
 | Additional Report Information   | Records & Reports                  |
-| Press Releases                  | News & Updates                     |
+| Press Releases                  | News & Alerts press-release archive |
 | Public Records homepage section | Public Records notice in Resources |
 | Employment Application          | Employment page                    |
 
@@ -368,7 +367,6 @@ Request a Report
 Visit an Inmate
 Submit a Tip
 Find a Sex Offender
-View Most Wanted
 Apply for a Job
 Contact the Sheriff's Office
 ```

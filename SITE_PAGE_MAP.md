@@ -40,8 +40,8 @@ Use this list as the production navigation and link-review checklist. The paths 
 - [ ] `/news-alerts/` — News and alerts
 - [ ] `/contact/` — Contact information
 - [x] `/accessibility-statement/` — Accessibility statement
-- [ ] `/terms-of-use/` — Terms of use
-- [ ] `/privacy-policy/` — Privacy policy
+- [x] `/terms-of-use/` — Terms of use
+- [x] `/privacy-policy/` — Privacy policy
 
 ## External links requiring owner verification
 
@@ -73,7 +73,7 @@ The generated site currently contains references that do not match the generated
 
 ## Existing generated page count
 
-There are currently 20 `index.html` page files under `site/`:
+There are currently 21 `index.html` page files under `site/`:
 
 ```text
 about/index.html
