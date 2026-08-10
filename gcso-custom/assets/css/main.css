@@ -2953,6 +2953,60 @@ textarea:focus-visible {
    11. RESPONSIVE RULES
    ========================================================================== */
 
+@media (max-width: 767px) {
+    .gcso-utility-bar {
+        font-size: 0.72rem;
+    }
+
+    .gcso-utility-bar__list {
+        gap: 0.35rem 0.75rem;
+    }
+
+    .gcso-header__inner {
+        width: calc(100% - 1rem);
+        min-height: 64px;
+        gap: 0.5rem;
+    }
+
+    .gcso-header__branding {
+        min-width: 0;
+        flex: 1 1 auto;
+        gap: 0.45rem;
+    }
+
+    .gcso-header__logo img,
+    .gcso-header__logo .custom-logo {
+        width: 48px;
+        height: 48px;
+    }
+
+    .gcso-header__text {
+        min-width: 0;
+    }
+
+    .gcso-header__site-name {
+        font-size: clamp(0.9rem, 4.2vw, 1.35rem);
+        line-height: 1.05;
+        white-space: normal;
+        overflow-wrap: anywhere;
+    }
+
+    .gcso-header__tagline {
+        font-size: 0.58rem;
+        letter-spacing: 0.05em;
+        line-height: 1.2;
+    }
+
+    .gcso-header__sheriff-name {
+        font-size: 0.72rem;
+        line-height: 1.2;
+    }
+
+    .gcso-header__nav-area {
+        flex: 0 0 auto;
+    }
+}
+
 /* Tablet: 768px+ */
 @media (min-width: 768px) {
     .gcso-hero-carousel__track {
