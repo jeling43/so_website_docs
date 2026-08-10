@@ -11,6 +11,7 @@
 
 - [Local Development](LOCAL-DEVELOPMENT.md)
 - [Deployment](PRODUCTION-DEPLOYMENT.md)
+- [Static Preview Deployment](wiki/Deployment.md)
 - [Upload to WordPress](UPLOAD-TO-WORDPRESS.md)
 - [Testing](TESTING.md)
 

@@ -48,8 +48,6 @@ Use this list as the production navigation and link-review checklist. The paths 
 - [ ] Inmate search destination
 - [ ] Facebook page
 - [ ] Georgia Sheriffs’ Association
-- [ ] GACJ / Georgia Association of Criminal Investigators
-- [ ] Georgia Crime Information Center
 - [ ] Georgia.gov
 - [ ] Any external social-media or embedded-feed URL
 
@@ -57,16 +55,16 @@ Use this list as the production navigation and link-review checklist. The paths 
 
 The generated site currently contains references that do not match the generated page tree. Confirm the intended destination, then update all instances consistently.
 
-- [ ] Replace `/services/request-a-report` references with `/resources/request-a-report/` where appropriate.
-- [ ] Replace `/services/submit-a-tip` references with `/submit-a-tip/` where appropriate.
-- [ ] Replace `/services/index.html` references with `/resources/index.html` where appropriate.
+- [x] Replace `/services/request-a-report` references with `/resources/request-a-report/` where appropriate.
+- [x] Replace `/services/submit-a-tip` references with `/submit-a-tip/` where appropriate.
+- [x] Replace `/services/index.html` references with `/resources/index.html` where appropriate.
 - [x] `/privacy-policy/` page created and privacy-policy references can be resolved.
 - [ ] Resolve `/contact/employment` references or create the missing employment page.
+- [ ] Regenerate the static export so the published Employment and Public Records pages are included under `site/`.
 - [x] Most Wanted removed from public cards and fallback menus; confirm no CMS menu still references it.
 - [x] Secondary metals recycling page created and resource link updated.
-- [ ] Resolve `/hello-world/index.html` if it is still present in generated navigation or remove the stale reference.
-- [ ] Replace every intentional `href="#"` placeholder with a real destination or remove the link.
-- [ ] Verify the `GACJ` and `Georgia Crime Information Center` footer links; they currently use placeholders.
+- [x] Remove the default `/hello-world/index.html` content and stale references.
+- [x] Remove the GACJ and Georgia Crime Information Center footer placeholders until approved destinations are provided.
 - [ ] Verify all carousel buttons and customizer-configured URLs.
 - [ ] Verify every mobile-navigation link separately from desktop navigation.
 - [ ] Verify relative links after deployment at the final production domain.
@@ -82,6 +80,7 @@ about/mission-and-values/index.html
 about/organization/index.html
 accessibility-statement/index.html
 contact/index.html
+privacy-policy/index.html
 divisions/administration/index.html
 divisions/enforcement-bureau/index.html
 divisions/index.html
@@ -97,6 +96,10 @@ sex-offender-registry/index.html
 submit-a-tip/index.html
 terms-of-use/index.html
 ```
+
+The static export does not currently include the WordPress Employment landing page
+or the full Public Records/ORR page. Regenerate the export after those pages are
+published so their links resolve in the GitHub Pages preview.
 
 ## Final link-review procedure
 

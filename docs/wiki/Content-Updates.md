@@ -15,7 +15,18 @@ WordPress page templates are in `gcso-custom/`. Common templates include:
 - `page-services.php`
 - `page-organization.php`
 
-When the static export is maintained, update the matching file under `site/` and the copied theme stylesheet under `site/wp-content/themes/gcso-custom/assets/css/`.
+When the static export is maintained, regenerate it from the WordPress source after
+publishing page or shared-template changes. The exporter replaces the contents of
+`site/`, so do not run it against an output directory containing unrelated files.
+For a local WordPress site, run:
+
+```bash
+node scripts/export-static.mjs http://localhost:8080/ site
+```
+
+Review the generated page tree and run the local-link check before committing. The
+GitHub Pages preview deploys only `site/`; changes made only in `gcso-custom/` will
+not appear there until the static export is updated.
 
 Current legal and service pages include:
 

@@ -20,6 +20,7 @@ For the live website, do not run or upload Docker. Package and deploy only the
 | Path | Description |
 |------|-------------|
 | `gcso-custom/` | The WordPress theme (PHP, CSS, JS) |
+| `site/` | Generated static preview/deployment files |
 | `docs/` | Project documentation |
 | `docker-compose.yml` | Local development environment |
 | `prompts.md` | AI image generation prompts for placeholder assets |
@@ -34,3 +35,4 @@ For the live website, do not run or upload Docker. Package and deploy only the
 - [Testing](docs/TESTING.md) — Functional, responsive, accessibility, and performance testing
 - [Logos & Assets](docs/LOGOS-AND-ASSETS.md) — Image specs and guidelines
 - [Site Structure](docs/Current_Site_Structure.md) — Navigation and content architecture
+- [Static Preview Deployment](docs/wiki/Deployment.md) — Exporting and deploying the `site/` directory
