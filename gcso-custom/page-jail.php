@@ -33,7 +33,7 @@ $maps_url    = 'https://www.google.com/maps/search/?api=1&query=2700+Highway+41+
 
             <div class="gcso-service-page__intro">
                 <p><?php esc_html_e('The Jail Division is responsible for the safe and secure operation of the county jail and its inmate occupants and for maintaining the required records of incarcerated persons.', 'gcso'); ?></p>
-                <p><?php esc_html_e('The current Gordon County Jail is a modern, 81,000-square-foot detention facility that opened in May 2009 and has capacity for 376 inmates. The Jail houses male and female pre-trial and convicted persons charged with criminal offenses occurring within Gordon County, including the cities of Calhoun, Fairmount, and Resaca.', 'gcso'); ?></p>
+                <p><?php esc_html_e('The current Gordon County Jail is a modern, 81,000-square-foot detention facility that opened in May 2009 and has a capacity of 376 inmates. The Jail houses male and female pretrial and convicted persons charged with criminal offenses occurring within Gordon County, including the cities of Calhoun, Fairmount, and Resaca.', 'gcso'); ?></p>
             </div>
 
             <div class="gcso-alert-box gcso-jail-mission">

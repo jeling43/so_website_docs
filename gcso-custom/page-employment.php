@@ -67,7 +67,7 @@ get_header();
                                 <span aria-hidden="true">↗</span>
                             </a>
                         </p>
-                        <p><?php esc_html_e('Completed applications and required documentation may be submitted in person or online by email.', 'gcso'); ?></p>
+                        <p><?php esc_html_e('Completed applications and required documentation may be submitted in person or by email.', 'gcso'); ?></p>
                         <p>
                             <strong><?php esc_html_e('In person:', 'gcso'); ?></strong><br>
                             <?php esc_html_e('Gordon County Sheriff\'s Office', 'gcso'); ?><br>

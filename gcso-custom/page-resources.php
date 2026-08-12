@@ -44,7 +44,7 @@ get_header();
                     </a>
                     <a href="<?php echo esc_url(home_url('/jail/')); ?>" class="gcso-info-card gcso-info-card--link">
                         <h3 class="gcso-info-card__title"><?php esc_html_e('Jail Information', 'gcso'); ?></h3>
-                        <div class="gcso-info-card__body"><p><?php esc_html_e('Find inmate, visitation, bonds, and jail-contact information.', 'gcso'); ?></p><span class="gcso-card-action"><?php esc_html_e('View jail information', 'gcso'); ?> <span aria-hidden="true">→</span></span></div>
+                        <div class="gcso-info-card__body"><p><?php esc_html_e('Find information about inmates, visitation, bonds, and jail contacts.', 'gcso'); ?></p><span class="gcso-card-action"><?php esc_html_e('View jail information', 'gcso'); ?> <span aria-hidden="true">→</span></span></div>
                     </a>
                 </div>
             </section>

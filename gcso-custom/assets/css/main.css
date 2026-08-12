@@ -780,6 +780,7 @@ p:last-child {
 .gcso-hero-carousel__content {
     position: relative;
     z-index: 2;
+    width: calc(100% - 10rem);
     max-width: var(--container-width);
 }
 
@@ -2954,6 +2955,11 @@ textarea:focus-visible {
    ========================================================================== */
 
 @media (max-width: 767px) {
+    /* Keep the vertically centered carousel controls clear of hero copy. */
+    .gcso-hero-carousel__content {
+        width: calc(100% - 10rem);
+    }
+
     .gcso-utility-bar {
         font-size: 0.72rem;
     }
@@ -3134,6 +3140,10 @@ textarea:focus-visible {
 }
 
 @media (min-width: 768px) and (max-width: 1050px) {
+    .gcso-hero-carousel__content {
+        width: calc(100% - 10rem);
+    }
+
     .gcso-cta__inner {
         grid-template-columns: auto minmax(0, 1fr) minmax(190px, 0.85fr);
     }

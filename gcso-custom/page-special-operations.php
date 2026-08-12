@@ -32,7 +32,7 @@ get_header();
                 <div class="gcso-info-card">
                     <h3 class="gcso-info-card__title"><?php esc_html_e('Tactical Operations', 'gcso'); ?></h3>
                     <div class="gcso-info-card__body">
-                        <p><?php esc_html_e('Trained tactical team members respond to high-risk situations including barricaded subjects, hostage situations, and high-risk warrant service.', 'gcso'); ?></p>
+                        <p><?php esc_html_e('Trained tactical team members respond to high-risk situations, including barricaded subjects, hostage situations, and high-risk warrant service.', 'gcso'); ?></p>
                     </div>
                 </div>
             </div>

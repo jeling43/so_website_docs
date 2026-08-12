@@ -40,12 +40,12 @@ get_header();
                         <p><?php esc_html_e('If you have information about a crime or an active investigation, your help could make the difference.', 'gcso'); ?></p>
                         <ul class="gcso-info-card__list">
                             <li>
-                                <a href="<?php echo esc_url(home_url('/services/submit-a-tip')); ?>">
+                                <a href="<?php echo esc_url(home_url('/submit-a-tip/')); ?>">
                                     <?php esc_html_e('Submit a Tip', 'gcso'); ?>
                                 </a>
                             </li>
                             <li>
-                                <a href="<?php echo esc_url(home_url('/services/request-a-report')); ?>">
+                                <a href="<?php echo esc_url(home_url('/resources/request-a-report/')); ?>">
                                     <?php esc_html_e('Provide Additional Case Information', 'gcso'); ?>
                                 </a>
                             </li>

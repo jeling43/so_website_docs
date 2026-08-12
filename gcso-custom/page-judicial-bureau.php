@@ -42,7 +42,7 @@ get_header();
                     <div class="gcso-info-card">
                         <h3 class="gcso-info-card__title"><?php esc_html_e('Court Services Division', 'gcso'); ?></h3>
                         <div class="gcso-info-card__body">
-                            <p><?php esc_html_e('The Court Services Division receives and serves all court process, including warrants, civil actions, and summonses; transports inmates; and provides physical security for the Superior Court and judges.', 'gcso'); ?></p>
+                            <p><?php esc_html_e('The Court Services Division receives and serves all court process, including warrants, civil actions, and summonses; transports inmates; and provides physical security for the Superior Court and its judges.', 'gcso'); ?></p>
                         </div>
                     </div>
                 </div>

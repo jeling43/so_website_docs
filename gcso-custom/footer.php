@@ -61,8 +61,6 @@ defined('ABSPATH') || exit;
                 <h4 class="gcso-footer__heading"><?php esc_html_e('Important Links', 'gcso'); ?></h4>
                 <ul class="gcso-footer__links">
                     <li><a href="https://www.georgiasheriffs.org/" target="_blank" rel="noopener noreferrer"><?php esc_html_e("Georgia Sheriffs' Association", 'gcso'); ?></a></li>
-                    <li><a href="#" target="_blank" rel="noopener noreferrer"><?php esc_html_e('GACJ (Georgia Association of Criminal Investigators)', 'gcso'); ?></a></li>
-                    <li><a href="#" target="_blank" rel="noopener noreferrer"><?php esc_html_e('Georgia Crime Information Center', 'gcso'); ?></a></li>
                     <li><a href="https://georgia.gov/" target="_blank" rel="noopener noreferrer"><?php esc_html_e('Georgia.gov', 'gcso'); ?></a></li>
                 </ul>
             </div>
