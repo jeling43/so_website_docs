@@ -24,7 +24,7 @@ get_header();
         <div class="gcso-service-page gcso-registry-page">
             <div class="gcso-service-page__intro gcso-registry-intro">
                 <p><?php esc_html_e('O.C.G.A. 42-1-12 requires the Sheriff to maintain and post a list of every sexual offender residing in this county, including other relevant information and requirements.', 'gcso'); ?></p>
-                <p><?php esc_html_e('The Gordon County Sheriff\'s Office makes every effort to ensure that the information contained on this website is as accurate and up to date as possible. However, because this information is continually changing and contains information provided by other agencies and persons, the Gordon County Sheriff\'s Office makes no expressed or implied guarantee concerning the accuracy of this information.', 'gcso'); ?></p>
+                <p><?php esc_html_e('The Gordon County Sheriff\'s Office makes every effort to ensure that the information contained on this website is as accurate and up to date as possible. However, because this information is continually changing and contains information provided by other agencies and persons, the Gordon County Sheriff\'s Office makes no express or implied guarantee concerning the accuracy of this information.', 'gcso'); ?></p>
             </div>
 
             <h2 class="gcso-section-heading gcso-registry-section-heading">

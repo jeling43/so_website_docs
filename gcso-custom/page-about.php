@@ -32,7 +32,7 @@ get_header();
                 <a href="<?php echo esc_url(home_url('/about/meet-the-sheriff')); ?>" class="gcso-info-card gcso-info-card--link">
                     <h3 class="gcso-info-card__title"><?php esc_html_e('Meet the Sheriff', 'gcso'); ?></h3>
                     <div class="gcso-info-card__body">
-                        <p><?php esc_html_e('Learn about Sheriff\'s background, experience, and message to the community.', 'gcso'); ?></p>
+                        <p><?php esc_html_e('Learn about the Sheriff\'s background, experience, and message to the community.', 'gcso'); ?></p>
                         <span class="gcso-card-action"><?php esc_html_e('Meet the Sheriff', 'gcso'); ?> <span aria-hidden="true">→</span></span>
                     </div>
                 </a>

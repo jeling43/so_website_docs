@@ -43,7 +43,7 @@ get_header();
                     <div class="gcso-info-card">
                         <h3 class="gcso-info-card__title"><?php esc_html_e('Uniform Patrol Division', 'gcso'); ?></h3>
                         <div class="gcso-info-card__body">
-                            <p><?php esc_html_e('Patrols State and County roads to suppress and detect crime, arrest violators, and provide the first response to requests for service.', 'gcso'); ?></p>
+                            <p><?php esc_html_e('Patrols state and county roads to suppress and detect crime, arrest violators, and provide the first response to requests for service.', 'gcso'); ?></p>
                         </div>
                     </div>
 
@@ -57,7 +57,7 @@ get_header();
                     <div class="gcso-info-card">
                         <h3 class="gcso-info-card__title"><?php esc_html_e('School Resource Officer Unit', 'gcso'); ?></h3>
                         <div class="gcso-info-card__body">
-                            <p><?php esc_html_e('Provides safety and security for the Gordon County Public Schools System.', 'gcso'); ?></p>
+                            <p><?php esc_html_e('Provides safety and security for the Gordon County public school system.', 'gcso'); ?></p>
                         </div>
                     </div>
 
