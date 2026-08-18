@@ -37,10 +37,14 @@ get_header();
                     <?php esc_html_e('Most Requested', 'gcso'); ?>
                     <span class="gcso-section-heading__line"></span>
                 </h2>
-                <div class="gcso-info-cards gcso-info-cards--two">
+                <div class="gcso-info-cards">
                     <a href="<?php echo esc_url(home_url('/resources/request-a-report/')); ?>" class="gcso-info-card gcso-info-card--link">
                         <h3 class="gcso-info-card__title"><?php esc_html_e('Request a Report', 'gcso'); ?></h3>
                         <div class="gcso-info-card__body"><p><?php esc_html_e('Learn how to request a copy of an incident or accident report.', 'gcso'); ?></p><span class="gcso-card-action"><?php esc_html_e('View request instructions', 'gcso'); ?> <span aria-hidden="true">→</span></span></div>
+                    </a>
+                    <a href="<?php echo esc_url(home_url('/services/georgia-criminal-alien-quarterly-report/')); ?>" class="gcso-info-card gcso-info-card--link">
+                        <h3 class="gcso-info-card__title"><?php esc_html_e('Georgia Criminal Alien Quarterly Report', 'gcso'); ?></h3>
+                        <div class="gcso-info-card__body"><p><?php esc_html_e('View the Georgia Criminal Alien Quarterly Report.', 'gcso'); ?></p><span class="gcso-card-action"><?php esc_html_e('View quarterly report', 'gcso'); ?> <span aria-hidden="true">→</span></span></div>
                     </a>
                     <a href="<?php echo esc_url(home_url('/jail/')); ?>" class="gcso-info-card gcso-info-card--link">
                         <h3 class="gcso-info-card__title"><?php esc_html_e('Jail Information', 'gcso'); ?></h3>
@@ -55,7 +59,7 @@ get_header();
                     <?php esc_html_e('Reports and Records', 'gcso'); ?>
                     <span class="gcso-section-heading__line"></span>
                 </h2>
-                <div class="gcso-info-cards gcso-info-cards--two">
+                <div class="gcso-info-cards">
                     <div class="gcso-info-card gcso-info-card--full gcso-info-card--notice">
                         <h3 class="gcso-info-card__title"><?php esc_html_e('Open Records Fees', 'gcso'); ?></h3>
                         <div class="gcso-info-card__body">
@@ -74,7 +78,7 @@ get_header();
                     <?php esc_html_e('Public Safety', 'gcso'); ?>
                     <span class="gcso-section-heading__line"></span>
                 </h2>
-                <div class="gcso-info-cards gcso-info-cards--two">
+                <div class="gcso-info-cards">
                     <a href="<?php echo esc_url(home_url('/submit-a-tip/')); ?>" class="gcso-info-card gcso-info-card--link">
                         <h3 class="gcso-info-card__title"><?php esc_html_e('Tip Line', 'gcso'); ?></h3>
                         <div class="gcso-info-card__body"><p><?php esc_html_e('Submit confidential information regarding major crimes.', 'gcso'); ?></p><span class="gcso-card-action"><?php esc_html_e('Submit a tip', 'gcso'); ?> <span aria-hidden="true">→</span></span></div>
@@ -83,6 +87,13 @@ get_header();
                         <h3 class="gcso-info-card__title"><?php esc_html_e('Sex Offender Search', 'gcso'); ?></h3>
                         <div class="gcso-info-card__body"><p><?php esc_html_e('Access registration and community-safety information.', 'gcso'); ?></p><span class="gcso-card-action"><?php esc_html_e('Search registry', 'gcso'); ?> <span aria-hidden="true">→</span></span></div>
                     </a>
+                    <div class="gcso-info-card">
+                        <h3 class="gcso-info-card__title"><?php esc_html_e('Domestic Violence Outreach', 'gcso'); ?></h3>
+                        <div class="gcso-info-card__body">
+                            <p><?php esc_html_e('For domestic violence outreach information and assistance, call:', 'gcso'); ?></p>
+                            <p><a href="tel:7066255586" class="gcso-btn gcso-btn--outline-navy">706-625-5586</a></p>
+                        </div>
+                    </div>
                 </div>
             </section>
 

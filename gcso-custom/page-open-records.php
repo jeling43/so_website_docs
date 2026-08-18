@@ -23,24 +23,43 @@ get_header();
 
             <div class="gcso-info-cards">
                 <div class="gcso-info-card">
-                    <h3 class="gcso-info-card__title"><?php esc_html_e('How to Submit a Request', 'gcso'); ?></h3>
+                    <h3 class="gcso-info-card__title"><?php esc_html_e('Who Can Request Public Records', 'gcso'); ?></h3>
                     <div class="gcso-info-card__body">
-                        <p><?php esc_html_e('Public Records Requests must be submitted in writing. You may submit your request:', 'gcso'); ?></p>
-                        <ul class="gcso-info-card__list">
-                            <li><?php esc_html_e('In person at the Sheriff\'s Office', 'gcso'); ?></li>
-                            <li><?php esc_html_e('By mail', 'gcso'); ?></li>
-                            <li><?php esc_html_e('By email', 'gcso'); ?></li>
-                        </ul>
+                        <p><?php esc_html_e('Anyone may request public reports and records. You do not have to be involved in the incident or accident to make a request.', 'gcso'); ?></p>
+                        <p><?php esc_html_e('Identification may be requested, but it is not required to submit a request.', 'gcso'); ?></p>
                     </div>
                 </div>
 
                 <div class="gcso-info-card">
-                    <h3 class="gcso-info-card__title"><?php esc_html_e('Required Information', 'gcso'); ?></h3>
+                    <h3 class="gcso-info-card__title"><?php esc_html_e('How to Submit a Request', 'gcso'); ?></h3>
+                    <div class="gcso-info-card__body">
+                        <p><?php esc_html_e('Public records requests may be submitted using any of the following methods:', 'gcso'); ?></p>
+                        <ul class="gcso-info-card__list">
+                            <li><?php esc_html_e('Online', 'gcso'); ?></li>
+                            <li><?php esc_html_e('By phone', 'gcso'); ?></li>
+                            <li><?php esc_html_e('By mail', 'gcso'); ?></li>
+                            <li><?php esc_html_e('Walk-in / in person at the Sheriff\'s Office', 'gcso'); ?></li>
+                        </ul>
+                        <p>
+                            <strong><?php esc_html_e('To request a report, contact Terry Swaim:', 'gcso'); ?></strong><br>
+                            <a href="mailto:terry.swaim@gordoncountyga.gov">terry.swaim@gordoncountyga.gov</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="gcso-info-card">
+                    <h3 class="gcso-info-card__title"><?php esc_html_e('Request Form Information', 'gcso'); ?></h3>
+                    <p><?php esc_html_e('Please provide the following information when submitting your request:', 'gcso'); ?></p>
                     <ul class="gcso-info-card__list">
-                        <li><?php esc_html_e('Your full name and contact information', 'gcso'); ?></li>
-                        <li><?php esc_html_e('Specific records being requested', 'gcso'); ?></li>
-                        <li><?php esc_html_e('Date range (if applicable)', 'gcso'); ?></li>
-                        <li><?php esc_html_e('Preferred format (electronic or paper)', 'gcso'); ?></li>
+                        <li><?php esc_html_e('First name', 'gcso'); ?></li>
+                        <li><?php esc_html_e('Middle name', 'gcso'); ?></li>
+                        <li><?php esc_html_e('Last name', 'gcso'); ?></li>
+                        <li><?php esc_html_e('Contact phone number', 'gcso'); ?></li>
+                        <li><?php esc_html_e('Contact email address', 'gcso'); ?></li>
+                        <li><?php esc_html_e('Date of incident or accident', 'gcso'); ?></li>
+                        <li><?php esc_html_e('Case number', 'gcso'); ?></li>
+                        <li><?php esc_html_e('Location', 'gcso'); ?></li>
+                        <li><?php esc_html_e('Type of report: incident, accident, or other', 'gcso'); ?></li>
                     </ul>
                 </div>
             </div>

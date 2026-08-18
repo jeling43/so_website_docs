@@ -8,7 +8,7 @@ This document explains how to run every CI check locally and what each tool does
 
 | Tool | Version | Install |
 |------|---------|---------|
-| PHP | ≥ 8.0 | [php.net](https://www.php.net/downloads) |
+| PHP | ≥ 7.4 for the theme runtime; PHP 8.2 recommended for tooling | [php.net](https://www.php.net/downloads) |
 | Composer | v2 | [getcomposer.org](https://getcomposer.org/download/) |
 | Node.js | ≥ 20 LTS | [nodejs.org](https://nodejs.org/) |
 | npm | (bundled with Node) | — |
@@ -121,7 +121,7 @@ gitleaks detect --source . --verbose
 ## Assumptions
 
 - The WordPress theme root is `gcso-custom/`.
-- PHP ≥ 8.0 is required (per `style.css`).
+- PHP ≥ 7.4 is required by the theme runtime (per `style.css`).
 - WordPress ≥ 6.0 is targeted (per `style.css`).
 - CI uses PHP 8.2 and Node.js 20 LTS.
 - No `composer.json` or `package.json` existed previously.

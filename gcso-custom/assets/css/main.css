@@ -762,7 +762,8 @@ p:last-child {
     position: absolute;
     inset: 0;
     background-size: cover;
-    background-position: center;
+    /* The artwork keeps its copy on the left and badge on the right. */
+    background-position: right center;
     background-repeat: no-repeat;
     transition: transform 6s ease;
 }
@@ -2204,6 +2205,10 @@ textarea:focus-visible {
     align-items: stretch;
 }
 
+.gcso-services-main [aria-labelledby="reports-heading"] .gcso-info-cards--services {
+    grid-template-columns: 1fr;
+}
+
 .gcso-services-main .gcso-info-card {
     display: flex;
     flex-direction: column;
@@ -2232,7 +2237,7 @@ textarea:focus-visible {
 .gcso-services-main .gcso-info-card--full {
     grid-column: 1 / -1;
     justify-self: center;
-    width: min(100%, 56rem);
+    width: 100%;
 }
 
 .gcso-service-page__intro {
@@ -2827,6 +2832,23 @@ textarea:focus-visible {
     margin-bottom: 0.5rem;
 }
 
+.gcso-footer__address p > span,
+.gcso-footer__address p > a {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.gcso-footer__address a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.gcso-footer__address a:hover,
+.gcso-footer__address a:focus-visible {
+    color: var(--gcso-gold);
+    text-decoration: underline;
+}
+
 .gcso-footer__address .gcso-icon {
     flex-shrink: 0;
 }
@@ -2955,6 +2977,16 @@ textarea:focus-visible {
    ========================================================================== */
 
 @media (max-width: 767px) {
+    /* Keep the right-hand badge in frame as the wide hero artwork crops on
+       narrow screens. The image remains fluid while the copy stays readable. */
+    .gcso-hero-carousel__bg {
+        background-position: right center;
+    }
+
+    .gcso-hero-carousel__slide.is-active .gcso-hero-carousel__bg {
+        transform: none;
+    }
+
     /* Keep the vertically centered carousel controls clear of hero copy. */
     .gcso-hero-carousel__content {
         width: calc(100% - 10rem);
@@ -3155,7 +3187,7 @@ textarea:focus-visible {
 }
 
 /* The complete desktop header needs more room than the main content column. */
-@media (min-width: 1024px) and (max-width: 1439px) {
+@media (min-width: 1024px) and (max-width: 1799px) {
     .gcso-primary-nav {
         display: none;
     }
@@ -3165,11 +3197,18 @@ textarea:focus-visible {
     }
 
     .gcso-header__actions .gcso-btn {
-        display: none;
+        display: inline-flex;
     }
 
     .gcso-mobile-toggle {
         display: flex;
+    }
+}
+
+/* Keep the action buttons in the menu at narrower desktop widths. */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .gcso-header__actions .gcso-btn {
+        display: none;
     }
 }
 

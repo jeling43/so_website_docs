@@ -172,11 +172,13 @@ $maps_url    = 'https://www.google.com/maps/search/?api=1&query=2700+Highway+41+
                                 <p><strong><?php esc_html_e('Saturday:', 'gcso'); ?></strong> 9:00 a.m.–3:30 p.m. and 6:00–8:30 p.m.</p>
                                 <p><strong><?php esc_html_e('Sunday:', 'gcso'); ?></strong> 9:00 a.m.–3:30 p.m. and 6:00–8:30 p.m.</p>
                                 <p><strong><?php esc_html_e('Monday:', 'gcso'); ?></strong> 9:00 a.m.–3:30 p.m. and 6:00–8:30 p.m.</p>
-                                <p><strong><?php esc_html_e('Tuesday:', 'gcso'); ?></strong> 9:00 a.m.–3:30 p.m. and 6:00–6:30 p.m.</p>
+                                <p><strong><?php esc_html_e('Tuesday:', 'gcso'); ?></strong> 9:00 a.m.–4:00 p.m. and 6:00–6:30 p.m.</p>
                                 <p><strong><?php esc_html_e('Wednesday:', 'gcso'); ?></strong> 9:00 a.m.–3:30 p.m. and 6:00–8:30 p.m.</p>
                                 <p><strong><?php esc_html_e('Thursday:', 'gcso'); ?></strong> <?php esc_html_e('No visits', 'gcso'); ?></p>
                                 <p><strong><?php esc_html_e('Friday:', 'gcso'); ?></strong> 9:00 a.m.–3:30 p.m. and 6:00–8:30 p.m.</p>
                             </div>
+
+                            <p><strong><?php esc_html_e('Important:', 'gcso'); ?></strong> <?php esc_html_e('No on-site visitation will be started later than 8:35 p.m. (2035 hours).', 'gcso'); ?></p>
 
                             <h3><?php esc_html_e('In-Person Visitor Rules', 'gcso'); ?></h3>
                             <ol>

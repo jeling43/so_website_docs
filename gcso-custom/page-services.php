@@ -45,6 +45,14 @@ get_header();
                         </div>
                     </a>
 
+                    <a href="<?php echo esc_url(home_url('/services/georgia-criminal-alien-quarterly-report/')); ?>" class="gcso-info-card gcso-info-card--link">
+                        <h3 class="gcso-info-card__title"><?php esc_html_e('Georgia Criminal Alien Quarterly Report', 'gcso'); ?></h3>
+                        <div class="gcso-info-card__body">
+                            <p><?php esc_html_e('View the Georgia Criminal Alien Quarterly Report.', 'gcso'); ?></p>
+                            <span class="gcso-card-action"><?php esc_html_e('View quarterly report', 'gcso'); ?> <span aria-hidden="true">→</span></span>
+                        </div>
+                    </a>
+
                     <div class="gcso-info-card gcso-info-card--full gcso-info-card--notice">
                         <h3 class="gcso-info-card__title"><?php esc_html_e('Open Records Fees', 'gcso'); ?></h3>
                         <div class="gcso-info-card__body">
@@ -74,9 +82,6 @@ get_header();
                             <span class="gcso-card-action"><?php esc_html_e('Submit a tip', 'gcso'); ?> <span aria-hidden="true">→</span></span>
                         </div>
                     </a>
-                </div>
-
-                <div class="gcso-info-cards gcso-info-cards--services">
                     <!-- Sex Offender Registry - Direct external link -->
                     <div class="gcso-info-card">
                         <h3 class="gcso-info-card__title"><?php esc_html_e('Sex Offender Search', 'gcso'); ?></h3>
@@ -102,6 +107,14 @@ get_header();
                                     <svg class="gcso-icon gcso-icon--external" aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
                                 </a>
                             </p>
+                        </div>
+                    </div>
+
+                    <div class="gcso-info-card">
+                        <h3 class="gcso-info-card__title"><?php esc_html_e('Domestic Violence Outreach', 'gcso'); ?></h3>
+                        <div class="gcso-info-card__body">
+                            <p><?php esc_html_e('For domestic violence outreach information and assistance, call:', 'gcso'); ?></p>
+                            <p><a href="tel:7066255586" class="gcso-btn gcso-btn--outline-navy">706-625-5586</a></p>
                         </div>
                     </div>
                 </div>
