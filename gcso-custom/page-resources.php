@@ -38,9 +38,9 @@ get_header();
                     <span class="gcso-section-heading__line"></span>
                 </h2>
                 <div class="gcso-info-cards">
-                    <a href="<?php echo esc_url(home_url('/resources/request-a-report/')); ?>" class="gcso-info-card gcso-info-card--link">
-                        <h3 class="gcso-info-card__title"><?php esc_html_e('Request a Report', 'gcso'); ?></h3>
-                        <div class="gcso-info-card__body"><p><?php esc_html_e('Learn how to request a copy of an incident or accident report.', 'gcso'); ?></p><span class="gcso-card-action"><?php esc_html_e('View request instructions', 'gcso'); ?> <span aria-hidden="true">→</span></span></div>
+                    <a href="<?php echo esc_url(home_url('/services/public-records/')); ?>" class="gcso-info-card gcso-info-card--link">
+                        <h3 class="gcso-info-card__title"><?php esc_html_e('Public Records', 'gcso'); ?></h3>
+                        <div class="gcso-info-card__body"><p><?php esc_html_e('Request incident, accident, and other public records.', 'gcso'); ?></p><span class="gcso-card-action"><?php esc_html_e('View public records information', 'gcso'); ?> <span aria-hidden="true">→</span></span></div>
                     </a>
                     <a href="<?php echo esc_url(home_url('/services/georgia-criminal-alien-quarterly-report/')); ?>" class="gcso-info-card gcso-info-card--link">
                         <h3 class="gcso-info-card__title"><?php esc_html_e('Georgia Criminal Alien Quarterly Report', 'gcso'); ?></h3>

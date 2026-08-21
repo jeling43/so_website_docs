@@ -37,11 +37,11 @@ get_header();
                 </h2>
 
                 <div class="gcso-info-cards gcso-info-cards--services">
-                    <a href="<?php echo esc_url(home_url('/resources/request-a-report/')); ?>" class="gcso-info-card gcso-info-card--link">
-                        <h3 class="gcso-info-card__title"><?php esc_html_e('Request a Report', 'gcso'); ?></h3>
+                    <a href="<?php echo esc_url(home_url('/services/public-records/')); ?>" class="gcso-info-card gcso-info-card--link">
+                        <h3 class="gcso-info-card__title"><?php esc_html_e('Public Records', 'gcso'); ?></h3>
                         <div class="gcso-info-card__body">
-                            <p><?php esc_html_e('Request a copy of an incident or accident report.', 'gcso'); ?></p>
-                            <span class="gcso-card-action"><?php esc_html_e('View report request', 'gcso'); ?> <span aria-hidden="true">→</span></span>
+                            <p><?php esc_html_e('Request incident, accident, and other public records.', 'gcso'); ?></p>
+                            <span class="gcso-card-action"><?php esc_html_e('View public records information', 'gcso'); ?> <span aria-hidden="true">→</span></span>
                         </div>
                     </a>
 

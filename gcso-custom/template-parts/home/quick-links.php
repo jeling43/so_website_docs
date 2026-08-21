@@ -15,10 +15,16 @@ $quick_links = [
         'external' => true,
     ],
     [
-        'title'    => __('Request a Report', 'gcso'),
-        'url'      => home_url('/resources/request-a-report/'),
+        'title'    => __('Public Records', 'gcso'),
+        'url'      => home_url('/services/public-records/'),
         'icon'     => '<svg viewBox="0 0 64 64" fill="currentColor" width="48" height="48"><path d="M40 8H16a4 4 0 00-4 4v40a4 4 0 004 4h32a4 4 0 004-4V20L40 8z" fill="none" stroke="currentColor" stroke-width="3"/><path d="M40 8v12h12" fill="none" stroke="currentColor" stroke-width="3"/><line x1="20" y1="30" x2="44" y2="30" stroke="currentColor" stroke-width="2"/><line x1="20" y1="38" x2="44" y2="38" stroke="currentColor" stroke-width="2"/><line x1="20" y1="46" x2="36" y2="46" stroke="currentColor" stroke-width="2"/></svg>',
         'external' => false,
+    ],
+    [
+        'title'    => __('GCSO 2025 Year In Review', 'gcso'),
+        'url'      => 'https://gordonsheriff.org/wp-content/uploads/2026/02/GCSO-Magazine-2025.pdf',
+        'icon'     => '<svg viewBox="0 0 64 64" fill="currentColor" width="48" height="48"><path d="M16 8h24l12 12v36H16z" fill="none" stroke="currentColor" stroke-width="3"/><path d="M40 8v12h12M24 34h20M24 43h20M24 52h12" fill="none" stroke="currentColor" stroke-width="3"/></svg>',
+        'external' => true,
     ],
     [
         'title'    => __('Services', 'gcso'),

@@ -225,7 +225,23 @@ $maps_url    = 'https://www.google.com/maps/search/?api=1&query=2700+Highway+41+
                     <details class="gcso-jail-accordion">
                         <summary><?php esc_html_e('Inmate Mail', 'gcso'); ?></summary>
                         <div class="gcso-jail-accordion__content">
-                            <p><?php esc_html_e('For current incoming-mail requirements and instructions, contact the Gordon County Jail before sending mail.', 'gcso'); ?></p>
+                            <h3><?php esc_html_e('Personal Correspondence', 'gcso'); ?></h3>
+                            <p><?php esc_html_e('All personal correspondence must be addressed as follows:', 'gcso'); ?></p>
+                            <address>
+                                <strong><?php esc_html_e('JailATM.com - Gordon County Sheriff\'s Office', 'gcso'); ?></strong><br>
+                                <?php esc_html_e('Inmate Name (first and last) / Inmate ID Number', 'gcso'); ?><br>
+                                <?php esc_html_e('925B Peachtree St. NE, Box 2062', 'gcso'); ?><br>
+                                <?php esc_html_e('Atlanta, GA 30309', 'gcso'); ?>
+                            </address>
+                            <h3><?php esc_html_e('Books, Magazines, and Legal Mail', 'gcso'); ?></h3>
+                            <p><?php esc_html_e('Books and magazines must be sent directly from a retailer or publisher.', 'gcso'); ?></p>
+                            <p><?php esc_html_e('Books, magazines, and legal mail must be mailed to the following address:', 'gcso'); ?></p>
+                            <address>
+                                <strong><?php esc_html_e('Gordon County Sheriff\'s Office', 'gcso'); ?></strong><br>
+                                <?php esc_html_e('Inmate Name (first and last) / Inmate ID Number', 'gcso'); ?><br>
+                                <?php esc_html_e('2700 US-41', 'gcso'); ?><br>
+                                <?php esc_html_e('Calhoun, GA 30701', 'gcso'); ?>
+                            </address>
                             <p><a href="tel:+17066291245" class="gcso-btn gcso-btn--outline-navy"><?php esc_html_e('Call the Jail: 706-629-1245', 'gcso'); ?></a></p>
                         </div>
                     </details>

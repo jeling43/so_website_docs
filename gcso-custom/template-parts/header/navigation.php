@@ -26,9 +26,9 @@ defined('ABSPATH') || exit;
             <svg class="gcso-icon" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
             <?php esc_html_e('Inmate Search', 'gcso'); ?>
         </a>
-        <a href="<?php echo esc_url(home_url('/resources/request-a-report/')); ?>" class="gcso-btn gcso-btn--navy gcso-btn--sm">
+        <a href="<?php echo esc_url(home_url('/services/public-records/')); ?>" class="gcso-btn gcso-btn--navy gcso-btn--sm">
             <svg class="gcso-icon" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
-            <?php esc_html_e('Request a Report', 'gcso'); ?>
+            <?php esc_html_e('Public Records', 'gcso'); ?>
         </a>
 
         <button class="gcso-search-toggle" aria-label="<?php esc_attr_e('Open search', 'gcso'); ?>" aria-expanded="false" aria-controls="gcso-search-overlay">
