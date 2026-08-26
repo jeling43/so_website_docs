@@ -16,7 +16,6 @@ get_header();
     <?php get_template_part('template-parts/home/sheriff-message'); ?>
     <?php get_template_part('template-parts/home/divisions'); ?>
     <?php get_template_part('template-parts/home/news'); ?>
-    <?php get_template_part('template-parts/home/social-feed'); ?>
     <?php get_template_part('template-parts/home/cta'); ?>
 </main>
 
